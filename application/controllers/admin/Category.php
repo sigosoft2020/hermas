@@ -28,18 +28,6 @@ class Category extends CI_Controller {
 			$sub_array[] = '<img src="' . base_url() . $res->CategoryImage . '" height="100px">';
 			$sub_array[] = $res->Cstatus;
 			$sub_array[] = '<a class="btn btn-link" style="font-size:16px;color:blue" href="' . site_url('admin/category/edit/'.$res->category_id) . '"><i class="fa fa-pencil"></i></a>';
-
-			// if($res->Cstatus == 'Active') 
-			// {
-   //           $action  = '<a class="btn btn-link" style="font-size:16px;color:red" href="' . site_url('admin/category/disable/'.$res->category_id) . '"  onclick="return block()">Block</i></a>';
-   //          } 
-   //          else
-   //          {
-   //           $action = '<a class="btn btn-link" style="font-size:16px;color:orange" href="' . site_url('admin/category/enable/'.$res->category_id) . '"  onclick="return block()">Enable</a>';
-   //          }
-            
-   //          $sub_array[]    = $action; 
-
 			$data[] = $sub_array;
 		}
 
@@ -174,34 +162,7 @@ class Category extends CI_Controller {
 			}
 		}
 	}
-	public function delete($banner_id)
-	{
-		$check = $this->Common->get_details('sliders',array('slider_id' => $banner_id));
-		if ($check->num_rows() > 0) {
-			$banner = $check->row();
-			if ($this->Common->delete('sliders',array('slider_id' => $banner_id))) {
-				$remove_path = FCPATH . $banner->image;
-				unlink($remove_path);
-
-				$this->session->set_flashdata('alert_type', 'success');
-				$this->session->set_flashdata('alert_title', 'Success');
-				$this->session->set_flashdata('alert_message', 'Banner deleted successfully..!');
-			}
-			else {
-				$this->session->set_flashdata('alert_type', 'error');
-				$this->session->set_flashdata('alert_title', 'Failed');
-				$this->session->set_flashdata('alert_message', 'Failed to remove banner..!');
-			}
-		}
-		else {
-			$this->session->set_flashdata('alert_type', 'error');
-			$this->session->set_flashdata('alert_title', 'Failed');
-			$this->session->set_flashdata('alert_message', 'Failed to remove banner..!');
-		}
-		redirect('admin/banners');
-	}
-
-
+	
 	public function getCategoryById()
 	{
 		$id = $_POST['id'];

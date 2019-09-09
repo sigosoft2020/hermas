@@ -201,10 +201,10 @@ class Vendor extends CI_Controller {
 	}
 
 
-	public function getCategoryById()
+	public function getVendorById()
 	{
 		$id = $_POST['id'];
-		$data = $this->Common->get_details('category',array('category_id' => $id))->row();
+		$data = $this->Common->get_details('vendor_details',array('vender_id' => $id))->row();
 		print_r(json_encode($data));
 	}
 }

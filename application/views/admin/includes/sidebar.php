@@ -70,12 +70,7 @@
                       </ul>
                   </li>
                   <li>
-                      <a href="#"><i class="fa fa-users"></i> <span> Vendors </span> <span class="menu-arrow"></span></a>
-                      <ul class="nav-second-level" aria-expanded="false">
-                          <li><a href="<?=site_url('admin/turfs')?>">Add Vendors</a></li>
-                          <li><a href="<?=site_url('admin/vendor')?>">Manage Vendors</a></li>
-                          <li><a href="<?=site_url('admin/turfs/blocked')?>">Blocked Vendors</a></li>
-                      </ul>
+                      <a href="<?=site_url('admin/vendor')?>"><i class="fa fa-users"></i> <span> Vendors </span></a>
                   </li>
                   <li>
                       <a href="#"><i class="fa fa-shopping-bag"></i> <span> Products </span> <span class="menu-arrow"></span></a>
