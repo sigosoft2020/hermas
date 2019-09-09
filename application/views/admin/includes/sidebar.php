@@ -73,7 +73,7 @@
                       <a href="#"><i class="fa fa-users"></i> <span> Vendors </span> <span class="menu-arrow"></span></a>
                       <ul class="nav-second-level" aria-expanded="false">
                           <li><a href="<?=site_url('admin/turfs')?>">Add Vendors</a></li>
-                          <li><a href="<?=site_url('admin/turfs/blocked')?>">Manage Vendors</a></li>
+                          <li><a href="<?=site_url('admin/vendor')?>">Manage Vendors</a></li>
                           <li><a href="<?=site_url('admin/turfs/blocked')?>">Blocked Vendors</a></li>
                       </ul>
                   </li>
