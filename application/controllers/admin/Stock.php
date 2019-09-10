@@ -41,10 +41,6 @@ class Stock extends CI_Controller {
 		echo json_encode($output);
 	}
 
-	public function add()
-	{
-		$this->load->view('admin/category/add');
-	}
 	public function edit($id)
 	{
 		$check = $this->Common->get_details('category',array('category_id' => $id));
@@ -138,6 +134,12 @@ class Stock extends CI_Controller {
 				redirect('admin/stock');
 			}		
         }			
+	}
+
+	public function history()
+	{  
+		$data['vendors'] = $this->Common->get_details('vendor_details',array('status'=>'Active'))->result();
+		$this->load->view('admin/stock/history',$data);
 	}
 
 	public function update()
