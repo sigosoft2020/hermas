@@ -43,11 +43,11 @@ class Vendor extends CI_Controller {
 		}
 
 		$output = array(
-			"draw"   => intval($_POST['draw']),
-			"recordsTotal" => $this->vendor->get_all_data(),
-			"recordsFiltered" => $this->vendor->get_filtered_data(),
-			"data" => $data
-		);
+						"draw"            => intval($_POST['draw']),
+						"recordsTotal"    => $this->vendor->get_all_data(),
+						"recordsFiltered" => $this->vendor->get_filtered_data(),
+						"data"            => $data
+					   );
 		echo json_encode($output);
 	}
 
@@ -66,113 +66,124 @@ class Vendor extends CI_Controller {
 			redirect('category');
 		}
 	}
-	public function addCategory()
+	public function addVendor()
 	{   
 		date_default_timezone_set('Asia/Kolkata');
         $timestamp = date('Y-m-d H:i:s');
 
-		$category = $this->security->xss_clean($this->input->post('name'));
-		$image    = $this->input->post('image');
-		$img      = substr($image, strpos($image, ",") + 1);
+		$vendor_name = $this->security->xss_clean($this->input->post('vendor_name'));
 
-		$cat_check = $this->Common->get_details('category',array('category_name'=>$category));
-		if($cat_check->num_rows()==0)
+		$vendor_check = $this->Common->get_details('vendor_details',array('vendor_name'=>$vendor_name));
+		if($vendor_check->num_rows()==0)
         {
-        	$url      = FCPATH.'uploads/category/';
-			$rand     = $category.date('Ymd').mt_rand(1001,9999);
-			$userpath = $url.$rand.'.png';
-			$path     = "uploads/category/".$rand.'.png';
-			file_put_contents($userpath,base64_decode($img));
-
 			$array = [
-						'category_name'  => $category,
-						'CategoryImage' => $path,
-						'Cstatus'        => 'Active',
-						'timestamp'      => $timestamp
+						'vendor_name'    => $vendor_name,
+						'status'         => 'Active'
 					];
-			if ($this->Common->insert('category',$array)) {
+			if ($this->Common->insert('vendor_details',$array)) {
 				$this->session->set_flashdata('alert_type', 'success');
 				$this->session->set_flashdata('alert_title', 'Success');
-				$this->session->set_flashdata('alert_message', 'New category added..!');
+				$this->session->set_flashdata('alert_message', 'New vendor added..!');
 
-				redirect('admin/category');
+				redirect('admin/vendor');
 			}
 			else {
 				$this->session->set_flashdata('alert_type', 'error');
 				$this->session->set_flashdata('alert_title', 'Failed');
-				$this->session->set_flashdata('alert_message', 'Failed to add category..!');
+				$this->session->set_flashdata('alert_message', 'Failed to add vendor..!');
 
-				redirect('admin/category/add');
+				redirect('admin/vendor');
 			}		
         }
         else
         {
     	  $this->session->set_flashdata('alert_type', 'error');
 		  $this->session->set_flashdata('alert_title', 'Failed');
-		  $this->session->set_flashdata('alert_message', 'Category already exists..!');
-          redirect('admin/category');
-        }	
-		
+		  $this->session->set_flashdata('alert_message', 'Vendor already exists..!');
+          redirect('admin/vendor');
+        }			
 	}
+
 	public function update()
 	{
-		$category_id = $this->input->post('category_id');
-		$category    = $this->security->xss_clean($this->input->post('name'));
-		$check       = $this->Common->get_details('category',array('category_name' => $category , 'category_id!=' => $category_id))->num_rows();
-		if ($check > 0) {
+		$vendor_id   = $this->input->post('vendor_id');
+		$vendor      = $this->security->xss_clean($this->input->post('vendor'));
+		$check       = $this->Common->get_details('vendor_details',array('vendor_name' => $vendor , 'vender_id!=' => $vendor_id))->num_rows();
+		if ($check > 0) 
+		{
 			$this->session->set_flashdata('alert_type', 'error');
 			$this->session->set_flashdata('alert_title', 'Failed');
-			$this->session->set_flashdata('alert_message', 'Failed to add category..!');
+			$this->session->set_flashdata('alert_message', 'Failed to add vendor..!');
 
-			redirect('admin/category/edit/'.$category_id);
+			redirect('admin/vendor');
 		}
-		else {
-			// Adding base64 file to server
-			$image  = $this->input->post('image');
-			$status = $this->input->post('status');
-			if ($image != '') {
-				$img = substr($image, strpos($image, ",") + 1);
-
-				$url      = FCPATH.'uploads/category/';
-				$rand     = $category.date('Ymd').mt_rand(1001,9999);
-				$userpath = $url.$rand.'.png';
-				$path     = "uploads/category/".$rand.'.png';
-				file_put_contents($userpath,base64_decode($img));
-
-				// Remove old image from the server
-				$old = $this->Common->get_details('category',array('category_id' => $category_id))->row()->CategoryImage;
-				$remove_path = FCPATH . $old;
-				unlink($remove_path);
-
-				$array = [
-					'category_name' => $category,
-					'CategoryImage' => $path,
-					'Cstatus'       => $status
-				];
-			}
-			else {
-				$array = [
-					'category_name' => $category,
-					'Cstatus'       => $status
-				];
-			}
-
-			if ($this->Common->update('category_id',$category_id,'category',$array)) {
+		else 
+		{
+			$array = [
+				       'vendor_name' => $vendor
+			         ];
+		
+			if ($this->Common->update('vender_id',$vendor_id,'vendor_details',$array)) {
 				$this->session->set_flashdata('alert_type', 'success');
 				$this->session->set_flashdata('alert_title', 'Success');
 				$this->session->set_flashdata('alert_message', 'Changes made successfully..!');
 
-				redirect('admin/category');
+				redirect('admin/vendor');
 			}
 			else {
 				$this->session->set_flashdata('alert_type', 'error');
 				$this->session->set_flashdata('alert_title', 'Failed');
-				$this->session->set_flashdata('alert_message', 'Failed to update category..!');
+				$this->session->set_flashdata('alert_message', 'Failed to edit vendor..!');
 
-				redirect('admin/amenities/edit/'.$category_id);
+				redirect('admin/vendor');
 			}
-		}
+	    }
 	}
+
+	public function disable($id)
+	{
+			$array = [
+				       'status' => 'Disabled'
+			         ];
+		
+			if ($this->Common->update('vender_id',$id,'vendor_details',$array)) {
+				$this->session->set_flashdata('alert_type', 'success');
+				$this->session->set_flashdata('alert_title', 'Success');
+				$this->session->set_flashdata('alert_message', 'Vendor blocked successfully..!');
+
+				redirect('admin/vendor');
+			}
+			else {
+				$this->session->set_flashdata('alert_type', 'error');
+				$this->session->set_flashdata('alert_title', 'Failed');
+				$this->session->set_flashdata('alert_message', 'Failed to block vendor..!');
+
+				redirect('admin/vendor');
+			}
+	}
+
+	public function enable($id)
+	{
+			$array = [
+				       'status' => 'Active'
+			         ];
+		
+			if ($this->Common->update('vender_id',$id,'vendor_details',$array)) {
+				$this->session->set_flashdata('alert_type', 'success');
+				$this->session->set_flashdata('alert_title', 'Success');
+				$this->session->set_flashdata('alert_message', 'Vendor activated successfully..!');
+
+				redirect('admin/vendor');
+			}
+			else {
+				$this->session->set_flashdata('alert_type', 'error');
+				$this->session->set_flashdata('alert_title', 'Failed');
+				$this->session->set_flashdata('alert_message', 'Failed to activate vendor..!');
+
+				redirect('admin/vendor');
+			}
+	}
+
 	public function delete($banner_id)
 	{
 		$check = $this->Common->get_details('sliders',array('slider_id' => $banner_id));
