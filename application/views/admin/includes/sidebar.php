@@ -83,7 +83,7 @@
                    <li>
                       <a href="#"><i class="fa fa-truck"></i> <span> Stock </span> <span class="menu-arrow"></span></a>
                       <ul class="nav-second-level" aria-expanded="false">
-                          <li><a href="<?=site_url('admin/turfs')?>">Add Stock</a></li>
+                          <li><a href="<?=site_url('admin/stock')?>">Add Stock</a></li>
                           <li><a href="<?=site_url('admin/turfs/blocked')?>">Stock History</a></li>
                       </ul>
                   </li>
