@@ -13,7 +13,7 @@
             <div class="row">
               <div class="col-12">
                 <div class="page-title-box">
-                  <h4 class="page-title float-left">Category</h4>
+                  <h4 class="page-title float-left">Products</h4>
                   <!-- <ol class="breadcrumb float-right">
                     <button type="button" class="btn btn-gradient btn-rounded waves-light waves-effect w-md">Add amenity</button>
                   </ol> -->
@@ -29,9 +29,13 @@
                   <table id="user_data" class="table table-bordered table-striped">
                     <thead>
                       <tr>
-                        <th width="50%">Categoty Name</th>
-                        <th width="30%">Category Image</th>
+                        <th width="10%">Image</th>
+                        <th width="30%">Name</th>
+                        <th width="10%">Quantity</th>
+                        <th width="10%">Price</th>
+                        <th width="10%">Featured</th>
                         <th width="10%">Status</th>
+                        <th width="10%">View</th>
                         <th width="10%">Edit</th>
                       </tr>
                     </thead>
@@ -56,7 +60,7 @@
         "serverSide":true,
         "order":[],
         "ajax":{
-          url:"<?=site_url('admin/stock/get_stock')?>",
+          url:"<?=site_url('admin/products/get')?>",
           type:"POST"
         },
         "columnDefs":[

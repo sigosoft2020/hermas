@@ -7,6 +7,7 @@ class Stock extends CI_Controller {
 			parent::__construct();
 			$this->load->helper('url');
 			$this->load->model('admin/M_stock','stock');
+			$this->load->model('admin/Stock_history','history');
 			$this->load->model('Common');
 			if (!admin()) {
 				redirect('app');
@@ -77,7 +78,8 @@ class Stock extends CI_Controller {
 					];
 			if ($this->Common->insert('stock_table',$array)) 
 			{   
-				$history = [
+				$history = [ 
+					         'product_id'         => $product_id,
                              'history_vendor_id'  => $vendor_id,
                              'history_invoice_no' => $invoice,
                              'history_old_stock'  => $current_stock,
@@ -110,6 +112,7 @@ class Stock extends CI_Controller {
 			if ($this->Common->update('product_id',$product_id,'stock_table',$array)) 
 			{   
 				$history = [
+					         'product_id'        => $product_id,
                              'history_vendor_id'  => $vendor_id,
                              'history_invoice_no' => $invoice,
                              'history_old_stock'  => $current_stock,
@@ -142,65 +145,37 @@ class Stock extends CI_Controller {
 		$this->load->view('admin/stock/history',$data);
 	}
 
-	public function update()
+	public function view()
 	{
-		$category_id = $this->input->post('category_id');
-		$category    = $this->security->xss_clean($this->input->post('name'));
-		$check       = $this->Common->get_details('category',array('category_name' => $category , 'category_id!=' => $category_id))->num_rows();
-		if ($check > 0) {
-			$this->session->set_flashdata('alert_type', 'error');
-			$this->session->set_flashdata('alert_title', 'Failed');
-			$this->session->set_flashdata('alert_message', 'Failed to add category..!');
-
-			redirect('admin/category/edit/'.$category_id);
-		}
-		else {
-			// Adding base64 file to server
-			$image  = $this->input->post('image');
-			$status = $this->input->post('status');
-			if ($image != '') {
-				$img = substr($image, strpos($image, ",") + 1);
-
-				$url      = FCPATH.'uploads/category/';
-				$rand     = $category.date('Ymd').mt_rand(1001,9999);
-				$userpath = $url.$rand.'.png';
-				$path     = "uploads/category/".$rand.'.png';
-				file_put_contents($userpath,base64_decode($img));
-
-				// Remove old image from the server
-				$old = $this->Common->get_details('category',array('category_id' => $category_id))->row()->CategoryImage;
-				$remove_path = FCPATH . $old;
-				unlink($remove_path);
-
-				$array = [
-					'category_name' => $category,
-					'CategoryImage' => $path,
-					'Cstatus'       => $status
-				];
-			}
-			else {
-				$array = [
-					'category_name' => $category,
-					'Cstatus'       => $status
-				];
-			}
-
-			if ($this->Common->update('category_id',$category_id,'category',$array)) {
-				$this->session->set_flashdata('alert_type', 'success');
-				$this->session->set_flashdata('alert_title', 'Success');
-				$this->session->set_flashdata('alert_message', 'Changes made successfully..!');
-
-				redirect('admin/category');
-			}
-			else {
-				$this->session->set_flashdata('alert_type', 'error');
-				$this->session->set_flashdata('alert_title', 'Failed');
-				$this->session->set_flashdata('alert_message', 'Failed to update category..!');
-
-				redirect('admin/amenities/edit/'.$category_id);
-			}
-		}
+      $this->load->view('admin/stock/view');
 	}
+
+	public function get_stock()
+	{   
+        $vendor_id  = $this->security->xss_clean($this->input->post('vendor_id'));
+
+		$result = $this->history->make_datatables($vendor_id);
+		$data = array();
+		foreach ($result as $res) 
+		{
+			$sub_array = array();
+			
+			$sub_array[] = $res->product_name;
+			$stock       = $this->stock->get_stock($res->product_id);
+			$sub_array[] = $stock;
+			$sub_array[] = '<button type="button" class="btn btn-link" style="font-size:20px;color:green" onclick="add(' . $res->product_id . ',' . $stock . ')"><i class="fa fa-plus"></i></button>';
+			$data[] = $sub_array;
+		}
+
+		$output = array(
+						"draw"            => intval($_POST['draw']),
+						"recordsTotal"    => $this->history->get_all_data($vendor_id),
+						"recordsFiltered" => $this->history->get_filtered_data($vendor_id),
+						"data"            => $data
+					  );
+		echo json_encode($output);
+	}
+
 	
 	public function getCategoryById()
 	{

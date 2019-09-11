@@ -14,7 +14,7 @@
             <div class="row">
               <div class="col-12">
                 <div class="page-title-box">
-                  <h4 class="page-title float-left">Add Category</h4>
+                  <h4 class="page-title float-left">Stock History</h4>
                   <div class="clearfix"></div>
                 </div>
               </div>
@@ -24,7 +24,7 @@
           <div class="row">
             <div class="col-12">
               <div class="card-box">
-                <form action="<?=site_url('admin/Category/addCategory')?>" method="post" id="add-form">
+                <form action="<?=site_url('admin/Stock/view')?>" method="post" id="add-form">
 
                    <div class="row">
                       <div class="col-md-4">
@@ -46,7 +46,7 @@
                       </div>
 
                       <div class="col-md-12 mt-4">
-                        <button type="submit" class="btn btn-success btn-rounded waves-light waves-effect w-md pull-right" id="submit-button" style="display:none;">Add</button>
+                        <button type="submit" class="btn btn-success btn-rounded waves-light waves-effect w-md pull-left" id="submit-button">Submit</button>
                       </div>
                   </div>
 
