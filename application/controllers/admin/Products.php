@@ -24,7 +24,7 @@ class Products extends CI_Controller {
 		{
 			$sub_array = array();
 			
-			$sub_array[] = '<img src="' . base_url() . $res->image . '" height="100px">';
+			$sub_array[] = '<img src="' . base_url() . $res->image . '" height="50px">';
 			$sub_array[] = $res->product_name;
 			$sub_array[] = $res->quantity;
 			$sub_array[] = $res->price;
@@ -53,126 +53,224 @@ class Products extends CI_Controller {
 	}
 
 	public function add()
-	{
-		$this->load->view('admin/category/add');
+	{   
+		$data['category']  = $this->Common->get_details('category',array('Cstatus'=>'Active'))->result();
+		$this->load->view('admin/products/add',$data);
 	}
 
 	public function edit($id)
 	{
-		$check = $this->Common->get_details('category',array('category_id' => $id));
-		if ($check->num_rows() > 0) {
-			$data['category'] = $check->row();
-			$this->load->view('admin/category/edit',$data);
+		$check = $this->Common->get_details('products',array('product_id' => $id));
+		if ($check->num_rows() > 0) 
+		{   
+			$data['category']  = $this->Common->get_details('category',array('Cstatus'=>'Active'))->result();
+			$data['product'] = $check->row();
+			$this->load->view('admin/products/edit',$data);
 		}
-		else {
-			redirect('category');
+		else 
+		{
+			redirect('admin/products');
 		}
 	}
 
-	public function addCategory()
+	public function addProduct()
 	{   
 		date_default_timezone_set('Asia/Kolkata');
         $timestamp = date('Y-m-d H:i:s');
 
-		$category = $this->security->xss_clean($this->input->post('name'));
-		$image    = $this->input->post('image');
-		$img      = substr($image, strpos($image, ",") + 1);
+		$product_name = $this->security->xss_clean($this->input->post('name'));
+		$category_id  = $this->security->xss_clean($this->input->post('category_id'));
+		$quantity     = $this->security->xss_clean($this->input->post('quantity'));
+		$price        = $this->security->xss_clean($this->input->post('price'));
+		$b2b_percentage = $this->security->xss_clean($this->input->post('b2b_percentage'));
+		$b2b_price    = $this->security->xss_clean($this->input->post('b2b_price'));
+		$description  = $this->security->xss_clean($this->input->post('description'));
+		$indication   = $this->security->xss_clean($this->input->post('indication'));
+       
+		if($b2b_price=='')
+		{
+		  $b2b = $price-($price*$b2b_percentage/100);
+		}
+		else
+		{
+		  $b2b = $b2b_price;
+		}
 
-		$cat_check = $this->Common->get_details('category',array('category_name'=>$category));
-		if($cat_check->num_rows()==0)
-        {
-        	$url      = FCPATH.'uploads/category/';
-			$rand     = $category.date('Ymd').mt_rand(1001,9999);
-			$userpath = $url.$rand.'.png';
-			$path     = "uploads/category/".$rand.'.png';
-			file_put_contents($userpath,base64_decode($img));
+		$pr_check = $this->Common->get_details('products',array('product_name'=>$product_name,'category_id'=>$category_id,'quantity'=>$quantity));
+		if($pr_check->num_rows()==0)
+        {	
+            $file     = $_FILES['image'];	       	
+			$tar      = "uploads/products/";
+			$rand     = date('Ymd').mt_rand(1001,9999);
+			$tar_file = $tar . $rand . basename($file['name']);
+			move_uploaded_file($file['tmp_name'], $tar_file);
 
 			$array = [
-						'category_name'  => $category,
-						'CategoryImage' => $path,
-						'Cstatus'        => 'Active',
-						'timestamp'      => $timestamp
+						'product_name'        => $product_name,
+						'product_description' => $description,
+						'image'               => $tar_file,
+						'category_id'         => $category_id,
+						'quantity'            => $quantity,
+						'price'               => $price,
+						'featured'            => 'Product',
+						'indication'          => $indication,
+						'b2b_percentage'      => $b2b_percentage,
+						'b2b_price'           => $b2b,      
+						'status'              => 'Active',
+						'timestamp'           => $timestamp
 					];
-			if ($this->Common->insert('category',$array)) {
+			if ($product_id=$this->Common->insert('products',$array)) 
+			{
+				$stock_array = [
+                                  'product_id' => $product_id,
+                                  'stock'      => '0'
+				               ];
+                 $this->Common->insert('stock_table',$stock_array);
+
+                $file1 = $_FILES['file-1'];
+				$file2 = $_FILES['file-2'];
+				$file3 = $_FILES['file-3'];
+				
+                if ($file1['size'] > 0) 
+                 {
+                 	$tar       = "uploads/product_images/";
+					$rand      = date('Ymd').mt_rand(1001,9999);
+					$tar_file1 = $tar . $rand . basename($file1['name']);
+					move_uploaded_file($file1['tmp_name'], $tar_file1);
+                 	$image_array = [
+                 		            'ProductID' => $product_id,
+                 		            'Image'     => $tar_file1,
+                 		            'timestamp' => $timestamp
+                 	               ];
+                 	$this->Common->insert('product_images',$image_array);               
+                 }
+                 
+                 if ($file2['size'] > 0) 
+                 {
+                 	$tar       = "uploads/product_images/";
+					$rand      = date('Ymd').mt_rand(1001,9999);
+					$tar_file2 = $tar . $rand . basename($file2['name']);
+					move_uploaded_file($file2['tmp_name'], $tar_file2);
+                 	$image_array = [
+                 		            'ProductID' => $product_id,
+                 		            'Image'     => $tar_file2,
+                 		            'timestamp' => $timestamp
+                 	               ];
+                 	$this->Common->insert('product_images',$image_array);               
+                 }
+                 
+                 if ($file3['size'] > 0) 
+                 {
+                 	$tar      = "uploads/product_images/";
+					$rand     = date('Ymd').mt_rand(1001,9999);
+					$tar_file3 = $tar . $rand . basename($file3['name']);
+					move_uploaded_file($file3['tmp_name'], $tar_file3);
+                 	$image_array = [
+                 		            'ProductID' => $product_id,
+                 		            'Image'     => $tar_file3,
+                 		            'timestamp' => $timestamp
+                 	               ];
+                 	$this->Common->insert('product_images',$image_array);               
+                 }
+
 				$this->session->set_flashdata('alert_type', 'success');
 				$this->session->set_flashdata('alert_title', 'Success');
-				$this->session->set_flashdata('alert_message', 'New category added..!');
+				$this->session->set_flashdata('alert_message', 'New product added..!');
 
-				redirect('admin/category');
+				redirect('admin/products');
 			}
-			else {
+			else 
+			{
 				$this->session->set_flashdata('alert_type', 'error');
 				$this->session->set_flashdata('alert_title', 'Failed');
-				$this->session->set_flashdata('alert_message', 'Failed to add category..!');
+				$this->session->set_flashdata('alert_message', 'Failed to add product..!');
 
-				redirect('admin/category/add');
+				redirect('admin/products/add');
 			}		
         }
         else
         {
     	  $this->session->set_flashdata('alert_type', 'error');
 		  $this->session->set_flashdata('alert_title', 'Failed');
-		  $this->session->set_flashdata('alert_message', 'Category already exists..!');
-          redirect('admin/category');
+		  $this->session->set_flashdata('alert_message', 'Product already exists..!');
+          redirect('admin/products');
         }			
 	}
 
 	public function update()
 	{
-		$category_id = $this->input->post('category_id');
-		$category    = $this->security->xss_clean($this->input->post('name'));
-		$check       = $this->Common->get_details('category',array('category_name' => $category , 'category_id!=' => $category_id))->num_rows();
+		$product_id   = $this->security->xss_clean($this->input->post('product_id'));
+        $product_name = $this->security->xss_clean($this->input->post('name'));
+		$category_id  = $this->security->xss_clean($this->input->post('category_id'));
+		$quantity     = $this->security->xss_clean($this->input->post('quantity'));
+		$price        = $this->security->xss_clean($this->input->post('price'));
+		$b2b_percentage = $this->security->xss_clean($this->input->post('b2b_percentage'));
+		$b2b_price    = $this->security->xss_clean($this->input->post('b2b_price'));
+		$description  = $this->security->xss_clean($this->input->post('description'));
+		$indication   = $this->security->xss_clean($this->input->post('indication'));
+		$status       = $this->security->xss_clean($this->input->post('status'));
+
+		$check       = $this->Common->get_details('products',array('product_name'=>$product_name,'category_id'=>$category_id,'quantity'=>$quantity, 'product_id!=' => $product_id))->num_rows();
 		if ($check > 0) {
 			$this->session->set_flashdata('alert_type', 'error');
 			$this->session->set_flashdata('alert_title', 'Failed');
-			$this->session->set_flashdata('alert_message', 'Failed to add category..!');
+			$this->session->set_flashdata('alert_message', 'Failed to add products..!');
 
-			redirect('admin/category/edit/'.$category_id);
+			redirect('admin/products/edit/'.$product_id);
 		}
 		else {
-			// Adding base64 file to server
-			$image  = $this->input->post('image');
-			$status = $this->input->post('status');
-			if ($image != '') {
-				$img = substr($image, strpos($image, ",") + 1);
+				$file     = $_FILES['image'];	       	
+                 
+				if ($file['name'] != '') 
+				{
+					$tar      = "uploads/products/";
+					$rand     = date('Ymd').mt_rand(1001,9999);
+					$tar_file = $tar . $rand . basename($file['name']);
+					move_uploaded_file($file['tmp_name'], $tar_file);
+                    
+                    $array = [ 
+		                        'product_name'        => $product_name,
+								'product_description' => $description,
+								'image'               => $tar_file,
+								'category_id'         => $category_id,
+								'quantity'            => $quantity,
+								'price'               => $price,
+								'indication'          => $indication,
+								'b2b_percentage'      => $b2b_percentage,
+								'b2b_price'           => $b2b_price,
+								'status'              => $status
+							];	
+				}
+				else 
+				{
+				 $array = [ 
+	                        'product_name'        => $product_name,
+							'product_description' => $description,
+							'category_id'         => $category_id,
+							'quantity'            => $quantity,
+							'price'               => $price,
+							'indication'          => $indication,
+							'b2b_percentage'      => $b2b_percentage,
+							'b2b_price'           => $b2b_price,      
+							'status'              => $status
+						];	
+				}
 
-				$url      = FCPATH.'uploads/category/';
-				$rand     = $category.date('Ymd').mt_rand(1001,9999);
-				$userpath = $url.$rand.'.png';
-				$path     = "uploads/category/".$rand.'.png';
-				file_put_contents($userpath,base64_decode($img));
-
-				// Remove old image from the server
-				$old = $this->Common->get_details('category',array('category_id' => $category_id))->row()->CategoryImage;
-				$remove_path = FCPATH . $old;
-				unlink($remove_path);
-
-				$array = [
-					'category_name' => $category,
-					'CategoryImage' => $path,
-					'Cstatus'       => $status
-				];
-			}
-			else {
-				$array = [
-					'category_name' => $category,
-					'Cstatus'       => $status
-				];
-			}
-
-			if ($this->Common->update('category_id',$category_id,'category',$array)) {
+			if ($this->Common->update('product_id',$product_id,'products',$array)) 
+			{
 				$this->session->set_flashdata('alert_type', 'success');
 				$this->session->set_flashdata('alert_title', 'Success');
 				$this->session->set_flashdata('alert_message', 'Changes made successfully..!');
 
-				redirect('admin/category');
+				redirect('admin/products');
 			}
-			else {
+			else 
+			{
 				$this->session->set_flashdata('alert_type', 'error');
 				$this->session->set_flashdata('alert_title', 'Failed');
-				$this->session->set_flashdata('alert_message', 'Failed to update category..!');
+				$this->session->set_flashdata('alert_message', 'Failed to update product..!');
 
-				redirect('admin/amenities/edit/'.$category_id);
+				redirect('admin/products/edit/'.$product_id);
 			}
 		}
 	}

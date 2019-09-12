@@ -21,7 +21,7 @@
           </div>
 
           <div class="row">
-            <div class="col-9">
+            <div class="col-8">
                 <div class="card-box table-responsive">
                   <table id="user_data" class="table">
                     <tbody>
@@ -55,9 +55,9 @@
                 </div>
             </div>
             
-            <div class="col-md-3">
+            <div class="col-md-4">
                <div id="current-image">
-                  <img src="<?=base_url() . $product->image?>" height="150px" width="150px">
+                  <img src="<?=base_url() . $product->image?>" height="250px" width="300px">
                 </div>
             </div>
           </div>
