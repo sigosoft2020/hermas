@@ -95,11 +95,7 @@
                       </ul>
                   </li>
                   <li>
-                      <a href="#"><i class="fa fa-user"></i> <span> Users </span> <span class="menu-arrow"></span></a>
-                      <ul class="nav-second-level" aria-expanded="false">
-                          <li><a href="<?=site_url('admin/turfs')?>">Manage Users</a></li>
-                          <li><a href="<?=site_url('admin/Users/blocked')?>">Blocked Users</a></li>
-                      </ul>
+                      <a href="<?=site_url('admin/users')?>"><i class="fa fa-user"></i> <span> Users </span></a>
                   </li>
                   <li>
                       <a href="#"><i class="fa fa-image"></i> <span> Banner Images </span> <span class="menu-arrow"></span></a>

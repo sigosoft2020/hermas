@@ -184,33 +184,6 @@ class Vendor extends CI_Controller {
 			}
 	}
 
-	public function delete($banner_id)
-	{
-		$check = $this->Common->get_details('sliders',array('slider_id' => $banner_id));
-		if ($check->num_rows() > 0) {
-			$banner = $check->row();
-			if ($this->Common->delete('sliders',array('slider_id' => $banner_id))) {
-				$remove_path = FCPATH . $banner->image;
-				unlink($remove_path);
-
-				$this->session->set_flashdata('alert_type', 'success');
-				$this->session->set_flashdata('alert_title', 'Success');
-				$this->session->set_flashdata('alert_message', 'Banner deleted successfully..!');
-			}
-			else {
-				$this->session->set_flashdata('alert_type', 'error');
-				$this->session->set_flashdata('alert_title', 'Failed');
-				$this->session->set_flashdata('alert_message', 'Failed to remove banner..!');
-			}
-		}
-		else {
-			$this->session->set_flashdata('alert_type', 'error');
-			$this->session->set_flashdata('alert_title', 'Failed');
-			$this->session->set_flashdata('alert_message', 'Failed to remove banner..!');
-		}
-		redirect('admin/banners');
-	}
-
 
 	public function getVendorById()
 	{

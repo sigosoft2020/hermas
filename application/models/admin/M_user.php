@@ -6,33 +6,44 @@ class M_user extends CI_Model
   {
     $this->load->database();
   }
-	function getDateId($date)
+  function make_query()
   {
-    $this->db->select('*');
-    $this->db->from('date');
-    $this->db->where('date',$date);
-    return $this->db->get();
-  }
-  function getEntry($array)
-  {
-    $this->db->select('*');
-    $this->db->from('entries');
-    $this->db->where($array);
-    $res = $this->db->get();
-    if ($res->num_rows() == 0) {
-      return false;
+    $table = "users";
+    $select_column = array("user_id","name","phone","email","Status");
+    $order_column = array(null,"name",null,null);
+
+    $this->db->select($select_column);
+    $this->db->from($table);
+    if (isset($_POST["search"]["value"])) {
+      $this->db->like("name",$_POST["search"]["value"]);
+    }
+    if (isset($_POST["order"])) {
+      $this->db->order_by($_POST['order']['0']['column'],$_POST['order']['0']['dir']);
     }
     else {
-      return $res->row()->entry_id;
+      $this->db->order_by("user_id","desc");
     }
   }
-  function getAllEntries($start,$date)
+  function make_datatables()
   {
-    $this->db->select('*');
-    $this->db->from('entries');
-    $this->db->where('date >=',$start);
-    $this->db->where('date <',$date);
-    return $this->db->get()->result();
+    $this->make_query();
+    if ($_POST["length"] != -1) {
+      $this->db->limit($_POST["length"],$_POST["start"]);
+    }
+    $query = $this->db->get();
+    return $query->result();
+  }
+  function get_filtered_data()
+  {
+    $this->make_query();
+    $query = $this->db->get();
+    return $query->num_rows();
+  }
+  function get_all_data()
+  {
+    $this->db->select("*");
+    $this->db->from("users");
+    return $this->db->count_all_results();
   }
 }
 
