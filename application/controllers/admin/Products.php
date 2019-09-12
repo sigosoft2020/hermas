@@ -227,5 +227,22 @@ class Products extends CI_Controller {
 			redirect('admin/products');
 		}
 	}
+
+	public function view($id)
+	{
+	  $check = $this->Common->get_details('products',array('product_id'=>$id));
+	  if($check->num_rows()>0)
+	  {
+	  	$product = $check->row();
+	  	$product->categoty = $this->Common->get_details('category',array('category_id'=>$product->category_id))->row()->category_name;
+	  }	
+	  else
+	  {
+	  	$product = '';
+	  }
+
+	  $data['product'] = $product;
+	  $this->load->view('admin/products/details',$data);
+ 	}
 }
 ?>
