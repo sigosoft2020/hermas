@@ -30,15 +30,16 @@ class Products extends CI_Controller {
 			$sub_array[] = $res->price;
 			if($res->featured=='Featured')
 			  {
-               $star = '<a class="btn btn-link" style="font-size:16px;color:blue" href="' . site_url('admin/products/featured/'.$res->product_id) . '"><i class="fa fa-star"></i></a>'; 
+               $star = '<a class="btn btn-link" style="font-size:10px;color:green" href="' . site_url('admin/products/featured_remove/'.$res->product_id) . '"><i class="fa fa-star fa-2x"></i></a>'; 
 			  }	
 			 else
 			 {
-              $star ='<a class="btn btn-link" style="font-size:16px;color:blue" href="' . site_url('admin/products/featured/'.$res->product_id) . '"><i class="fa fa-star"></i></a>';
+              $star ='<a class="btn btn-link" style="font-size:10px;color:green" href="' . site_url('admin/products/featured/'.$res->product_id) . '"><i class="fa fa-star-o fa-2x"></i></a>';
 			 } 
 			$sub_array[] = $star;
 			$sub_array[] = $res->status;
-			$sub_array[] = '<a class="btn btn-link" style="font-size:16px;color:blue" href="' . site_url('admin/products/edit/'.$res->product_id) . '"><i class="fa fa-pencil"></i></a>';
+			$sub_array[] = '<a class="btn btn-link" style="font-size:17px;color:blue" href="' . site_url('admin/products/view/'.$res->product_id) . '"><i class="fa fa-eye"></i></a>';
+			$sub_array[] = '<a class="btn btn-link" style="font-size:17px;color:blue" href="' . site_url('admin/products/edit/'.$res->product_id) . '"><i class="fa fa-pencil"></i></a>';
 			$data[] = $sub_array;
 		}
 
@@ -181,6 +182,50 @@ class Products extends CI_Controller {
 		$id = $_POST['id'];
 		$data = $this->Common->get_details('category',array('category_id' => $id))->row();
 		print_r(json_encode($data));
+	}
+
+	public function featured($id)
+	{
+		$array = [
+			       'featured' => 'Featured'
+		         ];
+	
+		if ($this->Common->update('product_id',$id,'products',$array)) {
+			$this->session->set_flashdata('alert_type', 'success');
+			$this->session->set_flashdata('alert_title', 'Success');
+			$this->session->set_flashdata('alert_message', 'Product added to featured successfully..!');
+
+			redirect('admin/products');
+		}
+		else {
+			$this->session->set_flashdata('alert_type', 'error');
+			$this->session->set_flashdata('alert_title', 'Failed');
+			$this->session->set_flashdata('alert_message', 'Failed to add featured..!');
+
+			redirect('admin/products');
+		}
+	}
+
+	public function featured_remove($id)
+	{
+		$array = [
+			       'featured' => 'Product'
+		         ];
+	
+		if ($this->Common->update('product_id',$id,'products',$array)) {
+			$this->session->set_flashdata('alert_type', 'success');
+			$this->session->set_flashdata('alert_title', 'Success');
+			$this->session->set_flashdata('alert_message', 'Product removed from featured successfully..!');
+
+			redirect('admin/products');
+		}
+		else {
+			$this->session->set_flashdata('alert_type', 'error');
+			$this->session->set_flashdata('alert_title', 'Failed');
+			$this->session->set_flashdata('alert_message', 'Failed to remove from featured..!');
+
+			redirect('admin/products');
+		}
 	}
 }
 ?>

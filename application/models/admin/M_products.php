@@ -6,7 +6,8 @@ class M_products extends CI_Model
   {
     $this->load->database();
   }
-  function make_query(){
+  function make_query()
+  {
     $table = "products";
     $select_column = array("product_id","product_name","image","status","quantity","price","featured");
     $order_column = array(null,"product_name",null,null);

@@ -75,9 +75,8 @@
                   <li>
                       <a href="#"><i class="fa fa-shopping-bag"></i> <span> Products </span> <span class="menu-arrow"></span></a>
                       <ul class="nav-second-level" aria-expanded="false">
-                          <li><a href="<?=site_url('admin/turfs')?>">Add Products</a></li>
-                          <li><a href="<?=site_url('admin/turfs/blocked')?>">Manage Products</a></li>
-                          <li><a href="<?=site_url('admin/turfs/blocked')?>">Blocked Products</a></li>
+                          <li><a href="<?=site_url('admin/products/add')?>">Add Products</a></li>
+                          <li><a href="<?=site_url('admin/products')?>">Manage Products</a></li>
                       </ul>
                    </li>
                    <li>
