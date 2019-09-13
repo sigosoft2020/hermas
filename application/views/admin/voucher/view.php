@@ -64,7 +64,7 @@
                              <div class="form-group m-b-25">
                                  <div class="col-12">
                                      <label for="select">Voucher name</label>
-                                     <input type="text" class="form-control" name="voucher_name" id="voucher_name" required>
+                                     <input type="text" class="form-control" name="voucher_name" required>
                                  </div>
                              </div>
 
@@ -137,30 +137,86 @@
          </div>
 
 
-     <div id="edit-vendor" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="custom-width-modalLabel" aria-hidden="true" style="display: none;">
+     <div id="edit-voucher" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="custom-width-modalLabel" aria-hidden="true" style="display: none;">
           <div class="modal-dialog">
               <div class="modal-content">
 
                   <div class="modal-body">
                       <h2 class="text-uppercase text-center m-b-30">
-                          <span><h4>Edit Vendor</h4></span>
+                          <span><h4>Edit Voucher</h4></span>
                       </h2>
-                      <form class="form-horizontal" action="<?=site_url('admin/vendor/update')?>" method="post">
-                           <input type="hidden" name="vendor_id" id="vendor_id" class="form-control">
-                          <div class="form-group m-b-25">
-                              <div class="col-12">
-                                  <label for="select">Vendor Name</label>
-                                  <input type="text" name="vendor" id="vendor" class="form-control" required>
-                              </div>
+                    <form class="form-horizontal" action="<?=site_url('admin/voucher/update')?>" method="post" onsubmit="return finalize()">
+                       
+                       <input type="hidden" class="form-control" name="voucher_id" id="voucher_id">      
+                       <div class="form-group m-b-25">
+                           <div class="col-12">
+                               <label for="select">Voucher name</label>
+                               <input type="text" class="form-control" name="voucher_name" id="voucher_name" required>
+                           </div>
+                       </div>
+
+                       <div class="form-group m-b-25">
+                           <div class="col-12">
+                               <label for="select">Voucher code</label>
+                               <input type="text" class="form-control" name="code" id="voucher_code" required readonly>
+                           </div>
+                       </div>
+
+                       <div class="form-group m-b-25">
+                           <div class="col-12">
+                               <label for="select">Amount</label><br>
+                               <input type="number" min="0" id="amount" class="form-control" name="amount" placeholder="Amount" required>
+                           </div>
+                       </div>
+
+                       <div class="form-group m-b-25">
+                           <div class="col-12">
+                               <label for="select">Date From</label>
+                               <input type="date" class="form-control" id="from_date" name="date_from" placeholder="" required>
+                           </div>
+                       </div>
+
+                       <div class="form-group m-b-25">
+                          <div class="col-12">
+                              <label for="select">End date</label>
+                              <input type="date" class="form-control" name="end_date" id="last_date">
                           </div>
-                        
-                          <div class="form-group account-btn text-center m-t-10">
-                              <div class="col-12">
-                                  <button type="reset" class="btn btn-primary btn-rounded waves-light waves-effect w-md " data-dismiss="modal">Back</button>
-                                  <button class="btn btn-success btn-rounded waves-light waves-effect w-md " type="submit">Update</button>
-                              </div>
-                          </div>
-                      </form>
+                       </div>
+
+                       <div class="form-group m-b-25">
+                           <div class="col-12">
+                               <label for="select">Time from</label>
+                               <input type="time" class="form-control" id="time_start" name="time_from" placeholder="" required>
+                           </div>
+                       </div>
+                       
+                      <div class="form-group m-b-25">
+                           <div class="col-12">
+                               <label for="select">Time to</label>
+                               <input type="time" class="form-control" id="last_time" name="time_to" placeholder="" required>
+                           </div>
+                       </div>
+                       
+                       <div class="form-group m-b-25">
+                           <div class="col-12">
+                               <label for="select">Minimun Cart Value</label>
+                               <input type="number" min="0" class="form-control" name="cart_value" id="cart_value" placeholder="Minimun cart value" required>
+                           </div>
+                       </div>
+
+                      <div class="form-group m-b-25">
+                        <div class="col-12">
+                            <p id="error-message" style="color:red;"></p>
+                        </div>
+                      </div>
+                       
+                       <div class="form-group account-btn text-center m-t-10">
+                           <div class="col-12">
+                               <button type="reset" class="btn w-lg btn-rounded btn-light waves-effect m-l-5" data-dismiss="modal">Back</button>
+                               <button class="btn w-lg btn-rounded btn-primary waves-effect waves-light" type="submit">Add</button>
+                           </div>
+                       </div>
+                   </form>
                  </div>
               </div><!-- /.modal-content -->
           </div><!-- /.modal-dialog -->
@@ -192,7 +248,7 @@
   <script>
     function del()
     {
-      if (confirm('Are you sure to delete this banner ?')) {
+      if (confirm('Are you sure to delete this voucher ?')) {
         return true;
       }
       else {
@@ -202,16 +258,23 @@
 
     function edit(id)
     {
-      $('#vendor_id').val(id);
+      $('#voucher_id').val(id);
       // alert(id);
       $.ajax({
           method: "POST",
-          url: "<?php echo site_url('admin/vendor/getVendorById');?>",
+          url: "<?php echo site_url('admin/voucher/getVoucherById');?>",
           dataType : "json",
           data : { id : id },
           success : function( data ){
-            $('#vendor').val(data.vendor_name);
-            $('#edit-vendor').modal('show');
+            $('#voucher_name').val(data.voucher_name);
+            $('#voucher_code').val(data.voucher_code);
+            $('#amount').val(data.amount);
+            $('#from_date').val(data.valid_from);
+            $('#last_date').val(data.valid_to);
+            $('#time_start').val(data.time);
+            $('#last_time').val(data.time_to);
+            $('#cart_value').val(data.minimum_cart_value);
+            $('#edit-voucher').modal('show');
             // alert(data);
           }
         });

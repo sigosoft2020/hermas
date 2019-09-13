@@ -108,95 +108,78 @@ class Voucher extends CI_Controller {
 				$this->session->set_flashdata('alert_message', 'Failed to add voucher..!');
 
 				redirect('admin/voucher');
-			}		
-	
+			}			
 	}
 
 	public function update()
 	{
-		$vendor_id   = $this->input->post('vendor_id');
-		$vendor      = $this->security->xss_clean($this->input->post('vendor'));
-		$check       = $this->Common->get_details('vendor_details',array('vendor_name' => $vendor , 'vender_id!=' => $vendor_id))->num_rows();
-		if ($check > 0) 
-		{
-			$this->session->set_flashdata('alert_type', 'error');
-			$this->session->set_flashdata('alert_title', 'Failed');
-			$this->session->set_flashdata('alert_message', 'Failed to add vendor..!');
-
-			redirect('admin/vendor');
-		}
-		else 
+		$voucher_id   = $this->security->xss_clean($this->input->post('voucher_id'));
+		$voucher_name = $this->security->xss_clean($this->input->post('voucher_name'));
+        $code         = $this->security->xss_clean($this->input->post('code'));
+        $amount       = $this->security->xss_clean($this->input->post('amount'));
+        $date_from    = $this->security->xss_clean($this->input->post('date_from'));
+        $end_date     = $this->security->xss_clean($this->input->post('end_date'));
+        $time_from    = $this->security->xss_clean($this->input->post('time_from'));
+        $time_to      = $this->security->xss_clean($this->input->post('time_to'));
+        $cart_value   = $this->security->xss_clean($this->input->post('cart_value'));
+		
 		{
 			$array = [
-				       'vendor_name' => $vendor
-			         ];
+						'voucher_name'    => $voucher_name,
+						'amount'          => $amount,
+						'valid_from'      => $date_from,
+						'valid_to'        => $end_date,
+						'time'            => $time,
+						'time_to'         => $timeto,
+						'minimum_cart_value' => $cart_value,
+						'str_time_from'   => $t1,
+						'str_time_to'     => $t2
+					];
 		
-			if ($this->Common->update('vender_id',$vendor_id,'vendor_details',$array)) {
+			if ($this->Common->update('voucher_id',$voucher_id,'voucher',$array)) {
 				$this->session->set_flashdata('alert_type', 'success');
 				$this->session->set_flashdata('alert_title', 'Success');
 				$this->session->set_flashdata('alert_message', 'Changes made successfully..!');
 
-				redirect('admin/vendor');
+				redirect('admin/voucher');
 			}
 			else {
 				$this->session->set_flashdata('alert_type', 'error');
 				$this->session->set_flashdata('alert_title', 'Failed');
-				$this->session->set_flashdata('alert_message', 'Failed to edit vendor..!');
+				$this->session->set_flashdata('alert_message', 'Failed to edit voucher..!');
 
-				redirect('admin/vendor');
+				redirect('admin/voucher');
 			}
 	    }
 	}
 
-	public function disable($id)
+	public function delete($id)
 	{
 			$array = [
-				       'status' => 'Disabled'
+				       'status' => 'Blocked'
 			         ];
 		
-			if ($this->Common->update('vender_id',$id,'vendor_details',$array)) {
+			if ($this->Common->update('voucher_id',$id,'voucher',$array)) {
 				$this->session->set_flashdata('alert_type', 'success');
 				$this->session->set_flashdata('alert_title', 'Success');
-				$this->session->set_flashdata('alert_message', 'Vendor blocked successfully..!');
+				$this->session->set_flashdata('alert_message', 'Voucher deleted successfully..!');
 
-				redirect('admin/vendor');
+				redirect('admin/voucher');
 			}
 			else {
 				$this->session->set_flashdata('alert_type', 'error');
 				$this->session->set_flashdata('alert_title', 'Failed');
-				$this->session->set_flashdata('alert_message', 'Failed to block vendor..!');
+				$this->session->set_flashdata('alert_message', 'Failed to delete voucher..!');
 
-				redirect('admin/vendor');
+				redirect('admin/voucher');
 			}
 	}
 
-	public function enable($id)
-	{
-			$array = [
-				       'status' => 'Active'
-			         ];
-		
-			if ($this->Common->update('vender_id',$id,'vendor_details',$array)) {
-				$this->session->set_flashdata('alert_type', 'success');
-				$this->session->set_flashdata('alert_title', 'Success');
-				$this->session->set_flashdata('alert_message', 'Vendor activated successfully..!');
-
-				redirect('admin/vendor');
-			}
-			else {
-				$this->session->set_flashdata('alert_type', 'error');
-				$this->session->set_flashdata('alert_title', 'Failed');
-				$this->session->set_flashdata('alert_message', 'Failed to activate vendor..!');
-
-				redirect('admin/vendor');
-			}
-	}
-
-
-	public function getVendorById()
+	
+	public function getVoucherById()
 	{
 		$id = $_POST['id'];
-		$data = $this->Common->get_details('vendor_details',array('vender_id' => $id))->row();
+		$data = $this->Common->get_details('voucher',array('voucher_id' => $id))->row();
 		print_r(json_encode($data));
 	}
 }
