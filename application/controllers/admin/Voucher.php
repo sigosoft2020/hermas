@@ -62,39 +62,52 @@ class Voucher extends CI_Controller {
 			redirect('category');
 		}
 	}
-	public function addVendor()
+	public function addVoucher()
 	{   
 		date_default_timezone_set('Asia/Kolkata');
         $timestamp = date('Y-m-d H:i:s');
 
 		$voucher_name = $this->security->xss_clean($this->input->post('voucher_name'));
-        $code = $this->security->xss_clean($this->input->post('code'));
-        $amount = $this->security->xss_clean($this->input->post('amount'));
-        $date_from = $this->security->xss_clean($this->input->post('date_from'));
-        $end_date = $this->security->xss_clean($this->input->post('end_date'));
-        $time_from = $this->security->xss_clean($this->input->post('time_from'));
-        $time_to = $this->security->xss_clean($this->input->post('time_to'));
-        $cart_value = $this->security->xss_clean($this->input->post('cart_value'));
+        $code         = $this->security->xss_clean($this->input->post('code'));
+        $amount       = $this->security->xss_clean($this->input->post('amount'));
+        $date_from    = $this->security->xss_clean($this->input->post('date_from'));
+        $end_date     = $this->security->xss_clean($this->input->post('end_date'));
+        $time_from    = $this->security->xss_clean($this->input->post('time_from'));
+        $time_to      = $this->security->xss_clean($this->input->post('time_to'));
+        $cart_value   = $this->security->xss_clean($this->input->post('cart_value'));
+
+        $time   = date("H:i:s",strtotime($time_from));
+		$timeto = date("H:i:s",strtotime($time_to));
+
+		$t1=strtotime("$date_from $time_from");
+		$t2=strtotime("$end_date $time_to");
 
 			$array = [
-						'voucher_name'    => $vendor_name,
-						'voucher_code'
-						''
-						'status'         => 'Active'
+						'voucher_name'    => $voucher_name,
+						'voucher_code'    => $code,
+						'amount'          => $amount,
+						'valid_from'      => $date_from,
+						'valid_to'        => $end_date,
+						'time'            => $time,
+						'time_to'         => $timeto,
+						'minimum_cart_value' => $cart_value,
+						'str_time_from'   => $t1,
+						'str_time_to'     => $t2,
+						'status'          => 'Active'
 					];
-			if ($this->Common->insert('vendor_details',$array)) {
+			if ($this->Common->insert('voucher',$array)) {
 				$this->session->set_flashdata('alert_type', 'success');
 				$this->session->set_flashdata('alert_title', 'Success');
-				$this->session->set_flashdata('alert_message', 'New vendor added..!');
+				$this->session->set_flashdata('alert_message', 'New voucher added..!');
 
-				redirect('admin/vendor');
+				redirect('admin/voucher');
 			}
 			else {
 				$this->session->set_flashdata('alert_type', 'error');
 				$this->session->set_flashdata('alert_title', 'Failed');
-				$this->session->set_flashdata('alert_message', 'Failed to add vendor..!');
+				$this->session->set_flashdata('alert_message', 'Failed to add voucher..!');
 
-				redirect('admin/vendor');
+				redirect('admin/voucher');
 			}		
 	
 	}
