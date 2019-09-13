@@ -110,11 +110,7 @@
                   </li>
 
                   <li>
-                      <a href="#"><i class="fa fa-gift"></i> <span> Voucher </span> <span class="menu-arrow"></span></a>
-                      <ul class="nav-second-level" aria-expanded="false">
-                          <li><a href="<?=site_url('admin/owners')?>">Add Voucher</a></li>
-                          <li><a href="<?=site_url('admin/owners/add')?>">Manage Voucher</a></li>
-                      </ul>
+                      <a href="<?=site_url('admin/voucher')?>"><i class="fa fa-gift"></i> <span> Voucher </span></a>
                   </li>
 
                   <li>
