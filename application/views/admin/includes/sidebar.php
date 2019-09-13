@@ -124,8 +124,8 @@
                   <li>
                       <a href="#"><i class="fa fa-bell"></i> <span> Wholesaler Request </span> <span class="menu-arrow"></span></a>
                       <ul class="nav-second-level" aria-expanded="false">
-                          <li><a href="<?=site_url('admin/reports/booking')?>"> Wholesaler Requests</a></li>
-                          <li><a href="<?=site_url('admin/reports/payment')?>">Manage Wholesaler</a></li>
+                          <li><a href="<?=site_url('admin/wholesaler/request')?>"> Wholesaler Requests</a></li>
+                          <li><a href="<?=site_url('admin/wholesaler')?>">Manage Wholesaler</a></li>
                       </ul>
                   </li>
 
