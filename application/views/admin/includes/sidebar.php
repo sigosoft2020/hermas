@@ -130,7 +130,7 @@
                   </li>
 
                   <li>
-                      <a href="#"><i class="fa fa-credit-card-alt"></i> <span> Subscription </span> <span class="menu-arrow"></span></a>
+                      <a href="<?=site_url('admin/newsletter')?>"><i class="fa fa-credit-card-alt"></i> <span> Subscription </span></a>
                   </li>
               </ul>
 
