@@ -106,12 +106,7 @@
                   </li>
 
                   <li>
-                      <a href="#"><i class="fa fa-user"></i> <span> Salesman </span> <span class="menu-arrow"></span></a>
-                      <ul class="nav-second-level" aria-expanded="false">
-                          <li><a href="<?=site_url('admin/customers')?>">Add Salesman</a></li>
-                          <li><a href="<?=site_url('admin/customers/add')?>">Manage Salesman</a></li>
-                          <li><a href="<?=site_url('admin/customers/add')?>">Blocked Salesman</a></li>
-                      </ul>
+                      <a href="<?=site_url('admin/salesman')?>"><i class="fa fa-user"></i> <span> Salesman </span></a>
                   </li>
 
                   <li>
