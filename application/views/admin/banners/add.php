@@ -14,7 +14,7 @@
             <div class="row">
               <div class="col-12">
                 <div class="page-title-box">
-                  <h4 class="page-title float-left">ADD BANNER</h4>
+                  <h4 class="page-title float-left">Add Banner</h4>
                   <div class="clearfix"></div>
                 </div>
               </div>
@@ -24,25 +24,46 @@
           <div class="row">
             <div class="col-12">
               <div class="card-box">
-                <form action="<?=site_url('admin/banners/addBanner')?>" method="post" id="add-form">
-
+                <form action="<?=site_url('admin/banner/addBanner')?>" method="post" id="add-form" enctype="multipart/form-data">
 
                   <div class="row">
                       <div class="col-md-4">
                           <div class="">
                               <div>
-                                  <p class="mb-1 mt-4 font-weight-bold">Name</p>
-                                  <p class="text-muted font-14">
-                                        (Add turf banner name here , This image will show as slider in android home screen);
-                                  </p>
-                                  <input type="text" maxlength="25" name="name" class="form-control" required>
+                                  <p class="mb-1 mt-4 font-weight-bold">Select Item</p>
+                                   <select name="slt" id="slt" class="form-control" >
+                                      <option value="">---Select Item---</option> 
+                                      <option value="0">Category</option> 
+                                      <option value="1">Product</option> 
+                                  </select> 
                               </div>
 
                               <div>
-                                  <p class="mb-1 mt-4 font-weight-bold">Image</p>
-                                  <p class="text-muted font-14">
-                                        (Choose image of amenity);
-                                  </p>
+                                  <p class="mb-1 mt-4 font-weight-bold">Item</p>
+                                   <select name="data" id="data" class="form-control" >
+                                      <option value="">---Select Item---</option> 
+                                    
+                                  </select> 
+                              </div>
+
+                               <div>
+                                  <p class="mb-1 mt-4 font-weight-bold">Possition</p>
+                                    <select class="form-control col-md-7 col-xs-12" name="position" >
+                                      <option  value="1">1</option>
+                                      <option  value="2">2</option>
+                                      <option  value="3">3</option>
+                                      <option  value="4">4</option>
+                                      <option  value="5">5</option>
+                                      <option  value="6">6</option>
+                                      <option  value="7">7</option>
+                                      <option  value="8">8</option>
+                                      <option  value="9">9</option>
+                                      <option  value="10">10</option>
+                                    </select>
+                              </div>
+                              
+                               <div>
+                                  <p class="mb-1 mt-4 font-weight-bold">Banner Image</p>
                                   <input type="file" class="form-control" id="upload">
                                   <!-- <input class="sample_input" type="hidden" name="test[image]"> -->
                               </div>
@@ -143,4 +164,21 @@
     document.getElementById("add-form").submit();
   });
   </script>
+  <script>
+       $('#slt').on('change',function(){
+         var cat_id = $("#slt option:selected").val();
+
+          $.ajax({
+          method: "POST",
+          url: "<?=site_url('admin/banner/getData');?>",
+          data : { cat_id : cat_id },
+          dataType : "json",
+          success : function( data ){
+            var opt = "<option value=''>---Select Item---</option>";
+            opt = opt + data;
+            $('#data').html(opt);
+              }
+          });
+       });
+   </script>
 </html>

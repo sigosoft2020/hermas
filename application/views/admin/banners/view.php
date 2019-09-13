@@ -29,9 +29,8 @@
                   <table id="user_data" class="table table-bordered table-striped">
                     <thead>
                       <tr>
-                        <th width="20%">Image</th>
-                        <th width="45%">Banner name</th>
-                        <th width="10%">Delete</th>
+                        <th width="70%">Image</th>
+                        <th width="30%">Delete</th>
                       </tr>
                     </thead>
                   </table>
@@ -52,7 +51,7 @@
         "serverSide":true,
         "order":[],
         "ajax":{
-          url:"<?=site_url('admin/banners/get')?>",
+          url:"<?=site_url('admin/banner/get')?>",
           type:"POST"
         },
         "columnDefs":[

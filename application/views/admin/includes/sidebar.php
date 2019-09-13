@@ -5,7 +5,7 @@
           <a href="<?=site_url('admin/dashboard')?>" class="logo">
             <span>
 
-               <img src="<?=base_url()?>assets/images/logo.png" alt="" height="50">
+               <img src="<?=base_url()?>assets/images/footer-logo.png" alt="" height="50">
             </span>
             <i>
               <img src="<?=base_url()?>assets/images/logo_sm.png" alt="" height="30">
@@ -100,8 +100,8 @@
                   <li>
                       <a href="#"><i class="fa fa-image"></i> <span> Banner Images </span> <span class="menu-arrow"></span></a>
                       <ul class="nav-second-level" aria-expanded="false">
-                          <li><a href="<?=site_url('admin/amenities')?>">Create Banner Images</a></li>
-                          <li><a href="<?=site_url('admin//add')?>">Manage Banner Images</a></li>
+                          <li><a href="<?=site_url('admin/banner/add')?>">Create Banner Images</a></li>
+                          <li><a href="<?=site_url('admin/banner')?>">Manage Banner Images</a></li>
                       </ul>
                   </li>
 

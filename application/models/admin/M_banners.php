@@ -6,21 +6,22 @@ class M_banners extends CI_Model
   {
     $this->load->database();
   }
-  function make_query(){
-    $table = "sliders";
-    $select_column = array("slider_id","name","image");
-    $order_column = array(null,"name",null,null);
+  function make_query()
+  {
+    $table = "offer_image";
+    $select_column = array("OfferImageID","OfferImage");
+    $order_column = array(null,"OfferImageID",null,null);
 
     $this->db->select($select_column);
     $this->db->from($table);
     if (isset($_POST["search"]["value"])) {
-      $this->db->like("name",$_POST["search"]["value"]);
+      $this->db->like("OfferImageID",$_POST["search"]["value"]);
     }
     if (isset($_POST["order"])) {
       $this->db->order_by($_POST['order']['0']['column'],$_POST['order']['0']['dir']);
     }
     else {
-      $this->db->order_by("slider_id","desc");
+      $this->db->order_by("OfferImageID","desc");
     }
   }
   function make_datatables()
@@ -41,7 +42,7 @@ class M_banners extends CI_Model
   function get_all_data()
   {
     $this->db->select("*");
-    $this->db->from("sliders");
+    $this->db->from("offer_image");
     return $this->db->count_all_results();
   }
 }

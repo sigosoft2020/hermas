@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 
   <!-- App favicon -->
-  <link rel="icon" type="image/png" href="<?=base_url()?>assets/images/logo_sm.png">
+  <link rel="icon" type="image/png" href="<?=base_url()?>assets/images/favicon.ico">
   <!-- Responsive datatable examples -->
   <link href="<?=base_url()?>plugins/datatables/responsive.bootstrap4.min.css" rel="stylesheet" type="text/css" />
   <link href="<?=base_url()?>plugins/jquery-toastr/jquery.toast.min.css" rel="stylesheet" />
