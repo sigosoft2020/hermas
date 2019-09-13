@@ -116,8 +116,8 @@
                   <li>
                       <a href="#"><i class="fa fa-quote-left"></i> <span> Testimonial </span> <span class="menu-arrow"></span></a>
                       <ul class="nav-second-level" aria-expanded="false">
-                          <li><a href="<?=site_url('admin/expenses')?>">Create Testimonial</a></li>
-                          <li><a href="<?=site_url('admin/expenses/add')?>">Manage Testimonial</a></li>
+                          <li><a href="<?=site_url('admin/testimonial/add')?>">Create Testimonial</a></li>
+                          <li><a href="<?=site_url('admin/testimonial')?>">Manage Testimonial</a></li>
                       </ul>
                   </li>
 

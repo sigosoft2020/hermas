@@ -158,7 +158,7 @@ class Category extends CI_Controller {
 				$this->session->set_flashdata('alert_title', 'Failed');
 				$this->session->set_flashdata('alert_message', 'Failed to update category..!');
 
-				redirect('admin/amenities/edit/'.$category_id);
+				redirect('admin/category/edit/'.$category_id);
 			}
 		}
 	}
