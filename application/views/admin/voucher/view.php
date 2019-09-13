@@ -145,7 +145,7 @@
                       <h2 class="text-uppercase text-center m-b-30">
                           <span><h4>Edit Voucher</h4></span>
                       </h2>
-                    <form class="form-horizontal" action="<?=site_url('admin/voucher/update')?>" method="post" onsubmit="return finalize()">
+                    <form class="form-horizontal" action="<?=site_url('admin/voucher/update')?>" method="post" onsubmit="return checking()">
                        
                        <input type="hidden" class="form-control" name="voucher_id" id="voucher_id">      
                        <div class="form-group m-b-25">
@@ -206,14 +206,14 @@
 
                       <div class="form-group m-b-25">
                         <div class="col-12">
-                            <p id="error-message" style="color:red;"></p>
+                            <p id="error-message1" style="color:red;"></p>
                         </div>
                       </div>
                        
                        <div class="form-group account-btn text-center m-t-10">
                            <div class="col-12">
                                <button type="reset" class="btn w-lg btn-rounded btn-light waves-effect m-l-5" data-dismiss="modal">Back</button>
-                               <button class="btn w-lg btn-rounded btn-primary waves-effect waves-light" type="submit">Add</button>
+                               <button class="btn w-lg btn-rounded btn-primary waves-effect waves-light" type="submit">Update</button>
                            </div>
                        </div>
                    </form>
@@ -308,6 +308,24 @@
         }
         else {
           $('#error-message').text('');
+          return true;
+          
+          }
+      }
+
+      function checking()
+      {
+        var end    = $('#last_date').val();
+        var myDate = new Date(end);
+        var today  = new Date();
+        
+        if (myDate < today) {
+          $('#error-message1').text('Please select valid date');
+          $('#error-message1').fadeIn().delay(1500).fadeOut(1200);
+          return false;
+        }
+        else {
+          $('#error-message1').text('');
           return true;
           
           }

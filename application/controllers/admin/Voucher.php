@@ -122,6 +122,12 @@ class Voucher extends CI_Controller {
         $time_from    = $this->security->xss_clean($this->input->post('time_from'));
         $time_to      = $this->security->xss_clean($this->input->post('time_to'));
         $cart_value   = $this->security->xss_clean($this->input->post('cart_value'));
+
+        $time   = date("H:i:s",strtotime($time_from));
+		$timeto = date("H:i:s",strtotime($time_to));
+
+		$t1=strtotime("$date_from $time_from");
+		$t2=strtotime("$end_date $time_to");
 		
 		{
 			$array = [
