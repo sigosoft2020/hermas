@@ -153,27 +153,22 @@ class Stock extends CI_Controller {
 	public function get_stock()
 	{   
         $vendor_id  = $this->security->xss_clean($this->input->post('vendor_id'));
-
-		$result = $this->history->make_datatables($vendor_id);
-		$data = array();
-		foreach ($result as $res) 
-		{
-			$sub_array = array();
-			
-			$sub_array[] = $res->product_name;
-			$stock       = $this->stock->get_stock($res->product_id);
-			$sub_array[] = $stock;
-			$sub_array[] = '<button type="button" class="btn btn-link" style="font-size:20px;color:green" onclick="add(' . $res->product_id . ',' . $stock . ')"><i class="fa fa-plus"></i></button>';
-			$data[] = $sub_array;
-		}
-
-		$output = array(
-						"draw"            => intval($_POST['draw']),
-						"recordsTotal"    => $this->history->get_all_data($vendor_id),
-						"recordsFiltered" => $this->history->get_filtered_data($vendor_id),
-						"data"            => $data
-					  );
-		echo json_encode($output);
+        $data['vendor'] = $this->Common->get_details('vendor_details',array('vender_id'=>$vendor_id))->row()->vendor_name;
+        $history    = $this->Common->get_details('stock_history',array('history_vendor_id'=>$vendor_id))->result();
+        foreach($history as $his)
+         {  
+         	$product_check = $this->Common->get_details('products',array('product_id'=>$his->product_id));
+         	if($product_check->num_rows()>0)
+         	{
+         		$his->product = $product_check->row()->product_name;
+         	}
+         	else
+         	{
+         		$his->product = '';
+         	}        		
+       	}	
+        $data['history'] =  $history;
+        $this->load->view('admin/stock/history_view',$data);
 	}
 
 	

@@ -109,23 +109,6 @@
       }
     }
 
-    function edit(id)
-    {
-      $('#salesman_id').val(id);
-      // alert(id);
-      $.ajax({
-          method: "POST",
-          url: "<?php echo site_url('admin/salesman/getsalesmanById');?>",
-          dataType : "json",
-          data : { id : id },
-          success : function( data ){
-            $('#salesman').val(data.salesman_name);
-            $('#edit-salesman').modal('show');
-            // alert(data);
-          }
-        });
-    }
-
    function updater(order_id)
     {
       document.getElementById('o_id').value = order_id;

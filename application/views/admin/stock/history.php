@@ -24,7 +24,7 @@
           <div class="row">
             <div class="col-12">
               <div class="card-box">
-                <form action="<?=site_url('admin/Stock/view')?>" method="post" id="add-form">
+                <form action="<?=site_url('admin/Stock/get_stock')?>" method="post" id="add-form">
 
                    <div class="row">
                       <div class="col-md-4">
