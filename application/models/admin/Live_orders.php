@@ -6,7 +6,8 @@ class Live_orders extends CI_Model
   {
     $this->load->database();
   }
-  function make_query(){
+  function make_query()
+  {
     $table = "orders";
     $select_column = array("order_id","order_no","invoice_no","grand_total","user_id","name","email","phone","house","address_1","address_2","city","state","landmark","pincode","status");
     $order_column = array(null,"name",null,null);

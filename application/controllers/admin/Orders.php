@@ -31,7 +31,7 @@ class Orders extends CI_Controller {
 			$sub_array[] = $res->phone;
 			$sub_array[] = $res->status;
 			$sub_array[] = '<a class="btn btn-link" style="font-size:16px;color:blue" href="' . site_url('admin/orders/view/'.$res->order_id) . '" ><i class="fa fa-eye"></i></a>';
-			$sub_array[] = '<button type="button" class="btn btn-link" style="font-size:20px;color:blue" onclick="edit(' . $res->order_id . ')"><i class="fa fa-pencil"></i></button>';
+			$sub_array[] = '<button type="button" class="btn btn-link" style="font-size:20px;color:blue" onclick="updater(' . $res->order_id . ')" data-toggle="modal" data-target="#myModal"><i class="fa fa-pencil"></i></button>';
             
 	
 			$data[] = $sub_array;
@@ -67,78 +67,53 @@ class Orders extends CI_Controller {
       }
 	}
 
-	public function addSalesman()
-	{   
-		date_default_timezone_set('Asia/Kolkata');
-        $timestamp = date('Y-m-d H:i:s');
-
-		$name = $this->security->xss_clean($this->input->post('name'));
-
-		$vendor_check = $this->Common->get_details('salesman',array('salesman_name'=>$name));
-		if($vendor_check->num_rows()==0)
-        {
-			$array = [
-						'salesman_name'    => $name,
-						'salesman_status'  => 'Active'
-					];
-			if ($this->Common->insert('salesman',$array)) {
-				$this->session->set_flashdata('alert_type', 'success');
-				$this->session->set_flashdata('alert_title', 'Success');
-				$this->session->set_flashdata('alert_message', 'New salesman added..!');
-
-				redirect('admin/salesman');
-			}
-			else {
-				$this->session->set_flashdata('alert_type', 'error');
-				$this->session->set_flashdata('alert_title', 'Failed');
-				$this->session->set_flashdata('alert_message', 'Failed to add salesman..!');
-
-				redirect('admin/salesman');
-			}		
-        }
-        else
-        {
-    	  $this->session->set_flashdata('alert_type', 'error');
-		  $this->session->set_flashdata('alert_title', 'Failed');
-		  $this->session->set_flashdata('alert_message', 'Salesman already exists..!');
-          redirect('admin/salesman');
-        }			
-	}
-
 	public function update()
 	{
-		$salesman_id   = $this->input->post('salesman_id');
-		$salesman      = $this->security->xss_clean($this->input->post('salesman'));
-		$check         = $this->Common->get_details('salesman',array('salesman_name' => $salesman , 's_id!=' => $salesman_id))->num_rows();
-		if ($check > 0) 
-		{
-			$this->session->set_flashdata('alert_type', 'error');
-			$this->session->set_flashdata('alert_title', 'Failed');
-			$this->session->set_flashdata('alert_message', 'Failed to add salesman..!');
-
-			redirect('admin/salesman');
-		}
-		else 
+		$order_id   = $this->input->post('order_id');
+		$status     = $this->security->xss_clean($this->input->post('status'));
+		
+		if($status =='Delivered')
 		{
 			$array = [
-				       'salesman_name' => $salesman
+				       'status' => $status
 			         ];
 		
-			if ($this->Common->update('s_id',$salesman_id,'salesman',$array)) {
+			if ($this->Common->update('order_id',$order_id,'orders',$array)) {
 				$this->session->set_flashdata('alert_type', 'success');
 				$this->session->set_flashdata('alert_title', 'Success');
 				$this->session->set_flashdata('alert_message', 'Changes made successfully..!');
 
-				redirect('admin/salesman');
+				redirect('admin/orders/delivered');
 			}
 			else {
 				$this->session->set_flashdata('alert_type', 'error');
 				$this->session->set_flashdata('alert_title', 'Failed');
-				$this->session->set_flashdata('alert_message', 'Failed to edit vendor..!');
+				$this->session->set_flashdata('alert_message', 'Failed to edit status..!');
 
-				redirect('admin/salesman');
+				redirect('admin/orders');
 			}
-	    }
+		}
+		else
+		{
+		   $array = [
+				       'status' => $status
+			         ];
+		
+			if ($this->Common->update('order_id',$order_id,'orders',$array)) {
+				$this->session->set_flashdata('alert_type', 'success');
+				$this->session->set_flashdata('alert_title', 'Success');
+				$this->session->set_flashdata('alert_message', 'Order cancelled  successfully..!');
+
+				redirect('admin/orders');
+			}
+			else {
+				$this->session->set_flashdata('alert_type', 'error');
+				$this->session->set_flashdata('alert_title', 'Failed');
+				$this->session->set_flashdata('alert_message', 'Failed to cancel order..!');
+
+				redirect('admin/orders');
+			}	
+		}	
 	}
 
 	public function disable($id)
