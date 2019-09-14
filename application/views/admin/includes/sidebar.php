@@ -89,9 +89,9 @@
                   <li>
                       <a href="#"><i class="fa fa-shopping-bag"></i> <span> Orders </span> <span class="menu-arrow"></span></a>
                       <ul class="nav-second-level" aria-expanded="false">
-                          <li><a href="<?=site_url('admin/bookings/upcoming')?>">Live Orders</a></li>
-                          <li><a href="<?=site_url('admin/bookings/completed')?>">Delivered Orders</a></li>
-                          <li><a href="<?=site_url('admin/bookings/cancelled')?>">Bulk Orders</a></li>
+                          <li><a href="<?=site_url('admin/orders')?>">Live Orders</a></li>
+                          <li><a href="<?=site_url('admin/orders/delivered')?>">Delivered Orders</a></li>
+                          <li><a href="<?=site_url('admin/orders/bulk')?>">Bulk Orders</a></li>
                       </ul>
                   </li>
                   <li>
