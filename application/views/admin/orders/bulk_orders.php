@@ -13,7 +13,7 @@
             <div class="row">
               <div class="col-12">
                 <div class="page-title-box">
-                  <h4 class="page-title float-left">Live Orders</h4>
+                  <h4 class="page-title float-left">Bulk Orders</h4>
                   
                   <div class="clearfix"></div>
                 </div>
@@ -29,12 +29,16 @@
                       <tr>
                           <th width="10%">Order No</th>
                           <th width="10%">Invoice No</th>
-                          <th width="25%">Name</th>
+                          <th width="10%">Product</th>
+                          <th width="5%">Quantity</th>
+                          <th width="5%">Price</th>
+                          <th width="5%">Total</th>
+                          <th width="10%">Name</th>
+                          <th width="10%">Address</th>
                           <th width="10%">Email</th>
-                          <th width="15%">Mobile</th>
+                          <th width="10%">Mobile</th>
                           <th width="10%">Status</th>
-                          <th width="10%">View</th>
-                          <th width="10%">Update</th>
+                          <th width="5%">Update</th>
                       </tr>
                     </thead>
                   </table>
@@ -57,7 +61,7 @@
 
               <!-- Modal body -->
             <div class="modal-body">
-              <form method="POST" action="<?=site_url('admin/orders/update')?>">
+              <form method="POST" action="<?=site_url('admin/orders/bulk_update')?>">
                   <input type="hidden" name="order_id" id="o_id">
                   <select class="form-control" name="status">
                      <option value="Delivered">Delivered</option>        
@@ -86,7 +90,7 @@
         "serverSide":true,
         "order":[],
         "ajax":{
-          url:"<?=site_url('admin/orders/get')?>",
+          url:"<?=site_url('admin/orders/get_bulk')?>",
           type:"POST"
         },
         "columnDefs":[
