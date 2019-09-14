@@ -16,17 +16,12 @@ class Dashboard extends CI_Controller {
 		$admin = $this->session->userdata['admin'];
 		$admin_id = $admin['admin_id'];
 
-		// $data['pending'] = $this->dash->bookingsPending($owner_id);
-		// $data['bookingThisMonth'] = $this->dash->bookingsThisMonth($owner_id);
-		// $data['turfs'] = $this->dash->registeredTurfsCounts($owner_id);
-		// //$data['users'] = $this->dash->registeredCustomers($owner_id);
-		// //$data['expenseToday'] = $this->dash->todaysExpense($owner_id);
-		// $data['expenseMonthly'] = $this->dash->ExpenseThisMonth($owner_id);
+		$data['pending']   = $this->dash->pending_orders();
+		$data['cancelled'] = $this->dash->cancelled_orders();
+		$data['delivered'] = $this->dash->delivered_orders();
+		$data['total'] = $this->dash->total_orders();
 
-		// $data['feedbacks'] = $this->dash->latestFeedbacks($owner_id);
-		// $data['expenses'] = $this->dash->latestExpenses($owner_id);
-
-		$this->load->view('admin/dashboard/dashboard');
+		$this->load->view('admin/dashboard/dashboard',$data);
 	}
 }
 ?>
