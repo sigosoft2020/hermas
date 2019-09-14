@@ -7,6 +7,7 @@ class Orders extends CI_Controller {
 			parent::__construct();
 			$this->load->helper('url');
 			$this->load->model('admin/Live_orders','live');
+			$this->load->model('admin/Delivered_orders','delivered');
 			$this->load->model('Common');
 			if (!admin()) {
 				redirect('app');
@@ -41,6 +42,39 @@ class Orders extends CI_Controller {
 						"draw"            => intval($_POST['draw']),
 						"recordsTotal"    => $this->live->get_all_data(),
 						"recordsFiltered" => $this->live->get_filtered_data(),
+						"data"            => $data
+					   );
+		echo json_encode($output);
+	}
+    
+    public function delivered()
+	{
+		$this->load->view('admin/orders/delivered_orders');
+	}
+	public function get_delivered()
+	{
+		$result = $this->delivered->make_datatables();
+		$data = array();
+		foreach ($result as $res) 
+		{
+			$sub_array = array();
+			
+			$sub_array[] = $res->order_no;
+			$sub_array[] = $res->invoice_no;
+			$sub_array[] = $res->name;
+			$sub_array[] = $res->email;
+			$sub_array[] = $res->phone;
+			$sub_array[] = $res->grand_total;
+			$sub_array[] = $res->status;
+			$sub_array[] = '<a class="btn btn-link" style="font-size:16px;color:blue" href="' . site_url('admin/orders/view/'.$res->order_id) . '" ><i class="fa fa-eye"></i></a>';
+	
+			$data[] = $sub_array;
+		}
+
+		$output = array(
+						"draw"            => intval($_POST['draw']),
+						"recordsTotal"    => $this->delivered->get_all_data(),
+						"recordsFiltered" => $this->delivered->get_filtered_data(),
 						"data"            => $data
 					   );
 		echo json_encode($output);
