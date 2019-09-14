@@ -91,6 +91,7 @@
                       <ul class="nav-second-level" aria-expanded="false">
                           <li><a href="<?=site_url('admin/orders')?>">Live Orders</a></li>
                           <li><a href="<?=site_url('admin/orders/delivered')?>">Delivered Orders</a></li>
+                          <li><a href="<?=site_url('admin/orders/cancelled')?>">Cancelled Orders</a></li>
                           <li><a href="<?=site_url('admin/orders/bulk')?>">Bulk Orders</a></li>
                       </ul>
                   </li>
