@@ -94,7 +94,7 @@
                   </li>
 
                   <li>
-                      <a href="<?=site_url('unani/directories')?>"><i class="fa fa-gift"></i> <span> Events </span></a>
+                      <a href="<?=site_url('unani/events')?>"><i class="fa fa-gift"></i> <span> Events </span></a>
                   </li>
 
                   <li>
