@@ -1,0 +1,368 @@
+[20-Dec-2017 16:15:33 Etc/GMT] PHP Notice:  Undefined index: id in /home/sigosflb/public_html/ourworks.today/calicutdemo/admin/edit_product.php on line 12
+[20-Dec-2017 16:16:14 Etc/GMT] PHP Notice:  Undefined index: id in /home/sigosflb/public_html/ourworks.today/calicutdemo/admin/view_product.php on line 13
+[01-Apr-2019 10:15:01 Etc/GMT] PHP Notice:  Undefined index: b2b_price in /home/hermasunani/public_html/admin/create_product.php on line 23
+[01-Apr-2019 11:35:50 Etc/GMT] PHP Notice:  Undefined index: Category_Id in /home/hermasunani/public_html/admin/create_banner.php on line 155
+[01-Apr-2019 11:35:50 Etc/GMT] PHP Notice:  Undefined index: Category_Title in /home/hermasunani/public_html/admin/create_banner.php on line 155
+[01-Apr-2019 11:35:50 Etc/GMT] PHP Notice:  Undefined index: Category_Id in /home/hermasunani/public_html/admin/create_banner.php on line 155
+[01-Apr-2019 11:35:50 Etc/GMT] PHP Notice:  Undefined index: Category_Title in /home/hermasunani/public_html/admin/create_banner.php on line 155
+[01-Apr-2019 11:35:50 Etc/GMT] PHP Notice:  Undefined index: Category_Id in /home/hermasunani/public_html/admin/create_banner.php on line 155
+[01-Apr-2019 11:35:50 Etc/GMT] PHP Notice:  Undefined index: Category_Title in /home/hermasunani/public_html/admin/create_banner.php on line 155
+[01-Apr-2019 11:40:57 Etc/GMT] PHP Notice:  Undefined index: Category_Id in /home/hermasunani/public_html/admin/create_banner.php on line 155
+[01-Apr-2019 11:40:57 Etc/GMT] PHP Notice:  Undefined index: Category_Title in /home/hermasunani/public_html/admin/create_banner.php on line 155
+[01-Apr-2019 11:40:57 Etc/GMT] PHP Notice:  Undefined index: Category_Id in /home/hermasunani/public_html/admin/create_banner.php on line 155
+[01-Apr-2019 11:40:57 Etc/GMT] PHP Notice:  Undefined index: Category_Title in /home/hermasunani/public_html/admin/create_banner.php on line 155
+[01-Apr-2019 11:40:57 Etc/GMT] PHP Notice:  Undefined index: Category_Id in /home/hermasunani/public_html/admin/create_banner.php on line 155
+[01-Apr-2019 11:40:57 Etc/GMT] PHP Notice:  Undefined index: Category_Title in /home/hermasunani/public_html/admin/create_banner.php on line 155
+[01-Apr-2019 11:41:45 Etc/GMT] PHP Notice:  Undefined index: Category_Id in /home/hermasunani/public_html/admin/create_banner.php on line 155
+[01-Apr-2019 11:41:45 Etc/GMT] PHP Notice:  Undefined index: Category_Title in /home/hermasunani/public_html/admin/create_banner.php on line 155
+[01-Apr-2019 11:41:45 Etc/GMT] PHP Notice:  Undefined index: Category_Id in /home/hermasunani/public_html/admin/create_banner.php on line 155
+[01-Apr-2019 11:41:45 Etc/GMT] PHP Notice:  Undefined index: Category_Title in /home/hermasunani/public_html/admin/create_banner.php on line 155
+[01-Apr-2019 11:41:45 Etc/GMT] PHP Notice:  Undefined index: Category_Id in /home/hermasunani/public_html/admin/create_banner.php on line 155
+[01-Apr-2019 11:41:45 Etc/GMT] PHP Notice:  Undefined index: Category_Title in /home/hermasunani/public_html/admin/create_banner.php on line 155
+[01-Apr-2019 11:42:00 Etc/GMT] PHP Notice:  Undefined index: Category_Id in /home/hermasunani/public_html/admin/create_banner.php on line 155
+[01-Apr-2019 11:42:00 Etc/GMT] PHP Notice:  Undefined index: Category_Title in /home/hermasunani/public_html/admin/create_banner.php on line 155
+[01-Apr-2019 11:42:00 Etc/GMT] PHP Notice:  Undefined index: Category_Id in /home/hermasunani/public_html/admin/create_banner.php on line 155
+[01-Apr-2019 11:42:00 Etc/GMT] PHP Notice:  Undefined index: Category_Title in /home/hermasunani/public_html/admin/create_banner.php on line 155
+[01-Apr-2019 11:42:00 Etc/GMT] PHP Notice:  Undefined index: Category_Id in /home/hermasunani/public_html/admin/create_banner.php on line 155
+[01-Apr-2019 11:42:00 Etc/GMT] PHP Notice:  Undefined index: Category_Title in /home/hermasunani/public_html/admin/create_banner.php on line 155
+[04-Apr-2019 04:03:14 Etc/GMT] PHP Notice:  Undefined index: Category_Id in /home/hermasunani/public_html/admin/create_banner.php on line 155
+[04-Apr-2019 04:03:14 Etc/GMT] PHP Notice:  Undefined index: Category_Title in /home/hermasunani/public_html/admin/create_banner.php on line 155
+[04-Apr-2019 04:03:14 Etc/GMT] PHP Notice:  Undefined index: Category_Id in /home/hermasunani/public_html/admin/create_banner.php on line 155
+[04-Apr-2019 04:03:14 Etc/GMT] PHP Notice:  Undefined index: Category_Title in /home/hermasunani/public_html/admin/create_banner.php on line 155
+[04-Apr-2019 04:03:14 Etc/GMT] PHP Notice:  Undefined index: Category_Id in /home/hermasunani/public_html/admin/create_banner.php on line 155
+[04-Apr-2019 04:03:14 Etc/GMT] PHP Notice:  Undefined index: Category_Title in /home/hermasunani/public_html/admin/create_banner.php on line 155
+[04-Apr-2019 04:03:29 Etc/GMT] PHP Notice:  Undefined index: Category_Id in /home/hermasunani/public_html/admin/create_banner.php on line 155
+[04-Apr-2019 04:03:29 Etc/GMT] PHP Notice:  Undefined index: Category_Title in /home/hermasunani/public_html/admin/create_banner.php on line 155
+[04-Apr-2019 04:03:29 Etc/GMT] PHP Notice:  Undefined index: Category_Id in /home/hermasunani/public_html/admin/create_banner.php on line 155
+[04-Apr-2019 04:03:29 Etc/GMT] PHP Notice:  Undefined index: Category_Title in /home/hermasunani/public_html/admin/create_banner.php on line 155
+[04-Apr-2019 04:03:29 Etc/GMT] PHP Notice:  Undefined index: Category_Id in /home/hermasunani/public_html/admin/create_banner.php on line 155
+[04-Apr-2019 04:03:29 Etc/GMT] PHP Notice:  Undefined index: Category_Title in /home/hermasunani/public_html/admin/create_banner.php on line 155
+[04-Apr-2019 05:54:44 Etc/GMT] PHP Notice:  Undefined index: b2b_price in /home/hermasunani/public_html/admin/create_product.php on line 23
+[07-Apr-2019 03:24:05 Etc/GMT] PHP Notice:  Undefined index: Category_Id in /home/hermasunani/public_html/admin/create_banner.php on line 155
+[07-Apr-2019 03:24:05 Etc/GMT] PHP Notice:  Undefined index: Category_Title in /home/hermasunani/public_html/admin/create_banner.php on line 155
+[07-Apr-2019 03:24:05 Etc/GMT] PHP Notice:  Undefined index: Category_Id in /home/hermasunani/public_html/admin/create_banner.php on line 155
+[07-Apr-2019 03:24:05 Etc/GMT] PHP Notice:  Undefined index: Category_Title in /home/hermasunani/public_html/admin/create_banner.php on line 155
+[07-Apr-2019 03:24:05 Etc/GMT] PHP Notice:  Undefined index: Category_Id in /home/hermasunani/public_html/admin/create_banner.php on line 155
+[07-Apr-2019 03:24:05 Etc/GMT] PHP Notice:  Undefined index: Category_Title in /home/hermasunani/public_html/admin/create_banner.php on line 155
+[16-Apr-2019 07:00:02 Etc/GMT] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, boolean given in /home/hermasunani/public_html/admin/dashboard.php on line 259
+[16-Apr-2019 07:00:02 Etc/GMT] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, boolean given in /home/hermasunani/public_html/admin/dashboard.php on line 264
+[16-Apr-2019 07:00:02 Etc/GMT] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, boolean given in /home/hermasunani/public_html/admin/dashboard.php on line 269
+[16-Apr-2019 07:00:02 Etc/GMT] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, boolean given in /home/hermasunani/public_html/admin/dashboard.php on line 274
+[16-Apr-2019 07:00:02 Etc/GMT] PHP Notice:  Undefined variable: sale in /home/hermasunani/public_html/admin/dashboard.php on line 282
+[16-Apr-2019 07:00:02 Etc/GMT] PHP Notice:  Undefined variable: purchase in /home/hermasunani/public_html/admin/dashboard.php on line 283
+[16-Apr-2019 07:01:22 Etc/GMT] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, boolean given in /home/hermasunani/public_html/admin/dashboard.php on line 259
+[16-Apr-2019 07:01:22 Etc/GMT] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, boolean given in /home/hermasunani/public_html/admin/dashboard.php on line 264
+[16-Apr-2019 07:01:22 Etc/GMT] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, boolean given in /home/hermasunani/public_html/admin/dashboard.php on line 269
+[16-Apr-2019 07:01:22 Etc/GMT] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, boolean given in /home/hermasunani/public_html/admin/dashboard.php on line 274
+[16-Apr-2019 07:01:22 Etc/GMT] PHP Notice:  Undefined variable: sale in /home/hermasunani/public_html/admin/dashboard.php on line 282
+[16-Apr-2019 07:01:22 Etc/GMT] PHP Notice:  Undefined variable: purchase in /home/hermasunani/public_html/admin/dashboard.php on line 283
+[16-Apr-2019 07:13:27 Etc/GMT] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, boolean given in /home/hermasunani/public_html/admin/dashboard.php on line 259
+[16-Apr-2019 07:13:27 Etc/GMT] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, boolean given in /home/hermasunani/public_html/admin/dashboard.php on line 264
+[16-Apr-2019 07:13:27 Etc/GMT] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, boolean given in /home/hermasunani/public_html/admin/dashboard.php on line 269
+[16-Apr-2019 07:13:27 Etc/GMT] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, boolean given in /home/hermasunani/public_html/admin/dashboard.php on line 274
+[16-Apr-2019 07:13:27 Etc/GMT] PHP Notice:  Undefined variable: sale in /home/hermasunani/public_html/admin/dashboard.php on line 282
+[16-Apr-2019 07:13:27 Etc/GMT] PHP Notice:  Undefined variable: purchase in /home/hermasunani/public_html/admin/dashboard.php on line 283
+[16-Apr-2019 07:13:39 Etc/GMT] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, boolean given in /home/hermasunani/public_html/admin/dashboard.php on line 259
+[16-Apr-2019 07:13:39 Etc/GMT] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, boolean given in /home/hermasunani/public_html/admin/dashboard.php on line 264
+[16-Apr-2019 07:13:39 Etc/GMT] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, boolean given in /home/hermasunani/public_html/admin/dashboard.php on line 269
+[16-Apr-2019 07:13:39 Etc/GMT] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, boolean given in /home/hermasunani/public_html/admin/dashboard.php on line 274
+[16-Apr-2019 07:13:39 Etc/GMT] PHP Notice:  Undefined variable: sale in /home/hermasunani/public_html/admin/dashboard.php on line 282
+[16-Apr-2019 07:13:39 Etc/GMT] PHP Notice:  Undefined variable: purchase in /home/hermasunani/public_html/admin/dashboard.php on line 283
+[16-Apr-2019 07:13:55 Etc/GMT] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, boolean given in /home/hermasunani/public_html/admin/dashboard.php on line 259
+[16-Apr-2019 07:13:55 Etc/GMT] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, boolean given in /home/hermasunani/public_html/admin/dashboard.php on line 264
+[16-Apr-2019 07:13:55 Etc/GMT] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, boolean given in /home/hermasunani/public_html/admin/dashboard.php on line 269
+[16-Apr-2019 07:13:55 Etc/GMT] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, boolean given in /home/hermasunani/public_html/admin/dashboard.php on line 274
+[16-Apr-2019 07:13:55 Etc/GMT] PHP Notice:  Undefined variable: sale in /home/hermasunani/public_html/admin/dashboard.php on line 282
+[16-Apr-2019 07:13:55 Etc/GMT] PHP Notice:  Undefined variable: purchase in /home/hermasunani/public_html/admin/dashboard.php on line 283
+[16-Apr-2019 07:14:04 Etc/GMT] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, boolean given in /home/hermasunani/public_html/admin/dashboard.php on line 259
+[16-Apr-2019 07:14:04 Etc/GMT] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, boolean given in /home/hermasunani/public_html/admin/dashboard.php on line 264
+[16-Apr-2019 07:14:04 Etc/GMT] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, boolean given in /home/hermasunani/public_html/admin/dashboard.php on line 269
+[16-Apr-2019 07:14:04 Etc/GMT] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, boolean given in /home/hermasunani/public_html/admin/dashboard.php on line 274
+[16-Apr-2019 07:14:04 Etc/GMT] PHP Notice:  Undefined variable: sale in /home/hermasunani/public_html/admin/dashboard.php on line 282
+[16-Apr-2019 07:14:04 Etc/GMT] PHP Notice:  Undefined variable: purchase in /home/hermasunani/public_html/admin/dashboard.php on line 283
+[16-Apr-2019 07:48:18 Etc/GMT] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, boolean given in /home/hermasunani/public_html/admin/dashboard.php on line 259
+[16-Apr-2019 07:48:18 Etc/GMT] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, boolean given in /home/hermasunani/public_html/admin/dashboard.php on line 264
+[16-Apr-2019 07:48:18 Etc/GMT] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, boolean given in /home/hermasunani/public_html/admin/dashboard.php on line 269
+[16-Apr-2019 07:48:18 Etc/GMT] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, boolean given in /home/hermasunani/public_html/admin/dashboard.php on line 274
+[16-Apr-2019 07:48:18 Etc/GMT] PHP Notice:  Undefined variable: sale in /home/hermasunani/public_html/admin/dashboard.php on line 282
+[16-Apr-2019 07:48:18 Etc/GMT] PHP Notice:  Undefined variable: purchase in /home/hermasunani/public_html/admin/dashboard.php on line 283
+[16-Apr-2019 07:56:52 Etc/GMT] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, boolean given in /home/hermasunani/public_html/admin/dashboard.php on line 259
+[16-Apr-2019 07:56:52 Etc/GMT] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, boolean given in /home/hermasunani/public_html/admin/dashboard.php on line 264
+[16-Apr-2019 07:56:52 Etc/GMT] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, boolean given in /home/hermasunani/public_html/admin/dashboard.php on line 269
+[16-Apr-2019 07:56:52 Etc/GMT] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, boolean given in /home/hermasunani/public_html/admin/dashboard.php on line 274
+[16-Apr-2019 07:56:52 Etc/GMT] PHP Notice:  Undefined variable: sale in /home/hermasunani/public_html/admin/dashboard.php on line 282
+[16-Apr-2019 07:56:52 Etc/GMT] PHP Notice:  Undefined variable: purchase in /home/hermasunani/public_html/admin/dashboard.php on line 283
+[16-Apr-2019 08:25:31 Etc/GMT] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, boolean given in /home/hermasunani/public_html/admin/dashboard.php on line 259
+[16-Apr-2019 08:25:31 Etc/GMT] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, boolean given in /home/hermasunani/public_html/admin/dashboard.php on line 264
+[16-Apr-2019 08:25:31 Etc/GMT] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, boolean given in /home/hermasunani/public_html/admin/dashboard.php on line 269
+[16-Apr-2019 08:25:31 Etc/GMT] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, boolean given in /home/hermasunani/public_html/admin/dashboard.php on line 274
+[16-Apr-2019 08:25:31 Etc/GMT] PHP Notice:  Undefined variable: sale in /home/hermasunani/public_html/admin/dashboard.php on line 282
+[16-Apr-2019 08:25:31 Etc/GMT] PHP Notice:  Undefined variable: purchase in /home/hermasunani/public_html/admin/dashboard.php on line 283
+[16-Apr-2019 08:28:07 Etc/GMT] PHP Warning:  A non-numeric value encountered in /home/hermasunani/public_html/admin/create_product.php on line 27
+[16-Apr-2019 18:08:05 Etc/GMT] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, boolean given in /home/hermasunani/public_html/admin/dashboard.php on line 259
+[16-Apr-2019 18:08:05 Etc/GMT] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, boolean given in /home/hermasunani/public_html/admin/dashboard.php on line 264
+[16-Apr-2019 18:08:05 Etc/GMT] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, boolean given in /home/hermasunani/public_html/admin/dashboard.php on line 269
+[16-Apr-2019 18:08:05 Etc/GMT] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, boolean given in /home/hermasunani/public_html/admin/dashboard.php on line 274
+[16-Apr-2019 18:08:05 Etc/GMT] PHP Notice:  Undefined variable: sale in /home/hermasunani/public_html/admin/dashboard.php on line 282
+[16-Apr-2019 18:08:05 Etc/GMT] PHP Notice:  Undefined variable: purchase in /home/hermasunani/public_html/admin/dashboard.php on line 283
+[16-Apr-2019 18:08:08 Etc/GMT] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, boolean given in /home/hermasunani/public_html/admin/dashboard.php on line 259
+[16-Apr-2019 18:08:08 Etc/GMT] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, boolean given in /home/hermasunani/public_html/admin/dashboard.php on line 264
+[16-Apr-2019 18:08:08 Etc/GMT] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, boolean given in /home/hermasunani/public_html/admin/dashboard.php on line 269
+[16-Apr-2019 18:08:08 Etc/GMT] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, boolean given in /home/hermasunani/public_html/admin/dashboard.php on line 274
+[16-Apr-2019 18:08:08 Etc/GMT] PHP Notice:  Undefined variable: sale in /home/hermasunani/public_html/admin/dashboard.php on line 282
+[16-Apr-2019 18:08:08 Etc/GMT] PHP Notice:  Undefined variable: purchase in /home/hermasunani/public_html/admin/dashboard.php on line 283
+[16-Apr-2019 18:32:27 Etc/GMT] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, boolean given in /home/hermasunani/public_html/admin/dashboard.php on line 259
+[16-Apr-2019 18:32:27 Etc/GMT] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, boolean given in /home/hermasunani/public_html/admin/dashboard.php on line 264
+[16-Apr-2019 18:32:27 Etc/GMT] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, boolean given in /home/hermasunani/public_html/admin/dashboard.php on line 269
+[16-Apr-2019 18:32:27 Etc/GMT] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, boolean given in /home/hermasunani/public_html/admin/dashboard.php on line 274
+[16-Apr-2019 18:32:27 Etc/GMT] PHP Notice:  Undefined variable: sale in /home/hermasunani/public_html/admin/dashboard.php on line 282
+[16-Apr-2019 18:32:27 Etc/GMT] PHP Notice:  Undefined variable: purchase in /home/hermasunani/public_html/admin/dashboard.php on line 283
+[17-Apr-2019 06:58:33 Etc/GMT] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, boolean given in /home/hermasunani/public_html/admin/dashboard.php on line 259
+[17-Apr-2019 06:58:33 Etc/GMT] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, boolean given in /home/hermasunani/public_html/admin/dashboard.php on line 264
+[17-Apr-2019 06:58:33 Etc/GMT] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, boolean given in /home/hermasunani/public_html/admin/dashboard.php on line 269
+[17-Apr-2019 06:58:33 Etc/GMT] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, boolean given in /home/hermasunani/public_html/admin/dashboard.php on line 274
+[17-Apr-2019 06:58:33 Etc/GMT] PHP Notice:  Undefined variable: sale in /home/hermasunani/public_html/admin/dashboard.php on line 282
+[17-Apr-2019 06:58:33 Etc/GMT] PHP Notice:  Undefined variable: purchase in /home/hermasunani/public_html/admin/dashboard.php on line 283
+[26-Aug-2019 11:06:42 Etc/GMT] PHP Warning:  mysqli_connect(): (28000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home/hermasunani/public_html/admin/db/config.php on line 2
+[26-Aug-2019 11:08:27 Etc/GMT] PHP Warning:  mysqli_connect(): (28000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home/hermasunani/public_html/admin/db/config.php on line 2
+[26-Aug-2019 11:10:38 Etc/GMT] PHP Warning:  mysqli_connect(): (28000/1045): Access denied for user 'hermasun_hermas'@'localhost' (using password: NO) in /home/hermasunani/public_html/admin/db/config.php on line 2
+[26-Aug-2019 11:12:19 Etc/GMT] PHP Warning:  mysqli_connect(): (28000/1045): Access denied for user 'hermasun_hermas'@'localhost' (using password: NO) in /home/hermasunani/public_html/admin/db/config.php on line 2
+[26-Aug-2019 11:12:22 Etc/GMT] PHP Warning:  mysqli_connect(): (28000/1045): Access denied for user 'hermasun_hermas'@'localhost' (using password: NO) in /home/hermasunani/public_html/admin/db/config.php on line 2
+[26-Aug-2019 11:13:35 Etc/GMT] PHP Fatal error:  Uncaught Error: Call to undefined method mysqli_stmt::get_result() in /home/hermasunani/public_html/admin/index.php:32
+Stack trace:
+#0 {main}
+  thrown in /home/hermasunani/public_html/admin/index.php on line 32
+[26-Aug-2019 11:13:36 Etc/GMT] PHP Fatal error:  Uncaught Error: Call to undefined method mysqli_stmt::get_result() in /home/hermasunani/public_html/admin/dashboard.php:20
+Stack trace:
+#0 {main}
+  thrown in /home/hermasunani/public_html/admin/dashboard.php on line 20
+[26-Aug-2019 11:13:40 Etc/GMT] PHP Fatal error:  Uncaught Error: Call to undefined method mysqli_stmt::get_result() in /home/hermasunani/public_html/admin/dashboard.php:20
+Stack trace:
+#0 {main}
+  thrown in /home/hermasunani/public_html/admin/dashboard.php on line 20
+[26-Aug-2019 11:15:08 Etc/GMT] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home/hermasunani/public_html/admin/dashboard.php on line 278
+[26-Aug-2019 11:15:08 Etc/GMT] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home/hermasunani/public_html/admin/dashboard.php on line 283
+[26-Aug-2019 11:15:08 Etc/GMT] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home/hermasunani/public_html/admin/dashboard.php on line 288
+[26-Aug-2019 11:15:08 Etc/GMT] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home/hermasunani/public_html/admin/dashboard.php on line 293
+[26-Aug-2019 11:15:08 Etc/GMT] PHP Notice:  Undefined variable: sale in /home/hermasunani/public_html/admin/dashboard.php on line 301
+[26-Aug-2019 11:15:08 Etc/GMT] PHP Notice:  Undefined variable: purchase in /home/hermasunani/public_html/admin/dashboard.php on line 302
+[26-Aug-2019 11:25:35 Etc/GMT] PHP Fatal error:  Uncaught Error: Call to undefined method mysqli_stmt::get_result() in /home/hermasunani/public_html/admin/index.php:32
+Stack trace:
+#0 {main}
+  thrown in /home/hermasunani/public_html/admin/index.php on line 32
+[26-Aug-2019 11:25:36 Etc/GMT] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home/hermasunani/public_html/admin/dashboard.php on line 278
+[26-Aug-2019 11:25:36 Etc/GMT] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home/hermasunani/public_html/admin/dashboard.php on line 283
+[26-Aug-2019 11:25:36 Etc/GMT] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home/hermasunani/public_html/admin/dashboard.php on line 288
+[26-Aug-2019 11:25:36 Etc/GMT] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home/hermasunani/public_html/admin/dashboard.php on line 293
+[26-Aug-2019 11:25:36 Etc/GMT] PHP Notice:  Undefined variable: sale in /home/hermasunani/public_html/admin/dashboard.php on line 301
+[26-Aug-2019 11:25:36 Etc/GMT] PHP Notice:  Undefined variable: purchase in /home/hermasunani/public_html/admin/dashboard.php on line 302
+[26-Aug-2019 11:26:02 Etc/GMT] PHP Fatal error:  Uncaught Error: Call to undefined method mysqli_stmt::get_result() in /home/hermasunani/public_html/admin/manage_products.php:17
+Stack trace:
+#0 {main}
+  thrown in /home/hermasunani/public_html/admin/manage_products.php on line 17
+[26-Aug-2019 11:26:05 Etc/GMT] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home/hermasunani/public_html/admin/dashboard.php on line 278
+[26-Aug-2019 11:26:05 Etc/GMT] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home/hermasunani/public_html/admin/dashboard.php on line 283
+[26-Aug-2019 11:26:05 Etc/GMT] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home/hermasunani/public_html/admin/dashboard.php on line 288
+[26-Aug-2019 11:26:05 Etc/GMT] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home/hermasunani/public_html/admin/dashboard.php on line 293
+[26-Aug-2019 11:26:05 Etc/GMT] PHP Notice:  Undefined variable: sale in /home/hermasunani/public_html/admin/dashboard.php on line 301
+[26-Aug-2019 11:26:05 Etc/GMT] PHP Notice:  Undefined variable: purchase in /home/hermasunani/public_html/admin/dashboard.php on line 302
+[26-Aug-2019 11:26:14 Etc/GMT] PHP Fatal error:  Uncaught Error: Call to undefined method mysqli_stmt::get_result() in /home/hermasunani/public_html/admin/manage_products.php:17
+Stack trace:
+#0 {main}
+  thrown in /home/hermasunani/public_html/admin/manage_products.php on line 17
+[26-Aug-2019 11:55:35 Etc/GMT] PHP Notice:  Undefined index: Category_Id in /home/hermasunani/public_html/admin/create_banner.php on line 155
+[26-Aug-2019 11:55:35 Etc/GMT] PHP Notice:  Undefined index: Category_Title in /home/hermasunani/public_html/admin/create_banner.php on line 155
+[26-Aug-2019 11:55:35 Etc/GMT] PHP Notice:  Undefined index: Category_Id in /home/hermasunani/public_html/admin/create_banner.php on line 155
+[26-Aug-2019 11:55:35 Etc/GMT] PHP Notice:  Undefined index: Category_Title in /home/hermasunani/public_html/admin/create_banner.php on line 155
+[26-Aug-2019 11:55:35 Etc/GMT] PHP Notice:  Undefined index: Category_Id in /home/hermasunani/public_html/admin/create_banner.php on line 155
+[26-Aug-2019 11:55:35 Etc/GMT] PHP Notice:  Undefined index: Category_Title in /home/hermasunani/public_html/admin/create_banner.php on line 155
+[26-Aug-2019 11:56:09 Etc/GMT] PHP Fatal error:  Uncaught Error: Call to undefined method mysqli_stmt::get_result() in /home/hermasunani/public_html/admin/manage_salesman.php:12
+Stack trace:
+#0 {main}
+  thrown in /home/hermasunani/public_html/admin/manage_salesman.php on line 12
+[26-Aug-2019 11:56:41 Etc/GMT] PHP Notice:  Undefined index: s_id in /home/hermasunani/public_html/admin/manage_salesman.php on line 95
+[26-Aug-2019 11:56:41 Etc/GMT] PHP Notice:  Undefined index: salesman_name in /home/hermasunani/public_html/admin/manage_salesman.php on line 96
+[26-Aug-2019 11:56:41 Etc/GMT] PHP Notice:  Undefined index: s_id in /home/hermasunani/public_html/admin/manage_salesman.php on line 97
+[26-Aug-2019 11:56:41 Etc/GMT] PHP Notice:  Undefined index: s_id in /home/hermasunani/public_html/admin/manage_salesman.php on line 97
+[26-Aug-2019 11:56:41 Etc/GMT] PHP Notice:  Undefined offset: 1 in /home/hermasunani/public_html/admin/manage_salesman.php on line 100
+[26-Aug-2019 11:56:41 Etc/GMT] PHP Notice:  Undefined index: s_id in /home/hermasunani/public_html/admin/manage_salesman.php on line 95
+[26-Aug-2019 11:56:41 Etc/GMT] PHP Notice:  Undefined index: salesman_name in /home/hermasunani/public_html/admin/manage_salesman.php on line 96
+[26-Aug-2019 11:56:41 Etc/GMT] PHP Notice:  Undefined index: s_id in /home/hermasunani/public_html/admin/manage_salesman.php on line 97
+[26-Aug-2019 11:56:41 Etc/GMT] PHP Notice:  Undefined index: s_id in /home/hermasunani/public_html/admin/manage_salesman.php on line 97
+[26-Aug-2019 11:56:41 Etc/GMT] PHP Notice:  Undefined offset: 1 in /home/hermasunani/public_html/admin/manage_salesman.php on line 100
+[26-Aug-2019 11:56:47 Etc/GMT] PHP Notice:  Undefined index: s_id in /home/hermasunani/public_html/admin/disabled_salesman.php on line 112
+[26-Aug-2019 11:56:47 Etc/GMT] PHP Notice:  Undefined index: salesman_name in /home/hermasunani/public_html/admin/disabled_salesman.php on line 113
+[26-Aug-2019 11:56:47 Etc/GMT] PHP Notice:  Undefined index: s_id in /home/hermasunani/public_html/admin/disabled_salesman.php on line 114
+[26-Aug-2019 11:57:57 Etc/GMT] PHP Notice:  Undefined index: user_id in /home/hermasunani/public_html/admin/subscription.php on line 110
+[26-Aug-2019 11:57:57 Etc/GMT] PHP Notice:  Undefined index: user_id in /home/hermasunani/public_html/admin/subscription.php on line 110
+[26-Aug-2019 11:57:57 Etc/GMT] PHP Notice:  Undefined index: user_id in /home/hermasunani/public_html/admin/subscription.php on line 110
+[26-Aug-2019 11:57:57 Etc/GMT] PHP Notice:  Undefined index: user_id in /home/hermasunani/public_html/admin/subscription.php on line 110
+[26-Aug-2019 11:57:57 Etc/GMT] PHP Notice:  Undefined index: user_id in /home/hermasunani/public_html/admin/subscription.php on line 110
+[26-Aug-2019 11:57:57 Etc/GMT] PHP Notice:  Undefined index: user_id in /home/hermasunani/public_html/admin/subscription.php on line 110
+[26-Aug-2019 11:57:57 Etc/GMT] PHP Notice:  Undefined index: user_id in /home/hermasunani/public_html/admin/subscription.php on line 110
+[26-Aug-2019 11:57:57 Etc/GMT] PHP Notice:  Undefined index: user_id in /home/hermasunani/public_html/admin/subscription.php on line 110
+[26-Aug-2019 11:57:57 Etc/GMT] PHP Notice:  Undefined index: user_id in /home/hermasunani/public_html/admin/subscription.php on line 110
+[26-Aug-2019 11:57:57 Etc/GMT] PHP Notice:  Undefined index: user_id in /home/hermasunani/public_html/admin/subscription.php on line 110
+[26-Aug-2019 11:57:57 Etc/GMT] PHP Notice:  Undefined index: user_id in /home/hermasunani/public_html/admin/subscription.php on line 110
+[26-Aug-2019 11:57:57 Etc/GMT] PHP Notice:  Undefined index: user_id in /home/hermasunani/public_html/admin/subscription.php on line 110
+[26-Aug-2019 11:57:57 Etc/GMT] PHP Notice:  Undefined index: user_id in /home/hermasunani/public_html/admin/subscription.php on line 110
+[26-Aug-2019 11:57:57 Etc/GMT] PHP Notice:  Undefined index: user_id in /home/hermasunani/public_html/admin/subscription.php on line 110
+[26-Aug-2019 11:57:57 Etc/GMT] PHP Notice:  Undefined index: user_id in /home/hermasunani/public_html/admin/subscription.php on line 110
+[26-Aug-2019 11:57:57 Etc/GMT] PHP Notice:  Undefined index: user_id in /home/hermasunani/public_html/admin/subscription.php on line 110
+[26-Aug-2019 11:57:57 Etc/GMT] PHP Notice:  Undefined index: user_id in /home/hermasunani/public_html/admin/subscription.php on line 110
+[26-Aug-2019 11:57:57 Etc/GMT] PHP Notice:  Undefined index: user_id in /home/hermasunani/public_html/admin/subscription.php on line 110
+[26-Aug-2019 11:57:57 Etc/GMT] PHP Notice:  Undefined index: user_id in /home/hermasunani/public_html/admin/subscription.php on line 110
+[26-Aug-2019 11:57:57 Etc/GMT] PHP Notice:  Undefined index: user_id in /home/hermasunani/public_html/admin/subscription.php on line 110
+[26-Aug-2019 11:57:57 Etc/GMT] PHP Notice:  Undefined index: user_id in /home/hermasunani/public_html/admin/subscription.php on line 110
+[26-Aug-2019 11:57:57 Etc/GMT] PHP Notice:  Undefined index: user_id in /home/hermasunani/public_html/admin/subscription.php on line 110
+[26-Aug-2019 11:57:57 Etc/GMT] PHP Notice:  Undefined index: user_id in /home/hermasunani/public_html/admin/subscription.php on line 110
+[26-Aug-2019 11:57:57 Etc/GMT] PHP Notice:  Undefined index: user_id in /home/hermasunani/public_html/admin/subscription.php on line 110
+[26-Aug-2019 11:57:57 Etc/GMT] PHP Notice:  Undefined index: user_id in /home/hermasunani/public_html/admin/subscription.php on line 110
+[26-Aug-2019 11:57:57 Etc/GMT] PHP Notice:  Undefined index: user_id in /home/hermasunani/public_html/admin/subscription.php on line 110
+[26-Aug-2019 11:57:57 Etc/GMT] PHP Notice:  Undefined index: user_id in /home/hermasunani/public_html/admin/subscription.php on line 110
+[26-Aug-2019 11:57:57 Etc/GMT] PHP Notice:  Undefined index: user_id in /home/hermasunani/public_html/admin/subscription.php on line 110
+[26-Aug-2019 11:57:57 Etc/GMT] PHP Notice:  Undefined index: user_id in /home/hermasunani/public_html/admin/subscription.php on line 110
+[26-Aug-2019 11:57:57 Etc/GMT] PHP Notice:  Undefined index: user_id in /home/hermasunani/public_html/admin/subscription.php on line 110
+[26-Aug-2019 11:57:57 Etc/GMT] PHP Notice:  Undefined index: user_id in /home/hermasunani/public_html/admin/subscription.php on line 110
+[26-Aug-2019 11:57:57 Etc/GMT] PHP Notice:  Undefined index: user_id in /home/hermasunani/public_html/admin/subscription.php on line 110
+[26-Aug-2019 11:57:57 Etc/GMT] PHP Notice:  Undefined index: user_id in /home/hermasunani/public_html/admin/subscription.php on line 110
+[26-Aug-2019 11:57:57 Etc/GMT] PHP Notice:  Undefined index: user_id in /home/hermasunani/public_html/admin/subscription.php on line 110
+[30-Aug-2019 05:49:10 Etc/GMT] PHP Fatal error:  Uncaught Error: Call to undefined method mysqli_stmt::get_result() in /home/hermasunani/public_html/admin/index.php:32
+Stack trace:
+#0 {main}
+  thrown in /home/hermasunani/public_html/admin/index.php on line 32
+[30-Aug-2019 05:49:26 Etc/GMT] PHP Fatal error:  Uncaught Error: Call to undefined method mysqli_stmt::get_result() in /home/hermasunani/public_html/admin/index.php:32
+Stack trace:
+#0 {main}
+  thrown in /home/hermasunani/public_html/admin/index.php on line 32
+[30-Aug-2019 05:49:27 Etc/GMT] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home/hermasunani/public_html/admin/dashboard.php on line 278
+[30-Aug-2019 05:49:27 Etc/GMT] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home/hermasunani/public_html/admin/dashboard.php on line 283
+[30-Aug-2019 05:49:27 Etc/GMT] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home/hermasunani/public_html/admin/dashboard.php on line 288
+[30-Aug-2019 05:49:27 Etc/GMT] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home/hermasunani/public_html/admin/dashboard.php on line 293
+[30-Aug-2019 05:49:27 Etc/GMT] PHP Notice:  Undefined variable: sale in /home/hermasunani/public_html/admin/dashboard.php on line 301
+[30-Aug-2019 05:49:27 Etc/GMT] PHP Notice:  Undefined variable: purchase in /home/hermasunani/public_html/admin/dashboard.php on line 302
+[31-Aug-2019 12:18:26 Etc/GMT] PHP Fatal error:  Uncaught Error: Call to undefined method mysqli_stmt::get_result() in /home/hermasunani/public_html/admin/index.php:32
+Stack trace:
+#0 {main}
+  thrown in /home/hermasunani/public_html/admin/index.php on line 32
+[31-Aug-2019 12:18:26 Etc/GMT] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home/hermasunani/public_html/admin/dashboard.php on line 278
+[31-Aug-2019 12:18:26 Etc/GMT] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home/hermasunani/public_html/admin/dashboard.php on line 283
+[31-Aug-2019 12:18:26 Etc/GMT] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home/hermasunani/public_html/admin/dashboard.php on line 288
+[31-Aug-2019 12:18:26 Etc/GMT] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home/hermasunani/public_html/admin/dashboard.php on line 293
+[31-Aug-2019 12:18:26 Etc/GMT] PHP Notice:  Undefined variable: sale in /home/hermasunani/public_html/admin/dashboard.php on line 301
+[31-Aug-2019 12:18:26 Etc/GMT] PHP Notice:  Undefined variable: purchase in /home/hermasunani/public_html/admin/dashboard.php on line 302
+[31-Aug-2019 13:02:00 Etc/GMT] PHP Fatal error:  Uncaught Error: Call to undefined method mysqli_stmt::get_result() in /home/hermasunani/public_html/admin/index.php:32
+Stack trace:
+#0 {main}
+  thrown in /home/hermasunani/public_html/admin/index.php on line 32
+[06-Sep-2019 09:42:34 Etc/GMT] PHP Fatal error:  Uncaught Error: Call to undefined method mysqli_stmt::get_result() in /home/hermasunani/public_html/admin/index.php:32
+Stack trace:
+#0 {main}
+  thrown in /home/hermasunani/public_html/admin/index.php on line 32
+[06-Sep-2019 09:42:35 Etc/GMT] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home/hermasunani/public_html/admin/dashboard.php on line 278
+[06-Sep-2019 09:42:35 Etc/GMT] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home/hermasunani/public_html/admin/dashboard.php on line 283
+[06-Sep-2019 09:42:35 Etc/GMT] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home/hermasunani/public_html/admin/dashboard.php on line 288
+[06-Sep-2019 09:42:35 Etc/GMT] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home/hermasunani/public_html/admin/dashboard.php on line 293
+[06-Sep-2019 09:42:35 Etc/GMT] PHP Notice:  Undefined variable: sale in /home/hermasunani/public_html/admin/dashboard.php on line 301
+[06-Sep-2019 09:42:35 Etc/GMT] PHP Notice:  Undefined variable: purchase in /home/hermasunani/public_html/admin/dashboard.php on line 302
+[06-Sep-2019 09:50:44 Etc/GMT] PHP Fatal error:  Uncaught Error: Call to undefined method mysqli_stmt::get_result() in /home/hermasunani/public_html/admin/index.php:32
+Stack trace:
+#0 {main}
+  thrown in /home/hermasunani/public_html/admin/index.php on line 32
+[06-Sep-2019 09:50:45 Etc/GMT] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home/hermasunani/public_html/admin/dashboard.php on line 278
+[06-Sep-2019 09:50:45 Etc/GMT] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home/hermasunani/public_html/admin/dashboard.php on line 283
+[06-Sep-2019 09:50:45 Etc/GMT] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home/hermasunani/public_html/admin/dashboard.php on line 288
+[06-Sep-2019 09:50:45 Etc/GMT] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home/hermasunani/public_html/admin/dashboard.php on line 293
+[06-Sep-2019 09:50:45 Etc/GMT] PHP Notice:  Undefined variable: sale in /home/hermasunani/public_html/admin/dashboard.php on line 301
+[06-Sep-2019 09:50:45 Etc/GMT] PHP Notice:  Undefined variable: purchase in /home/hermasunani/public_html/admin/dashboard.php on line 302
+[06-Sep-2019 09:52:24 Etc/GMT] PHP Fatal error:  Uncaught Error: Call to undefined method mysqli_stmt::get_result() in /home/hermasunani/public_html/admin/index.php:32
+Stack trace:
+#0 {main}
+  thrown in /home/hermasunani/public_html/admin/index.php on line 32
+[06-Sep-2019 09:52:48 Etc/GMT] PHP Fatal error:  Uncaught Error: Call to undefined method mysqli_stmt::get_result() in /home/hermasunani/public_html/admin/index.php:32
+Stack trace:
+#0 {main}
+  thrown in /home/hermasunani/public_html/admin/index.php on line 32
+[06-Sep-2019 09:52:49 Etc/GMT] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home/hermasunani/public_html/admin/dashboard.php on line 278
+[06-Sep-2019 09:52:49 Etc/GMT] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home/hermasunani/public_html/admin/dashboard.php on line 283
+[06-Sep-2019 09:52:49 Etc/GMT] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home/hermasunani/public_html/admin/dashboard.php on line 288
+[06-Sep-2019 09:52:49 Etc/GMT] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home/hermasunani/public_html/admin/dashboard.php on line 293
+[06-Sep-2019 09:52:49 Etc/GMT] PHP Notice:  Undefined variable: sale in /home/hermasunani/public_html/admin/dashboard.php on line 301
+[06-Sep-2019 09:52:49 Etc/GMT] PHP Notice:  Undefined variable: purchase in /home/hermasunani/public_html/admin/dashboard.php on line 302
+[06-Sep-2019 09:54:28 Etc/GMT] PHP Fatal error:  Uncaught Error: Call to undefined method mysqli_stmt::get_result() in /home/hermasunani/public_html/admin/index.php:32
+Stack trace:
+#0 {main}
+  thrown in /home/hermasunani/public_html/admin/index.php on line 32
+[06-Sep-2019 09:54:50 Etc/GMT] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home/hermasunani/public_html/admin/dashboard.php on line 278
+[06-Sep-2019 09:54:50 Etc/GMT] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home/hermasunani/public_html/admin/dashboard.php on line 283
+[06-Sep-2019 09:54:50 Etc/GMT] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home/hermasunani/public_html/admin/dashboard.php on line 288
+[06-Sep-2019 09:54:50 Etc/GMT] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home/hermasunani/public_html/admin/dashboard.php on line 293
+[06-Sep-2019 09:54:50 Etc/GMT] PHP Notice:  Undefined variable: sale in /home/hermasunani/public_html/admin/dashboard.php on line 301
+[06-Sep-2019 09:54:50 Etc/GMT] PHP Notice:  Undefined variable: purchase in /home/hermasunani/public_html/admin/dashboard.php on line 302
+[06-Sep-2019 09:55:01 Etc/GMT] PHP Fatal error:  Uncaught Error: Call to undefined method mysqli_stmt::get_result() in /home/hermasunani/public_html/admin/index.php:32
+Stack trace:
+#0 {main}
+  thrown in /home/hermasunani/public_html/admin/index.php on line 32
+[06-Sep-2019 09:55:31 Etc/GMT] PHP Fatal error:  Uncaught Error: Call to undefined method mysqli_stmt::get_result() in /home/hermasunani/public_html/admin/index.php:32
+Stack trace:
+#0 {main}
+  thrown in /home/hermasunani/public_html/admin/index.php on line 32
+[06-Sep-2019 09:56:14 Etc/GMT] PHP Fatal error:  Uncaught Error: Call to undefined method mysqli_stmt::get_result() in /home/hermasunani/public_html/admin/index.php:32
+Stack trace:
+#0 {main}
+  thrown in /home/hermasunani/public_html/admin/index.php on line 32
+[06-Sep-2019 09:56:29 Etc/GMT] PHP Fatal error:  Uncaught Error: Call to undefined method mysqli_stmt::get_result() in /home/hermasunani/public_html/admin/index.php:32
+Stack trace:
+#0 {main}
+  thrown in /home/hermasunani/public_html/admin/index.php on line 32
+[06-Sep-2019 09:57:17 Etc/GMT] PHP Fatal error:  Uncaught Error: Call to undefined method mysqli_stmt::get_result() in /home/hermasunani/public_html/admin/index.php:32
+Stack trace:
+#0 {main}
+  thrown in /home/hermasunani/public_html/admin/index.php on line 32
+[06-Sep-2019 10:03:18 Etc/GMT] PHP Fatal error:  Uncaught Error: Call to undefined method mysqli_stmt::get_result() in /home/hermasunani/public_html/admin/index.php:32
+Stack trace:
+#0 {main}
+  thrown in /home/hermasunani/public_html/admin/index.php on line 32
+[06-Sep-2019 10:03:18 Etc/GMT] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home/hermasunani/public_html/admin/dashboard.php on line 278
+[06-Sep-2019 10:03:18 Etc/GMT] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home/hermasunani/public_html/admin/dashboard.php on line 283
+[06-Sep-2019 10:03:18 Etc/GMT] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home/hermasunani/public_html/admin/dashboard.php on line 288
+[06-Sep-2019 10:03:18 Etc/GMT] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home/hermasunani/public_html/admin/dashboard.php on line 293
+[06-Sep-2019 10:03:18 Etc/GMT] PHP Notice:  Undefined variable: sale in /home/hermasunani/public_html/admin/dashboard.php on line 301
+[06-Sep-2019 10:03:18 Etc/GMT] PHP Notice:  Undefined variable: purchase in /home/hermasunani/public_html/admin/dashboard.php on line 302
+[06-Sep-2019 10:03:42 Etc/GMT] PHP Fatal error:  Uncaught Error: Call to undefined method mysqli_stmt::get_result() in /home/hermasunani/public_html/admin/manage_vendor.php:12
+Stack trace:
+#0 {main}
+  thrown in /home/hermasunani/public_html/admin/manage_vendor.php on line 12
+[06-Sep-2019 10:05:19 Etc/GMT] PHP Fatal error:  Uncaught Error: Call to undefined method mysqli_stmt::get_result() in /home/hermasunani/public_html/admin/manage_vendor.php:12
+Stack trace:
+#0 {main}
+  thrown in /home/hermasunani/public_html/admin/manage_vendor.php on line 12
+[06-Sep-2019 10:06:23 Etc/GMT] PHP Fatal error:  Uncaught Error: Call to undefined method mysqli_stmt::get_result() in /home/hermasunani/public_html/admin/stock_history.php:22
+Stack trace:
+#0 {main}
+  thrown in /home/hermasunani/public_html/admin/stock_history.php on line 22
+[06-Sep-2019 10:06:54 Etc/GMT] PHP Notice:  Undefined index: s_id in /home/hermasunani/public_html/admin/manage_salesman.php on line 95
+[06-Sep-2019 10:06:54 Etc/GMT] PHP Notice:  Undefined index: salesman_name in /home/hermasunani/public_html/admin/manage_salesman.php on line 96
+[06-Sep-2019 10:06:54 Etc/GMT] PHP Notice:  Undefined index: s_id in /home/hermasunani/public_html/admin/manage_salesman.php on line 97
+[06-Sep-2019 10:06:54 Etc/GMT] PHP Notice:  Undefined index: s_id in /home/hermasunani/public_html/admin/manage_salesman.php on line 97
+[06-Sep-2019 10:06:54 Etc/GMT] PHP Notice:  Undefined offset: 1 in /home/hermasunani/public_html/admin/manage_salesman.php on line 100
+[06-Sep-2019 10:06:54 Etc/GMT] PHP Notice:  Undefined index: s_id in /home/hermasunani/public_html/admin/manage_salesman.php on line 95
+[06-Sep-2019 10:06:54 Etc/GMT] PHP Notice:  Undefined index: salesman_name in /home/hermasunani/public_html/admin/manage_salesman.php on line 96
+[06-Sep-2019 10:06:54 Etc/GMT] PHP Notice:  Undefined index: s_id in /home/hermasunani/public_html/admin/manage_salesman.php on line 97
+[06-Sep-2019 10:06:54 Etc/GMT] PHP Notice:  Undefined index: s_id in /home/hermasunani/public_html/admin/manage_salesman.php on line 97
+[06-Sep-2019 10:06:54 Etc/GMT] PHP Notice:  Undefined offset: 1 in /home/hermasunani/public_html/admin/manage_salesman.php on line 100
+[06-Sep-2019 10:06:58 Etc/GMT] PHP Notice:  Undefined index: s_id in /home/hermasunani/public_html/admin/disabled_salesman.php on line 112
+[06-Sep-2019 10:06:58 Etc/GMT] PHP Notice:  Undefined index: salesman_name in /home/hermasunani/public_html/admin/disabled_salesman.php on line 113
+[06-Sep-2019 10:06:58 Etc/GMT] PHP Notice:  Undefined index: s_id in /home/hermasunani/public_html/admin/disabled_salesman.php on line 114
+[06-Sep-2019 10:07:02 Etc/GMT] PHP Notice:  Undefined index: Category_Id in /home/hermasunani/public_html/admin/create_banner.php on line 155
+[06-Sep-2019 10:07:02 Etc/GMT] PHP Notice:  Undefined index: Category_Title in /home/hermasunani/public_html/admin/create_banner.php on line 155
+[06-Sep-2019 10:07:02 Etc/GMT] PHP Notice:  Undefined index: Category_Id in /home/hermasunani/public_html/admin/create_banner.php on line 155
+[06-Sep-2019 10:07:02 Etc/GMT] PHP Notice:  Undefined index: Category_Title in /home/hermasunani/public_html/admin/create_banner.php on line 155
+[06-Sep-2019 10:07:02 Etc/GMT] PHP Notice:  Undefined index: Category_Id in /home/hermasunani/public_html/admin/create_banner.php on line 155
+[06-Sep-2019 10:07:02 Etc/GMT] PHP Notice:  Undefined index: Category_Title in /home/hermasunani/public_html/admin/create_banner.php on line 155
+[06-Sep-2019 10:07:16 Etc/GMT] PHP Notice:  Undefined index: Category_Id in /home/hermasunani/public_html/admin/create_banner.php on line 155
+[06-Sep-2019 10:07:16 Etc/GMT] PHP Notice:  Undefined index: Category_Title in /home/hermasunani/public_html/admin/create_banner.php on line 155
+[06-Sep-2019 10:07:16 Etc/GMT] PHP Notice:  Undefined index: Category_Id in /home/hermasunani/public_html/admin/create_banner.php on line 155
+[06-Sep-2019 10:07:16 Etc/GMT] PHP Notice:  Undefined index: Category_Title in /home/hermasunani/public_html/admin/create_banner.php on line 155
+[06-Sep-2019 10:07:16 Etc/GMT] PHP Notice:  Undefined index: Category_Id in /home/hermasunani/public_html/admin/create_banner.php on line 155
+[06-Sep-2019 10:07:16 Etc/GMT] PHP Notice:  Undefined index: Category_Title in /home/hermasunani/public_html/admin/create_banner.php on line 155

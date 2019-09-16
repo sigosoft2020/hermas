@@ -61,16 +61,5 @@
   </body>
   <?php $this->load->view('admin/includes/scripts.php'); ?>
   <?php $this->load->view('admin/includes/table-script.php'); ?>
-  
- <script type="text/javascript">
-        $(document).ready(function() {
-            // $('#datatable').DataTable();
-            $('#datatable').DataTable({
-               "ordering": false
-               });
-            
-        } );
-        
-    </script>
-   
+
 </html>

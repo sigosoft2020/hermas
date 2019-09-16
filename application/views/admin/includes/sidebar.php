@@ -24,10 +24,10 @@
 
                   </a>
                   <div class="dropdown-menu dropdown-menu-right profile-dropdown ">
-                    <a href="<?=site_url('admin/settings')?>" class="dropdown-item notify-item">
+                    <!-- <a href="<?=site_url('admin/settings')?>" class="dropdown-item notify-item">
                         <i class="fi-power"></i> <span>Settings</span>
-                    </a>
-                    <a href="<?=site_url('app/logout')?>" class="dropdown-item notify-item">
+                    </a> -->
+                    <a href="<?=site_url('users/logoutAdmin')?>" class="dropdown-item notify-item">
                         <i class="fi-power"></i> <span>Log Out</span>
                     </a>
                   </div>

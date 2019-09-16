@@ -20,22 +20,23 @@ class Users extends CI_Controller {
         }
         else
         {
-            redirect('users/staff');
+            redirect('users/unani');
         }
     }
-	public function staff()
+
+	public function unani()
 	{
-		if(isset($_COOKIE['staff_wooslot_id'])){
+		if(isset($_COOKIE['hermas_unani_id'])){
 			$session = [
-				'staff_id' => $_COOKIE['staff_wooslot_id'],
-				'name' => $_COOKIE['staff_wooslot_name'],
-				'turf_id' => $_COOKIE['staff_turf_id']
+				'staff_id' => $_COOKIE['hermas_unani_id'],
+				'name' => $_COOKIE['hermas_unani_name']
 			];
-			$this->session->set_userdata('staff',$session);
-			redirect('staff/dashboard');
+			$this->session->set_userdata('unani',$session);
+			redirect('unani/dashboard');
 		}
-		$this->load->view('login/staff/login');
+		$this->load->view('login/unani/login');
 	}
+
 	public function admin()
 	{
 		if(isset($_COOKIE['admin_hermas_id'])){
@@ -83,67 +84,57 @@ class Users extends CI_Controller {
 		}
 	}
 
-	public function staffLogin()
+	public function unaniLogin()
 	{
-		$email = $this->security->xss_clean($this->input->post('email'));
+		$username = $this->security->xss_clean($this->input->post('username'));
 		$pass = $this->security->xss_clean($this->input->post('password'));
 		$password = md5($pass);
-		if(is_numeric($email))
-        {
-            $array = [
-				'mobile' => $email,
-				'password' => $password
-			];
-        }
-		else {
-			$array = [
-				'email' => $email,
-				'password' => $password
-			];
-		}
 
-		$check = $this->Common->get_details('staffs',$array);
+		$array = [
+					'username' => $username,
+					'password' => $password
+				  ];
+
+		$check = $this->Common->get_details('unani_auth',$array);
 		if ( $check->num_rows() > 0 ) {
-			$staff = $check->row();
+			$unani = $check->row();
 			$session = [
-				'staff_id' => $staff->staff_id,
-				'name' => $staff->username,
-				'turf_id' => $staff->turf_id
+				'staff_id' => $unani->id,
+				'name' => $unani->username
 			];
-			$this->session->set_userdata('staff',$session);
+			$this->session->set_userdata('unani',$session);
 
 			$hour = time() + 3600 * 24 * 30;
-		    setcookie('staff_wooslot_id', $staff->staff_id, $hour);
-			setcookie('staff_wooslot_name', $staff->username, $hour);
-			setcookie('staff_turf_id', $staff->turf_id, $hour);
+		  setcookie('hermas_unani_id', $unani->id, $hour);
+			setcookie('hermas_unani_name', $unani->username, $hour);
 
-			redirect('staff/dashboard');
+
+			redirect('unani/dashboard');
 		}
 		else {
 			$this->session->set_flashdata('message','Login failed..!');
-			redirect('users/staff');
+			redirect('users/unani');
 		}
-
 	}
 
-	public function logoutOwner()
+	public function logoutAdmin()
 	{
 		setcookie('admin_hermas_id');
 		setcookie('admin_hermas_name');
 
-		$this->session->unset_userdata('owner');
+		$this->session->unset_userdata('admin');
 
-		redirect('users/owner');
+		redirect('users/admin');
 	}
 
-	public function logoutStaff()
+	public function logoutUnani()
 	{
-		setcookie('staff_wooslot_id');
-		setcookie('staff_wooslot_name');
+		setcookie('hermas_unani_id');
+		setcookie('hermas_unani_name');
 
-		$this->session->unset_userdata('staff');
+		$this->session->unset_userdata('unani');
 
-		redirect('users/staff');
+		redirect('users/unani');
 	}
 
 }

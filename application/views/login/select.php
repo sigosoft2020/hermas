@@ -38,7 +38,7 @@
 					<div class="col-sm-4 col-xs-12">
 					    <div class="ss">
 						    <img src="<?=base_url()?>assets/images/staff.png" class="img-fluid">
-						    <a href="<?=site_url('users/login/staff')?>"><button type="button" class="btn btn-light btn-lg waves-effect w-md"> Unani Login </button></a>
+						    <a href="<?=site_url('users/login/unani')?>"><button type="button" class="btn btn-light btn-lg waves-effect w-md"> Unani Login </button></a>
 						</div>
 					</div>
 					<div class="col-sm-2 col-xs-12">

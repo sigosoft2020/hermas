@@ -61,10 +61,10 @@ class Banner extends CI_Controller {
 		$image     = $this->input->post('image');
 		$img       = substr($image, strpos($image, ",") + 1);
 
-		$url      = FCPATH.'uploads/offer_image/';
+		$url      = FCPATH.'uploads/admin/offer_image/';
 		$rand     = $banner.date('Ymd').mt_rand(1001,9999);
 		$userpath = $url.$rand.'.png';
-		$path     = "uploads/offer_image/".$rand.'.png';
+		$path     = "uploads/admin/offer_image/".$rand.'.png';
 		file_put_contents($userpath,base64_decode($img));
 
 		$array = [

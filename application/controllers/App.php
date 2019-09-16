@@ -66,9 +66,9 @@ class App extends CI_Controller {
 
 		redirect('app');
 	}
-	public function staff()
+	public function unani()
 	{
-		if(isset($_COOKIE['staff_wooslot_id']))
+		if(isset($_COOKIE['unani_hermas_id']))
 		{
 		    $staff_id = $_COOKIE['staff_wooslot_id'];
 		    $staff = $this->Common->get_details('staffs',array('staff_id' => $staff_id))->row();
@@ -89,7 +89,7 @@ class App extends CI_Controller {
 		}
 		$this->load->view('login/staff/login');
 	}
-	public function owner()
+	public function admin()
 	{
 		if(isset($_COOKIE['admin_hermas_id']))
 		{

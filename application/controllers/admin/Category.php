@@ -67,10 +67,10 @@ class Category extends CI_Controller {
 		$cat_check = $this->Common->get_details('category',array('category_name'=>$category));
 		if($cat_check->num_rows()==0)
         {
-        	$url      = FCPATH.'uploads/category/';
+        	$url      = FCPATH.'uploads/admin/category/';
 			$rand     = $category.date('Ymd').mt_rand(1001,9999);
 			$userpath = $url.$rand.'.png';
-			$path     = "uploads/category/".$rand.'.png';
+			$path     = "uploads/admin/category/".$rand.'.png';
 			file_put_contents($userpath,base64_decode($img));
 
 			$array = [
@@ -122,10 +122,10 @@ class Category extends CI_Controller {
 			if ($image != '') {
 				$img = substr($image, strpos($image, ",") + 1);
 
-				$url      = FCPATH.'uploads/category/';
+				$url      = FCPATH.'uploads/admin/category/';
 				$rand     = $category.date('Ymd').mt_rand(1001,9999);
 				$userpath = $url.$rand.'.png';
-				$path     = "uploads/category/".$rand.'.png';
+				$path     = "uploads/admin/category/".$rand.'.png';
 				file_put_contents($userpath,base64_decode($img));
 
 				// Remove old image from the server

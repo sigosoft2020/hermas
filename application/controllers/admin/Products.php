@@ -100,7 +100,7 @@ class Products extends CI_Controller {
 		if($pr_check->num_rows()==0)
         {	
             $file     = $_FILES['image'];	       	
-			$tar      = "uploads/products/";
+			$tar      = "uploads/admin/products/";
 			$rand     = date('Ymd').mt_rand(1001,9999);
 			$tar_file = $tar . $rand . basename($file['name']);
 			move_uploaded_file($file['tmp_name'], $tar_file);
@@ -133,7 +133,7 @@ class Products extends CI_Controller {
 				
                 if ($file1['size'] > 0) 
                  {
-                 	$tar       = "uploads/product_images/";
+                 	$tar       = "uploads/admin/product_images/";
 					$rand      = date('Ymd').mt_rand(1001,9999);
 					$tar_file1 = $tar . $rand . basename($file1['name']);
 					move_uploaded_file($file1['tmp_name'], $tar_file1);
@@ -147,7 +147,7 @@ class Products extends CI_Controller {
                  
                  if ($file2['size'] > 0) 
                  {
-                 	$tar       = "uploads/product_images/";
+                 	$tar       = "uploads/admin/product_images/";
 					$rand      = date('Ymd').mt_rand(1001,9999);
 					$tar_file2 = $tar . $rand . basename($file2['name']);
 					move_uploaded_file($file2['tmp_name'], $tar_file2);
@@ -161,7 +161,7 @@ class Products extends CI_Controller {
                  
                  if ($file3['size'] > 0) 
                  {
-                 	$tar      = "uploads/product_images/";
+                 	$tar      = "uploads/admin/product_images/";
 					$rand     = date('Ymd').mt_rand(1001,9999);
 					$tar_file3 = $tar . $rand . basename($file3['name']);
 					move_uploaded_file($file3['tmp_name'], $tar_file3);
@@ -223,7 +223,7 @@ class Products extends CI_Controller {
                  
 				if ($file['name'] != '') 
 				{
-					$tar      = "uploads/products/";
+					$tar      = "uploads/admin/products/";
 					$rand     = date('Ymd').mt_rand(1001,9999);
 					$tar_file = $tar . $rand . basename($file['name']);
 					move_uploaded_file($file['tmp_name'], $tar_file);
