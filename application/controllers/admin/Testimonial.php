@@ -73,10 +73,10 @@ class Testimonial extends CI_Controller {
 		$check = $this->Common->get_details('testimonial',array('name'=>$name,'position'=>$position,'description'=>$description));
 		if($check->num_rows()==0)
         {
-        	$url      = FCPATH.'uploads/testimonial/';
+        	$url      = FCPATH.'uploads/admin/testimonial/';
 			$rand     = $name.date('Ymd').mt_rand(1001,9999);
 			$userpath = $url.$rand.'.png';
-			$path     = "uploads/testimonial/".$rand.'.png';
+			$path     = "uploads/admin/testimonial/".$rand.'.png';
 			file_put_contents($userpath,base64_decode($img));
 
 			$array = [
@@ -133,10 +133,10 @@ class Testimonial extends CI_Controller {
 			if ($image != '') {
 				$img = substr($image, strpos($image, ",") + 1);
 
-				$url      = FCPATH.'uploads/testimonial/';
+				$url      = FCPATH.'uploads/admin/testimonial/';
 				$rand     = $name.date('Ymd').mt_rand(1001,9999);
 				$userpath = $url.$rand.'.png';
-				$path     = "uploads/testimonial/".$rand.'.png';
+				$path     = "uploads/admin/testimonial/".$rand.'.png';
 				file_put_contents($userpath,base64_decode($img));
 
 				// Remove old image from the server

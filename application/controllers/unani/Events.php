@@ -8,9 +8,6 @@ class Events extends CI_Controller {
 			$this->load->helper('url');
 			$this->load->model('Common');
 			$this->load->model('unani/M_events','events');
-			// if (!unani()) {
-			// 	redirect('app');
-			// }
 	}
 	public function index()
 	{
@@ -44,139 +41,122 @@ class Events extends CI_Controller {
 
 	public function add()
 	{
-		$this->load->view('unani/directories/add');
+		$this->load->view('unani/events/add');
 	}
 
 	public function edit($id)
 	{
-		$check = $this->Common->get_details('yunani_directory',array('id' => $id));
+		$check = $this->Common->get_details('events',array('id' => $id));
 		if ($check->num_rows() > 0) {
-			$data['user'] = $check->row();
-			$this->load->view('unani/directories/edit',$data);
+			$data['event'] = $check->row();
+			$this->load->view('unani/events/edit',$data);
 		}
-		else {
+		else 
+		{
 			$this->session->set_flashdata('alert_type', 'error');
 			$this->session->set_flashdata('alert_title', 'Failed');
-			$this->session->set_flashdata('alert_message', 'Failed to load directory..!');
+			$this->session->set_flashdata('alert_message', 'Failed to load event..!');
 
-			redirect('unani/directories');
+			redirect('unani/events');
 		}
 	}
 
-	public function addDirectory()
+	public function addEvent()
 	{
-		$name = $this->security->xss_clean($this->input->post('name'));
-		$email = $this->security->xss_clean($this->input->post('email'));
-		$mobile = $this->security->xss_clean($this->input->post('mobile'));
-		$designation = $this->security->xss_clean($this->input->post('designation'));
-		$description = $this->security->xss_clean($this->input->post('description'));
+		$title        = $this->security->xss_clean($this->input->post('name'));
+		$description  = $this->security->xss_clean($this->input->post('description'));
+		$date         = $this->security->xss_clean($this->input->post('date'));
+		$time         = $this->security->xss_clean($this->input->post('time'));
+		$venue        = $this->security->xss_clean($this->input->post('venue'));
+		$no_of_days   = $this->security->xss_clean($this->input->post('no_of_days'));
 
-		$image = $this->input->post('image');
-		if ($image != '') {
-			$img = substr($image, strpos($image, ",") + 1);
+		$event_check  = $this->Common->get_details('events',array('title'=>$title,'description'=>$description,'date'=>$date,'time'=>$time,'venue'=>$venue));
+        if($event_check->num_rows()>0)
+        {
+        	$this->session->set_flashdata('alert_type', 'error');
+			$this->session->set_flashdata('alert_title', 'Failed');
+			$this->session->set_flashdata('alert_message', 'Failed to add events..!');
 
-			$url = FCPATH.'uploads/unani/directory/';
-			$rand = $username . date('Ymd').mt_rand(1001,9999);
-			$userpath = $url.$rand.'.png';
-			$path = "uploads/unani/directory/".$rand.'.png';
-			file_put_contents($userpath,base64_decode($img));
+			redirect('unani/events');
+	    }
+	    else		
+        {
+		    $array = [
+						'title'       => $title,
+						'description' => $description,
+						'date'        => $date,
+						'time'        => $time,
+						'days'        => $no_of_days,
+						'venue'       => $venue,
+						'status'      => 'open'
+				     ];
+
+				if ($this->Common->insert('events',$array)) {
+					$this->session->set_flashdata('alert_type', 'success');
+					$this->session->set_flashdata('alert_title', 'Success');
+					$this->session->set_flashdata('alert_message', 'New event added successfully..!');
+
+					redirect('unani/events');
+				}
+				else {
+					$this->session->set_flashdata('alert_type', 'error');
+					$this->session->set_flashdata('alert_title', 'Failed');
+					$this->session->set_flashdata('alert_message', 'Failed to add event..!');
+
+					redirect('unani/events');
+				}
 		}
-		else {
-			$path = "uploads/profile/user.png";
-		}
+    }
+	public function editEvent()
+	{
+		$id = $this->security->xss_clean($this->input->post('event_id'));
 
-		$array = [
-			'name' => $name,
-			'designation' => $designation,
-			'email' => $email,
-			'mobile' => $mobile,
-			'description' => $description,
-			'image' => $path
-		];
-
-		if ($this->Common->insert('yunani_directory',$array)) {
-			$this->session->set_flashdata('alert_type', 'success');
-			$this->session->set_flashdata('alert_title', 'Success');
-			$this->session->set_flashdata('alert_message', 'New directory added successfully..!');
-
-			redirect('unani/directories');
-		}
-		else {
+		$title        = $this->security->xss_clean($this->input->post('name'));
+		$description  = $this->security->xss_clean($this->input->post('description'));
+		$date         = $this->security->xss_clean($this->input->post('date'));
+		$time         = $this->security->xss_clean($this->input->post('time'));
+		$venue        = $this->security->xss_clean($this->input->post('venue'));
+		$no_of_days   = $this->security->xss_clean($this->input->post('no_of_days'));
+		$status       = $this->security->xss_clean($this->input->post('status'));
+	    
+	    $check       = $this->Common->get_details('category',array('category_name' => $category , 'category_id!=' => $category_id))->num_rows();
+		if ($check > 0) 
+		{
 			$this->session->set_flashdata('alert_type', 'error');
 			$this->session->set_flashdata('alert_title', 'Failed');
-			$this->session->set_flashdata('alert_message', 'Failed to add directory..!');
+			$this->session->set_flashdata('alert_message', 'Failed to add category..!');
 
-			redirect('unani/directories/add');
+			redirect('admin/category/edit/'.$category_id);
 		}
-	}
+		else 
+		{
+			   $array = [
+						'title'       => $title,
+						'description' => $description,
+						'date'        => $date,
+						'time'        => $time,
+						'days'        => $no_of_days,
+						'venue'       => $venue,
+						'status'      => $status
+				     ];
 
-	public function editdirectory()
-	{
-		$id = $this->security->xss_clean($this->input->post('id'));
 
-		$name = $this->security->xss_clean($this->input->post('name'));
-		$email = $this->security->xss_clean($this->input->post('email'));
-		$mobile = $this->security->xss_clean($this->input->post('mobile'));
-		$designation = $this->security->xss_clean($this->input->post('designation'));
-		$description = $this->security->xss_clean($this->input->post('description'));
-		$status = $this->security->xss_clean($this->input->post('status'));
+				if ($this->Common->update('id',$id,'events',$array)) 
+				{
+					$this->session->set_flashdata('alert_type', 'success');
+					$this->session->set_flashdata('alert_title', 'Success');
+					$this->session->set_flashdata('alert_message', 'Changes made successfully..!');
 
-		$image = $this->input->post('image');
-		if ($image != '') {
+					redirect('unani/events');
+				}
+				else {
+					$this->session->set_flashdata('alert_type', 'error');
+					$this->session->set_flashdata('alert_title', 'Failed');
+					$this->session->set_flashdata('alert_message', 'Failed to update event..!');
 
-			$img = substr($image, strpos($image, ",") + 1);
-
-			$url = FCPATH.'uploads/unani/directory/';
-			$rand = $username . date('Ymd').mt_rand(1001,9999);
-			$userpath = $url.$rand.'.png';
-			$path = "uploads/unani/directory/".$rand.'.png';
-			file_put_contents($userpath,base64_decode($img));
-
-			// Remove file from the server
-
-			$user = $this->Common->get_details('yunani_directory',array('id' => $id))->row();
-			$cr_image = "uploads/unani/directory/user.png";
-			if ($cr_image != $user->image) {
-				$remove_path = FCPATH . $user->image;
-				unlink($remove_path);
+					redirect('unani/events/edit/'.$id);
+				}
 			}
-
-			$array = [
-				'name' => $name,
-				'designation' => $designation,
-				'email' => $email,
-				'mobile' => $mobile,
-				'description' => $description,
-				'image' => $path,
-				'block' => $status
-			];
-
-		}
-		else {
-			$array = [
-				'name' => $name,
-				'designation' => $designation,
-				'email' => $email,
-				'mobile' => $mobile,
-				'description' => $description,
-				'block' => $status
-			];
-		}
-
-		if ($this->Common->update('id',$id,'yunani_directory',$array)) {
-			$this->session->set_flashdata('alert_type', 'success');
-			$this->session->set_flashdata('alert_title', 'Success');
-			$this->session->set_flashdata('alert_message', 'Changes made successfully..!');
-
-			redirect('unani/directories');
-		}
-		else {
-			$this->session->set_flashdata('alert_type', 'error');
-			$this->session->set_flashdata('alert_title', 'Failed');
-			$this->session->set_flashdata('alert_message', 'Failed to update directory..!');
-
-			redirect('unani/directories/edit/'.$id);
-		}
 	}
 
 	public function validation()
@@ -229,7 +209,8 @@ class Events extends CI_Controller {
 		print_r(json_encode($array));
 	}
 
-	function getKey() {
+	function getKey() 
+	{
 		while (true) {
 			$key = $this->key();
 			$cond = [

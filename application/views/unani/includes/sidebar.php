@@ -94,14 +94,18 @@
                   </li>
 
                   <li>
-                      <a href="<?=site_url('unani/events')?>"><i class="fa fa-gift"></i> <span> Events </span></a>
+                      <a href="<?=site_url('unani/events')?>"><i class="fa fa-gift"></i> <span> Events </span><span class="menu-arrow"></span></a>
+                      <ul class="nav-second-level" aria-expanded="false">
+                          <li><a href="<?=site_url('unani/events')?>">View events</a></li>
+                          <li><a href="<?=site_url('unani/events/add')?>">Add events</a></li>
+                      </ul>
                   </li>
 
                   <li>
                       <a href="#"><i class="fa fa-book"></i> <span> Library </span> <span class="menu-arrow"></span></a>
                       <ul class="nav-second-level" aria-expanded="false">
-                          <li><a href="<?=site_url('unani/directories')?>">View library</a></li>
-                          <li><a href="<?=site_url('unani/directories/add')?>">Add library</a></li>
+                          <li><a href="<?=site_url('unani/library')?>">View library</a></li>
+                          <li><a href="<?=site_url('unani/library/add')?>">Add library</a></li>
                       </ul>
                   </li>
                  
