@@ -112,8 +112,8 @@
                   <li>
                       <a href="#"><i class="fa fa-gift"></i> <span> Library Slider </span> <span class="menu-arrow"></span></a>
                       <ul class="nav-second-level" aria-expanded="false">
-                          <li><a href="<?=site_url('unani/directories')?>">View slider</a></li>
-                          <li><a href="<?=site_url('unani/directories/add')?>">Add slider</a></li>
+                          <li><a href="<?=site_url('unani/library_slider')?>">View slider</a></li>
+                          <li><a href="<?=site_url('unani/library_slider/add')?>">Add slider</a></li>
                       </ul>
                   </li>
                  
