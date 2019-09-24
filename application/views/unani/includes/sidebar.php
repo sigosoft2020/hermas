@@ -118,7 +118,7 @@
                   </li>
                  
                   <li>
-                      <a href="<?=site_url('unani/directories')?>"><i class="fa fa-user-md"></i> <span> Ask Doctor </span> <span class="menu-arrow"></span></a>
+                      <a href="<?=site_url('unani/ask_doctor')?>"><i class="fa fa-user-md"></i> <span> Ask Doctor </span></a>
                   </li>
 
 
