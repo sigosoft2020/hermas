@@ -16,28 +16,36 @@
      <link href="<?=base_url()?>site/css/bootstrap.min.css" rel="stylesheet">
      <link href="<?=base_url()?>site/css/style.css" rel="stylesheet">
     <!--  <link href="carousel.css" rel="stylesheet"> -->
-<style type="text/css">
-.custom-tab-content{
-color:#fff;
-font-family: 'Open Sans', sans-serif;
-}
-</style>
+    <style type="text/css">
+    .custom-tab-content{
+    color:#fff;
+    font-family: 'Open Sans', sans-serif;
+    }
+    </style>
 </head>
 
   <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
   
-<script>
-  (adsbygoogle = window.adsbygoogle || []).push({
-    google_ad_client: "ca-pub-1126577024424811",
-    enable_page_level_ads: true
-  });
-</script>
+  <script>
+    (adsbygoogle = window.adsbygoogle || []).push({
+      google_ad_client: "ca-pub-1126577024424811",
+      enable_page_level_ads: true
+    });
+  </script>
 <!-- NAVBAR
 ================================================== -->
+      <?php if(!empty($this->session->flashdata('Message')))  {?>
+        <div class="alert alert-success" id="warn">
+          <strong>Success!
+          </strong>&nbsp;&nbsp;&nbsp;
+          <?php echo $this->session->flashdata('Message'); ?>.
+        </div>
+      <?php } ?>
+
   <body>
   <?php $this->load->view('site/includes/header.php'); ?>
-
+     
     <!-- Carousel
     ================================================== -->
     <div id="myCarousel" class="carousel slide" data-ride="carousel">
@@ -47,24 +55,29 @@ font-family: 'Open Sans', sans-serif;
         <li data-target="#myCarousel" data-slide-to="1"></li>
         <li data-target="#myCarousel" data-slide-to="2"></li>
       </ol>
-      <div class="carousel-inner" role="listbox">
-       <div class="item active">
-           <div class="slider_txt">
-           <h1>Hermas Unani</h1>
-           <span>Greek Health Concept</span>
-           </div>
-          <img class="first-slide" src="<?=base_url()?>site/images/banner3.png" alt="First slide" class="img-responsive">
-        </div>
-        <div class="item">
-          <img class="first-slide" src="<?=base_url()?>site/images/banner1.png" alt="First slide" class="img-responsive">
-        </div>
-        <div class="item">
-          <img class="first-slide" src="<?=base_url()?>site/images/banner2.png" alt="First slide" class="img-responsive">
-        </div>
-        <div class="item">
-          <img class="first-slide" src="<?=base_url()?>site/images/banner4.png" alt="First slide" class="img-responsive">
-        </div>
+
+       <div class="carousel-inner" role="listbox">
+          <div class="item active">
+             <div class="slider_txt">
+             <h1>Hermas Unani</h1>
+             <span>Greek Health Concept</span>
+             </div>
+            <img class="first-slide" src="<?=base_url()?>site/images/banner3.png" alt="First slide" class="img-responsive">
+          </div>
+
+          <div class="item">
+            <img class="first-slide" src="<?=base_url()?>site/images/banner1.png" alt="First slide" class="img-responsive">
+          </div>
+
+          <div class="item">
+            <img class="first-slide" src="<?=base_url()?>site/images/banner2.png" alt="First slide" class="img-responsive">
+          </div>
+
+          <div class="item">
+            <img class="first-slide" src="<?=base_url()?>site/images/banner4.png" alt="First slide" class="img-responsive">
+          </div>
       </div>
+
       <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
         <span class="fas fa-chevron-left position" aria-hidden="true"></span>
         <span class="sr-only">Previous</span>
@@ -83,19 +96,18 @@ font-family: 'Open Sans', sans-serif;
         <p>UNANI- A Deep Rooted System Of Medicine With a 5000 Year Old History</p>
      </div><br>
 
-<div class="container">
-    <div class="row">
+     <div class="container">
+       <div class="row">
        
         <div>
             <!-- Wrapper for slides -->
             <div>
                 <div class="adj">
-                    <div class="row">
-                  
+                    <div class="row">                  
                         <!-- <a href="product-single.php?id=<?php echo $row_featured['product_id']?>"><div class="col-sm-3"> -->
                             <div class="col-item">
                                 <div class="photo">
-                                    
+                                  
                                 </div></a>
                                 <div class="info">
                                     <div class="row">
@@ -105,7 +117,6 @@ font-family: 'Open Sans', sans-serif;
                                             <h5 class="price-text-color">
                                              </h5>
                                         </div>
-                                       
                                     </div>
                                    
                                     <div class="clearfix">
@@ -113,28 +124,24 @@ font-family: 'Open Sans', sans-serif;
                                 </div>
                             </div>
                         </div>
-                    
-                </div>
+                  </div>
+              </div>
         </div>
-    </div>
-
-</div>
-
-  </div>
+     </div>
+   </div>
 </section>
 
 <section class="padding-sec">
-  <div class="container">
-     <div class="first-head">
-    <h4>LATEST PRODUCTS</h4>
-    <p>UNANI- A Deep Rooted System Of Medicine With a 5000 Year Old History</p>
-  </div><br>
+    <div class="container">
+      <div class="first-head">
+        <h4>LATEST PRODUCTS</h4>
+        <p>UNANI- A Deep Rooted System Of Medicine With a 5000 Year Old History</p>
+      </div><br>
 
 
- <div class="container">
-    <div class="row">
-       
-        <div>
+    <div class="container">
+      <div class="row">
+       <div>
             <!-- Wrapper for slides -->
             <div>
                 <div class="adj">
@@ -152,28 +159,21 @@ font-family: 'Open Sans', sans-serif;
                                              </h5>
                                             <h5 class="price-text-color">
                                               </h5>
-                                        </div>
-                                       
+                                        </div>                                       
                                     </div>
                                    
                                     <div class="clearfix">
                                     </div>
                                 </div>
                             </div>
-                        </div>
-
-              
-
+                        </div>              
                     </div>
                 </div>
-
-        </div>
-    </div>
-
-</div>
-
-  </div>
-</section>     
+             </div>
+          </div>
+       </div>
+     </div>
+ </section>     
 
 <section class="second-sec padding-sec">
   <div class="container">
@@ -199,204 +199,185 @@ font-family: 'Open Sans', sans-serif;
   <div class="row">
 
 
-    <div class="modal fade" id="login-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
+  <div class="modal fade" id="login-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
       <div class="modal-dialog">
       <div class="modal-content">
+
         <div class="modal-header" align="center">
           <button type="button" class="close" data-dismiss="modal" aria-label="Close">
             <!-- <span class="glyphicon glyphicon-remove" aria-hidden="true"></span> -->
-
             <p><span class="glyphicon glyphicon-remove"></span></p>
           </button>
         </div>
                 
-                      <div class="modal-body">
+          <div class="modal-body">
                 <!-- Begin # DIV Form -->
-                <div id="div-forms">
-                
-                    <!-- Begin # Login Form -->
-                    <form id="login-form" method="post">
-                        <div id="div-login-msg">
+            <div id="div-forms">                
+              <!-- Begin # Login Form -->
+              <form id="login-form" method="post">
+                  <div id="div-login-msg">                               
+                      <span id="text-login-msg">PRODUCT</span>
+                  </div>
+
+                  <input id="product" class="form-control" name="product" type="text" placeholder="" required readonly>
+                  <input id="product_id" class="form-control" name="product_id" type="hidden" placeholder="" required readonly>
                                
-                            <span id="text-login-msg">PRODUCT</span>
-                        </div>
-                            <input id="product" class="form-control" name="product" type="text" placeholder="" required readonly>
-              <input id="product_id" class="form-control" name="product_id" type="hidden" placeholder="" required readonly>
-               
-                
-                            <div id="div-login-msg">
-                                <span id="text-login-msg">PRODUCT PRICE</span>
-                            </div>
-                            <input id="price" class="form-control" type="text" name="price" readonly required>
+                  <div id="div-login-msg">
+                      <span id="text-login-msg">PRODUCT PRICE</span>
+                  </div>
+                  <input id="price" class="form-control" type="text" name="price" readonly required>
 
-                             <div id="div-login-msg">
-                                <span id="text-login-msg">REQUIRED QTY</span>
-                            </div>
-                            <input id="qty" class="form-control" type="number" name="qty" placeholder="" min="1" required oninput="show_total();" autocomplete="off">
+                  <div id="div-login-msg">
+                      <span id="text-login-msg">REQUIRED QTY</span>
+                  </div>
+                  <input id="qty" class="form-control" type="number" name="qty" placeholder="" min="1" required oninput="show_total();" autocomplete="off">
                            
-                            
+                  <div id="div-login-msg">
+                      <span id="text-login-msg">TOTAL</span>
+                  </div>
+                  <input id="total" class="form-control" type="text" name="total" placeholder="" required readonly>
 
-                            <div id="div-login-msg">
-                                <span id="text-login-msg">TOTAL</span>
-                            </div>
-                            <input id="total" class="form-control" type="text" name="total" placeholder="" required readonly>
+                  <div id="div-login-msg">
+                      <span id="text-login-msg">NAME</span>
+                  </div>
+                  <input id="name" class="form-control" type="text" name="name" placeholder="" required autocomplete="off">
 
-                            <div id="div-login-msg">
-                                <span id="text-login-msg">NAME</span>
-                            </div>
-                            <input id="name" class="form-control" type="text" name="name" placeholder="" required autocomplete="off">
-
-                          
-                              <div id="div-login-msg">
-                                <span id="text-login-msg">EMAIL</span>
-                            </div>
-                            <input id="email" class="form-control" type="text" name="email" placeholder="" autocomplete="off">
-                            <p id="warn1" style="color:red;"></p>
+                  <div id="div-login-msg">
+                      <span id="text-login-msg">EMAIL</span>
+                  </div>
+                  <input id="email" class="form-control" type="text" name="email" placeholder="" autocomplete="off">
+                  <p id="warn1" style="color:red;"></p>
                          
-                              <div id="div-login-msg">
-                                <span id="text-login-msg">PHONE</span>
-                            </div>
-                            <input id="phone" class="form-control" type="text" name="phone" placeholder=""  autocomplete="off">
-                            <p id="warn2" style="color:red;"></p>
+                  <div id="div-login-msg">
+                      <span id="text-login-msg">PHONE</span>
+                  </div>
+                  <input id="phone" class="form-control" type="text" name="phone" placeholder=""  autocomplete="off">
+                  <p id="warn2" style="color:red;"></p>
                       
-                            <div id="div-login-msg">
-                                <span id="text-login-msg">ADDRESS</span>
-                            </div>
-                            <input id="address" class="form-control" type="text" name="address" placeholder="" required autocomplete="off">
+                  <div id="div-login-msg">
+                      <span id="text-login-msg">ADDRESS</span>
+                  </div>
+                  <input id="address" class="form-control" type="text" name="address" placeholder="" required autocomplete="off">
               
-              <div id="div-login-msg">
-                                <span id="text-login-msg">CITY</span>
-                            </div>
-                            <input id="city" class="form-control" type="text" name="city" placeholder="" required autocomplete="off">
+                  <div id="div-login-msg">
+                     <span id="text-login-msg">CITY</span>
+                  </div>
+                  <input id="city" class="form-control" type="text" name="city" placeholder="" required autocomplete="off">
               
-              <div id="div-login-msg">
-                                <span id="text-login-msg">STATE</span>
-                            </div>
-                            <input id="state" class="form-control" type="text" name="state" placeholder="" required autocomplete="off">
+                  <div id="div-login-msg">
+                      <span id="text-login-msg">STATE</span>
+                  </div>
+                  <input id="state" class="form-control" type="text" name="state" placeholder="" required autocomplete="off">
               
-              <div id="div-login-msg">
-                                <span id="text-login-msg">PINCODE</span>
-                            </div>
-                            <input id="pincode" class="form-control" type="text"  name="pincode" placeholder=""   autocomplete="off" >
-                           <p id="warn3" style="color:red;"></p>
-                         <br>
+                  <div id="div-login-msg">
+                      <span id="text-login-msg">PINCODE</span>
+                  </div>
+                  <input id="pincode" class="form-control" type="text"  name="pincode" placeholder=""   autocomplete="off" >
+                  <p id="warn3" style="color:red;"></p>
+                  <br>
                            
-                                <button type="submit" class="btn btn-primary btn-lg btn-block" name="submit" onclick="book_now();">BOOK NOW</button>
-                            </div>
-                            <br>
-                    </form>
-                </div>
-                    <style>
-                      .btn-primary {
-                        color: #fff;
-                        background-color: #036b3a;
-                        border-color: #40560f;
-                          }
-                    </style>
-                    <!-- End # Login Form -->
+                  <button type="submit" class="btn btn-primary btn-lg btn-block" name="submit" onclick="book_now();">BOOK NOW</button>
+                  </div>
+                  <br>
+              </form>
+            </div>
+
+            <style>
+              .btn-primary {
+                color: #fff;
+                background-color: #036b3a;
+                border-color: #40560f;
+                  }
+            </style>
+            <!-- End # Login Form -->
                     
                     <!-- Begin | Lost Password Form -->
-                    <form id="lost-form" style="display:none;">
-                  <div class="modal-body">
-                <div id="div-lost-msg">
-                                <div id="icon-lost-msg" class="glyphicon glyphicon-chevron-right"></div>
-                                <span id="text-lost-msg">Type your e-mail.</span>
-                            </div>
-                <input id="lost_email" class="form-control" type="text" placeholder="E-Mail (type ERROR for error effect)" required>
+            <form id="lost-form" style="display:none;">
+
+                <div class="modal-body">
+                  <div id="div-lost-msg">
+                    <div id="icon-lost-msg" class="glyphicon glyphicon-chevron-right"></div>
+                    <span id="text-lost-msg">Type your e-mail.</span>
                   </div>
-                <div class="modal-footer">
-                            <div>
-                                <button type="submit" class="btn btn-primary btn-lg btn-block">Send</button>
-                            </div>
-                            <div>
-                                <button id="lost_login_btn" type="button" class="btn btn-link">Log In</button>
-                                <button id="lost_register_btn" type="button" class="btn btn-link">Register</button>
-                            </div>
+                  <input id="lost_email" class="form-control" type="text" placeholder="E-Mail (type ERROR for error effect)" required>
                 </div>
-                    </form>
+
+                <div class="modal-footer">
+                  <div>
+                      <button type="submit" class="btn btn-primary btn-lg btn-block">Send</button>
+                  </div>
+                  <div>
+                      <button id="lost_login_btn" type="button" class="btn btn-link">Log In</button>
+                      <button id="lost_register_btn" type="button" class="btn btn-link">Register</button>
+                  </div>
+                </div>
+            </form>
                     <!-- End | Lost Password Form -->
                     
                     <!-- Begin | Register Form -->
-                    <form id="register-form" style="display:none;">
-                    <div class="modal-body">
-                <div id="div-register-msg">
-                                <div id="icon-register-msg" class="glyphicon glyphicon-chevron-right"></div>
-                                <span id="text-register-msg">Register an account.</span>
-                            </div>
-                <input id="register_username" class="form-control" type="text" placeholder="Username (type ERROR for error effect)" required>
-                            <input id="register_email" class="form-control" type="text" placeholder="E-Mail" required>
-                            <input id="register_password" class="form-control" type="password" placeholder="Password" required>
-                  </div>
+            <form id="register-form" style="display:none;">
+                <div class="modal-body">
+                    <div id="div-register-msg">
+                        <div id="icon-register-msg" class="glyphicon glyphicon-chevron-right"></div>
+                        <span id="text-register-msg">Register an account.</span>
+                    </div>
+                    <input id="register_username" class="form-control" type="text" placeholder="Username (type ERROR for error effect)" required>
+                    <input id="register_email" class="form-control" type="text" placeholder="E-Mail" required>
+                    <input id="register_password" class="form-control" type="password" placeholder="Password" required>
+                </div>
+
                 <div class="modal-footer">
-                            <div>
-                                <button type="submit" class="btn btn-primary btn-lg btn-block">Register</button>
-                            </div>
-                            <div>
-                                <button id="register_login_btn" type="button" class="btn btn-link">Log In</button>
-                                <button id="register_lost_btn" type="button" class="btn btn-link">Lost Password?</button>
-                            </div>
+                  <div>
+                      <button type="submit" class="btn btn-primary btn-lg btn-block">Register</button>
+                  </div>
+                  <div>
+                      <button id="register_login_btn" type="button" class="btn btn-link">Log In</button>
+                      <button id="register_lost_btn" type="button" class="btn btn-link">Lost Password?</button>
+                  </div>
                 </div>
-                    </form>
+            </form>
                     <!-- End | Register Form -->
-                    
-                </div>
-                <!-- End # DIV Form -->
-                
+        </div>
+                <!-- End # DIV Form -->                
       </div>
     </div>
   </div>
 
 
       <div class="col-md-3 col-sm-6">
-        <span class="thumbnail">
-            
-      
-        <div class="block2-overlay trans-0-4">
-                  <a href="#" class="block2-btn-addwishlist hov-pointer trans-0-4">
-                    <i class="icon-wishlist icon_heart_alt" aria-hidden="true"></i>
-                    <i class="icon-wishlist icon_heart dis-none" aria-hidden="true"></i>
-                  </a>
+          <span class="thumbnail">      
+            <div class="block2-overlay trans-0-4">
+              <a href="#" class="block2-btn-addwishlist hov-pointer trans-0-4">
+                <i class="icon-wishlist icon_heart_alt" aria-hidden="true"></i>
+                <i class="icon-wishlist icon_heart dis-none" aria-hidden="true"></i>
+              </a>
 
-                  <div class="block2-btn-addcart w-size1 trans-0-4">
-                   
-                    
-                    
-                  </div>
+              <div class="block2-btn-addcart w-size1 trans-0-4">
+              </div>
+            </div>
+                
+            <div class="row merg">
+                <div class="col-md-12 green1">
+                 <h4></h4>
                 </div>
-             
 
+                <div class="col-md-6 col-sm-6 green2">
+                  <p class="price"></p>
+                </div>
 
-          
-           
-           <div class="row merg">
-
-         <div class="col-md-12 green1">
-           <h4></h4>
-         </div>
-              <div class="col-md-6 col-sm-6 green2">
-                <p class="price"></p>
-              </div>
-              <div class="col-md-6 col-sm-6 green3">
-                <!-- <a class="mybtn3" href="product-single.php?id=<?php echo $row['product_id']?>"> BUY NOW</a> -->
-
-              </div>
-              
-        </div>
-         </span>
+                <div class="col-md-6 col-sm-6 green3">
+                    <!-- <a class="mybtn3" href="product-single.php?id=<?php echo $row['product_id']?>"> BUY NOW</a> -->
+                </div>              
+            </div>
+          </span>
       </div>
-
-   
-   
-  </div>
-
-
+  
+    </div>
   </div>
 </div>  
-  </div>
+</div>
 
 <div class="new-file"> 
-
-
 
 </section>
  <?php $this->load->view('site/includes/footer.php'); ?>
@@ -411,7 +392,7 @@ font-family: 'Open Sans', sans-serif;
 
      <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
 
-<script type="text/javascript">
+    <script type="text/javascript">
     $(document).ready(function(){
 
 /**
@@ -477,8 +458,6 @@ function offSetManager(){
 
 }
 
-
-
 /**
  * bind to the document scroll detection
  */
@@ -495,9 +474,6 @@ offSetManager();
 
 
  </script>
-
-
-
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')</script>
     <script src="js/bootstrap.min.js"></script>
@@ -506,9 +482,7 @@ offSetManager();
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    
-    
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>    
     <script>
         function bulk_order(id,prod,img,qty,price){
             
@@ -563,10 +537,15 @@ offSetManager();
           document.getElementById('warn2').innerHTML = "Digits Only";
           event.preventDefault();
           }
-
         }
     </script>
-    
+    <script type="">
+      $("#warn").show();
+      setTimeout(function() 
+      {
+         $("#warn").hide();
+      }, 3000);
+    </script>
     
   </body>
 

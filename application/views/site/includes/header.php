@@ -1,4 +1,4 @@
-    <style type="text/css">
+<style type="text/css">
     /*
 * Style tweaks
 * --------------------------------------------------
@@ -84,7 +84,12 @@
 
 </style>
 
-
+<?php
+  if (isset($this->session->userdata['site_user'])) 
+  {
+    $user = $this->session->userdata['site_user'];
+  }
+?>
     <body>
 
         <nav id="header" class="navbar navbar-fixed-top " >
@@ -100,70 +105,67 @@
             </div>
             <div id="navbar" class="navbar-collapse collapse navbar-right ">
                 <ul class="nav navbar-nav">
-                <li><a href="index.php">HOME</a></li>
-                <li><a href="about.php">ABOUT</a></li>
-                <li><a href="product.php">STORE</a></li> 
-                
-           <!-- <li><a href="contact">BLOG</a></li> 
-               <li><a href="faq.php">FAQ</a></li>-->
- 
-               <li><a href="contact.php">CONTACT</a></li>
+                <li><a href="<?=site_url('home')?>">HOME</a></li>
+                <li><a href="<?=site_url('about')?>">ABOUT</a></li>
+                <li><a href="<?=site_url('store')?>">STORE</a></li> 
+                <li><a href="<?=site_url('contact')?>">CONTACT</a></li>
 
-               
-               <li><a href="basket.php" id="basket"><i class="fa fa-shopping-cart"></i> Cart <span class="badge" id="counter"></span></a></li>
+                <?php if(isset($user)) 
+                  { ?>     
+                    <li><a href="<?=site_url('cart')?>" id="basket"><i class="fa fa-shopping-cart"></i> Cart <span class="badge" id="counter"></span></a></li>
+                <?php } else {?>
+                   <li><a href="<?=site_url('login')?>" id="basket"><i class="fa fa-shopping-cart"></i> Cart <span class="badge" id="counter"></span></a></li>
+                <?php };?>   
 
-            
-          <?php if(isset($_SESSION['user']))
-          { ?>
-            
-         
+             <?php if(isset($user)) { ?>
+                     
              <li class="dropdown"><a href="#" id="cart" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><i class="fa fa-user"></i> User <span class="badge"></span></a>
                
-                <ul class="dropdown-menu"  id="drop_mnu_s">
+            <ul class="dropdown-menu"  id="drop_mnu_s">
                <div class="shopping-cart">
 
+                  <ul class="shopping-cart-items" id="drop_menu_s">
+                    <li class="clearfix">
+                    
+                       <a href="profile.php"><span class="item-name">My Account</span></a>
+                    </li>
 
-    <ul class="shopping-cart-items" id="drop_menu_s">
-      <li class="clearfix">
-      
-         <a href="profile.php"><span class="item-name">My Account</span></a>
-      </li>
+                    <li class="clearfix">
+                     
+                        <a href="order-history.php"><span class="item-name">My Orders</span></a>
+                    </li>
 
-      <li class="clearfix">
-       
-          <a href="order-history.php"><span class="item-name">My Orders</span></a>
-      </li>
+                    <li class="clearfix">
+                      
+                      <!--<a href="logout.php"><span class="item-name">Logout</span></a>-->
+                      <a data-toggle="modal" data-target=".bd-example-modal-sm"><span class="item-name" style="cursor:pointer">Logout</span></a>
+                    </li>
+                  </ul>
 
-      <li class="clearfix">
-        
-        <!--<a href="logout.php"><span class="item-name">Logout</span></a>-->
-        <a data-toggle="modal" data-target=".bd-example-modal-sm"><span class="item-name" style="cursor:pointer">Logout</span></a>
-      </li>
-    </ul>
+             <?php }
+             else 
+             { ?>
 
-          <?php }
-
-          else 
-          { ?>
-
-            <li><a href="login.php"><i class="fas fa-sign-in-alt"></i> Login</a>
-          <?php }
-          ?> 
+            <li><a href="<?=site_url('login')?>"><i class="fas fa-sign-in-alt"></i> Login</a>
+           <?php }
+            ?> 
               </ul>
             </div>
           </div>
         </nav>
 
+        
+
      <div class="modal fade bd-example-modal-sm" tabindex="-1" role="dialog" aria-hidden="true">
-             <div class="modal-dialog modal-sm">
-          <div class="modal-content">
-              <div class="modal-body">
-                <p>Are you sure to logout?</p>
-              </div>
-              <div class="modal-footer">
-                  <button type="button" class="btn btn-primary default mb-1" data-dismiss="modal">Cancel</button>
-                  <a class="btn btn-success default mb-1" href="logout.php">Logout</a>
-              </div>
-          </div>
-      </div>
+         <div class="modal-dialog modal-sm">
+            <div class="modal-content">
+                <div class="modal-body">
+                  <p>Are you sure to logout?</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary default mb-1" data-dismiss="modal">Cancel</button>
+                    <a class="btn btn-success default mb-1" href="<?=site_url('login/logout')?>">Logout</a>
+                </div>
+            </div>
+        </div>
      </div>
