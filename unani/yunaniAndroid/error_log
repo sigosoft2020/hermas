@@ -1,0 +1,89 @@
+[19-Dec-2018 05:55:59 Etc/GMT] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, boolean given in /home/hermasunani/public_html/unani/yunaniAndroid/android_user_details.php on line 13
+[19-Dec-2018 05:56:12 Etc/GMT] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, boolean given in /home/hermasunani/public_html/unani/yunaniAndroid/android_user_details.php on line 13
+[19-Dec-2018 05:58:44 Etc/GMT] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, boolean given in /home/hermasunani/public_html/unani/yunaniAndroid/android_contact.php on line 13
+[19-Dec-2018 05:58:46 Etc/GMT] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, boolean given in /home/hermasunani/public_html/unani/yunaniAndroid/android_contact.php on line 13
+[19-Dec-2018 05:58:48 Etc/GMT] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, boolean given in /home/hermasunani/public_html/unani/yunaniAndroid/android_contact.php on line 13
+[19-Dec-2018 06:08:01 Etc/GMT] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, boolean given in /home/hermasunani/public_html/unani/yunaniAndroid/android_contact.php on line 13
+[19-Dec-2018 06:20:37 Etc/GMT] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, boolean given in /home/hermasunani/public_html/unani/yunaniAndroid/android_contact.php on line 13
+[19-Dec-2018 06:21:56 Etc/GMT] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, boolean given in /home/hermasunani/public_html/unani/yunaniAndroid/android_contact.php on line 13
+[19-Dec-2018 06:21:58 Etc/GMT] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, boolean given in /home/hermasunani/public_html/unani/yunaniAndroid/android_contact.php on line 13
+[19-Dec-2018 07:51:22 Etc/GMT] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, boolean given in /home/hermasunani/public_html/unani/yunaniAndroid/android_home_message.php on line 42
+[19-Dec-2018 07:51:22 Etc/GMT] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, boolean given in /home/hermasunani/public_html/unani/yunaniAndroid/android_home_message.php on line 42
+[19-Dec-2018 07:51:22 Etc/GMT] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, boolean given in /home/hermasunani/public_html/unani/yunaniAndroid/android_home_message.php on line 42
+[19-Dec-2018 07:51:22 Etc/GMT] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, boolean given in /home/hermasunani/public_html/unani/yunaniAndroid/android_home_message.php on line 42
+[19-Dec-2018 07:51:22 Etc/GMT] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, boolean given in /home/hermasunani/public_html/unani/yunaniAndroid/android_home_message.php on line 42
+[19-Dec-2018 07:51:55 Etc/GMT] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, boolean given in /home/hermasunani/public_html/unani/yunaniAndroid/android_contact.php on line 13
+[19-Dec-2018 07:52:48 Etc/GMT] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, boolean given in /home/hermasunani/public_html/unani/yunaniAndroid/android_home_message.php on line 29
+[19-Dec-2018 07:52:48 Etc/GMT] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, boolean given in /home/hermasunani/public_html/unani/yunaniAndroid/android_home_message.php on line 29
+[19-Dec-2018 07:52:48 Etc/GMT] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, boolean given in /home/hermasunani/public_html/unani/yunaniAndroid/android_home_message.php on line 29
+[19-Dec-2018 07:52:48 Etc/GMT] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, boolean given in /home/hermasunani/public_html/unani/yunaniAndroid/android_home_message.php on line 29
+[19-Dec-2018 07:52:48 Etc/GMT] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, boolean given in /home/hermasunani/public_html/unani/yunaniAndroid/android_home_message.php on line 29
+[19-Dec-2018 07:53:19 Etc/GMT] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, boolean given in /home/hermasunani/public_html/unani/yunaniAndroid/android_contact.php on line 13
+[19-Dec-2018 07:59:11 Etc/GMT] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, boolean given in /home/hermasunani/public_html/unani/yunaniAndroid/android_contact.php on line 13
+[19-Dec-2018 08:05:22 Etc/GMT] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, boolean given in /home/hermasunani/public_html/unani/yunaniAndroid/android_home_message.php on line 29
+[19-Dec-2018 08:05:22 Etc/GMT] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, boolean given in /home/hermasunani/public_html/unani/yunaniAndroid/android_home_message.php on line 29
+[19-Dec-2018 08:05:22 Etc/GMT] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, boolean given in /home/hermasunani/public_html/unani/yunaniAndroid/android_home_message.php on line 29
+[19-Dec-2018 08:05:22 Etc/GMT] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, boolean given in /home/hermasunani/public_html/unani/yunaniAndroid/android_home_message.php on line 29
+[19-Dec-2018 08:05:22 Etc/GMT] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, boolean given in /home/hermasunani/public_html/unani/yunaniAndroid/android_home_message.php on line 29
+[19-Dec-2018 08:06:08 Etc/GMT] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, boolean given in /home/hermasunani/public_html/unani/yunaniAndroid/android_home_message.php on line 29
+[19-Dec-2018 08:06:08 Etc/GMT] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, boolean given in /home/hermasunani/public_html/unani/yunaniAndroid/android_home_message.php on line 29
+[19-Dec-2018 08:06:08 Etc/GMT] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, boolean given in /home/hermasunani/public_html/unani/yunaniAndroid/android_home_message.php on line 29
+[19-Dec-2018 08:06:08 Etc/GMT] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, boolean given in /home/hermasunani/public_html/unani/yunaniAndroid/android_home_message.php on line 29
+[19-Dec-2018 08:06:08 Etc/GMT] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, boolean given in /home/hermasunani/public_html/unani/yunaniAndroid/android_home_message.php on line 29
+[19-Dec-2018 08:06:53 Etc/GMT] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, null given in /home/hermasunani/public_html/unani/yunaniAndroid/android_home_message.php on line 33
+[19-Dec-2018 08:06:53 Etc/GMT] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, null given in /home/hermasunani/public_html/unani/yunaniAndroid/android_home_message.php on line 33
+[19-Dec-2018 08:06:53 Etc/GMT] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, null given in /home/hermasunani/public_html/unani/yunaniAndroid/android_home_message.php on line 33
+[19-Dec-2018 08:10:35 Etc/GMT] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, boolean given in /home/hermasunani/public_html/unani/yunaniAndroid/android_home_message.php on line 29
+[19-Dec-2018 08:10:35 Etc/GMT] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, boolean given in /home/hermasunani/public_html/unani/yunaniAndroid/android_home_message.php on line 29
+[19-Dec-2018 08:10:35 Etc/GMT] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, boolean given in /home/hermasunani/public_html/unani/yunaniAndroid/android_home_message.php on line 29
+[19-Dec-2018 08:10:35 Etc/GMT] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, boolean given in /home/hermasunani/public_html/unani/yunaniAndroid/android_home_message.php on line 29
+[19-Dec-2018 08:10:35 Etc/GMT] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, boolean given in /home/hermasunani/public_html/unani/yunaniAndroid/android_home_message.php on line 29
+[19-Dec-2018 08:20:39 Etc/GMT] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, boolean given in /home/hermasunani/public_html/unani/yunaniAndroid/android_contact.php on line 13
+[19-Dec-2018 08:20:42 Etc/GMT] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, boolean given in /home/hermasunani/public_html/unani/yunaniAndroid/android_contact.php on line 13
+[19-Dec-2018 08:22:40 Etc/GMT] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, boolean given in /home/hermasunani/public_html/unani/yunaniAndroid/android_contact.php on line 13
+[19-Dec-2018 08:35:39 Etc/GMT] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, boolean given in /home/hermasunani/public_html/unani/yunaniAndroid/android_contact.php on line 13
+[19-Dec-2018 08:38:04 Etc/GMT] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, boolean given in /home/hermasunani/public_html/unani/yunaniAndroid/android_contact.php on line 13
+[05-Jan-2019 10:31:20 Etc/GMT] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, boolean given in /home/hermasunani/public_html/unani/yunaniAndroid/android_profile_pic.php on line 18
+[05-Jan-2019 10:35:33 Etc/GMT] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, boolean given in /home/hermasunani/public_html/unani/yunaniAndroid/android_profile_pic.php on line 18
+[05-Jan-2019 10:40:05 Etc/GMT] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, boolean given in /home/hermasunani/public_html/unani/yunaniAndroid/android_profile_pic.php on line 18
+[05-Jan-2019 10:40:08 Etc/GMT] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, boolean given in /home/hermasunani/public_html/unani/yunaniAndroid/android_profile_pic.php on line 18
+[05-Jan-2019 10:41:58 Etc/GMT] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, boolean given in /home/hermasunani/public_html/unani/yunaniAndroid/android_profile_pic.php on line 18
+[05-Jan-2019 10:43:34 Etc/GMT] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, boolean given in /home/hermasunani/public_html/unani/yunaniAndroid/android_profile_pic.php on line 18
+[12-Jan-2019 04:17:42 Etc/GMT] PHP Warning:  mysqli::mysqli(): (HY000/1203): User hermasun_hermas already has more than 'max_user_connections' active connections in /home/hermasunani/public_html/unani/yunaniAndroid/android_connection.php on line 3
+[14-Jan-2019 11:30:32 Etc/GMT] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, boolean given in /home/hermasunani/public_html/unani/yunaniAndroid/android_home_message.php on line 18
+[14-Jan-2019 11:30:36 Etc/GMT] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, boolean given in /home/hermasunani/public_html/unani/yunaniAndroid/android_home_message.php on line 18
+[14-Jan-2019 11:30:42 Etc/GMT] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, boolean given in /home/hermasunani/public_html/unani/yunaniAndroid/android_home_message.php on line 18
+[14-Jan-2019 11:34:58 Etc/GMT] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, boolean given in /home/hermasunani/public_html/unani/yunaniAndroid/android_home_message.php on line 18
+[21-Jan-2019 09:16:55 Etc/GMT] PHP Warning:  mysqli::mysqli(): (HY000/1203): User hermasun_hermas already has more than 'max_user_connections' active connections in /home/hermasunani/public_html/unani/yunaniAndroid/android_connection.php on line 3
+[27-Mar-2019 11:19:47 Etc/GMT] PHP Warning:  mysqli::__construct(): (28000/1045): Access denied for user 'hermasun_hermas'@'localhost' (using password: YES) in /home/hermasunani/public_html/unani/yunaniAndroid/android_connection.php on line 3
+[27-Mar-2019 11:19:49 Etc/GMT] PHP Warning:  mysqli::__construct(): (28000/1045): Access denied for user 'hermasun_hermas'@'localhost' (using password: YES) in /home/hermasunani/public_html/unani/yunaniAndroid/android_connection.php on line 3
+[27-Mar-2019 11:20:00 Etc/GMT] PHP Warning:  mysqli::__construct(): (28000/1045): Access denied for user 'hermasun_hermas'@'localhost' (using password: YES) in /home/hermasunani/public_html/unani/yunaniAndroid/android_connection.php on line 3
+[27-Mar-2019 11:20:06 Etc/GMT] PHP Warning:  mysqli::__construct(): (28000/1045): Access denied for user 'hermasun_hermas'@'localhost' (using password: YES) in /home/hermasunani/public_html/unani/yunaniAndroid/android_connection.php on line 3
+[27-Mar-2019 11:20:08 Etc/GMT] PHP Warning:  mysqli::__construct(): (28000/1045): Access denied for user 'hermasun_hermas'@'localhost' (using password: YES) in /home/hermasunani/public_html/unani/yunaniAndroid/android_connection.php on line 3
+[27-Mar-2019 11:20:09 Etc/GMT] PHP Warning:  mysqli::__construct(): (28000/1045): Access denied for user 'hermasun_hermas'@'localhost' (using password: YES) in /home/hermasunani/public_html/unani/yunaniAndroid/android_connection.php on line 3
+[27-Mar-2019 11:20:11 Etc/GMT] PHP Warning:  mysqli::__construct(): (28000/1045): Access denied for user 'hermasun_hermas'@'localhost' (using password: YES) in /home/hermasunani/public_html/unani/yunaniAndroid/android_connection.php on line 3
+[27-Mar-2019 11:23:38 Etc/GMT] PHP Warning:  mysqli::__construct(): (28000/1045): Access denied for user 'hermasun_hermas'@'localhost' (using password: YES) in /home/hermasunani/public_html/unani/yunaniAndroid/android_connection.php on line 3
+[27-Mar-2019 11:26:29 Etc/GMT] PHP Warning:  mysqli::__construct(): (42000/1044): Access denied for user 'hermasun_hermas'@'localhost' to database 'hermasun_hermas' in /home/hermasunani/public_html/unani/yunaniAndroid/android_connection.php on line 3
+[27-Mar-2019 11:26:30 Etc/GMT] PHP Warning:  mysqli::__construct(): (42000/1044): Access denied for user 'hermasun_hermas'@'localhost' to database 'hermasun_hermas' in /home/hermasunani/public_html/unani/yunaniAndroid/android_connection.php on line 3
+[04-Apr-2019 08:13:03 Etc/GMT] PHP Notice:  Undefined index: place in /home/hermasunani/public_html/unani/yunaniAndroid/android_profile_edit.php on line 32
+[04-Apr-2019 08:13:03 Etc/GMT] PHP Notice:  Undefined index: type in /home/hermasunani/public_html/unani/yunaniAndroid/android_profile_edit.php on line 33
+[04-Apr-2019 08:14:09 Etc/GMT] PHP Notice:  Undefined index: place in /home/hermasunani/public_html/unani/yunaniAndroid/android_profile_edit.php on line 32
+[04-Apr-2019 08:14:09 Etc/GMT] PHP Notice:  Undefined index: type in /home/hermasunani/public_html/unani/yunaniAndroid/android_profile_edit.php on line 33
+[04-Apr-2019 08:15:48 Etc/GMT] PHP Notice:  Undefined index: user_id in /home/hermasunani/public_html/unani/yunaniAndroid/android_profile_edit.php on line 5
+[04-Apr-2019 08:15:48 Etc/GMT] PHP Notice:  Undefined index: mobile in /home/hermasunani/public_html/unani/yunaniAndroid/android_profile_edit.php on line 7
+[04-Apr-2019 08:15:48 Etc/GMT] PHP Notice:  Undefined index: email in /home/hermasunani/public_html/unani/yunaniAndroid/android_profile_edit.php on line 8
+[04-Apr-2019 08:15:48 Etc/GMT] PHP Notice:  Undefined index: name in /home/hermasunani/public_html/unani/yunaniAndroid/android_profile_edit.php on line 31
+[04-Apr-2019 08:15:48 Etc/GMT] PHP Notice:  Undefined index: place in /home/hermasunani/public_html/unani/yunaniAndroid/android_profile_edit.php on line 32
+[04-Apr-2019 08:15:48 Etc/GMT] PHP Notice:  Undefined index: type in /home/hermasunani/public_html/unani/yunaniAndroid/android_profile_edit.php on line 33
+[04-Apr-2019 08:15:48 Etc/GMT] PHP Notice:  Undefined index: user_id in /home/hermasunani/public_html/unani/yunaniAndroid/android_profile_edit.php on line 5
+[04-Apr-2019 08:15:48 Etc/GMT] PHP Notice:  Undefined index: mobile in /home/hermasunani/public_html/unani/yunaniAndroid/android_profile_edit.php on line 7
+[04-Apr-2019 08:15:48 Etc/GMT] PHP Notice:  Undefined index: email in /home/hermasunani/public_html/unani/yunaniAndroid/android_profile_edit.php on line 8
+[04-Apr-2019 08:15:48 Etc/GMT] PHP Notice:  Undefined index: name in /home/hermasunani/public_html/unani/yunaniAndroid/android_profile_edit.php on line 31
+[04-Apr-2019 08:15:48 Etc/GMT] PHP Notice:  Undefined index: place in /home/hermasunani/public_html/unani/yunaniAndroid/android_profile_edit.php on line 32
+[04-Apr-2019 08:15:48 Etc/GMT] PHP Notice:  Undefined index: type in /home/hermasunani/public_html/unani/yunaniAndroid/android_profile_edit.php on line 33
+[04-Apr-2019 08:27:09 Etc/GMT] PHP Notice:  Undefined index: name in /home/hermasunani/public_html/unani/yunaniAndroid/android_profile_edit.php on line 31
+[04-Apr-2019 08:29:39 Etc/GMT] PHP Notice:  Undefined index: name in /home/hermasunani/public_html/unani/yunaniAndroid/android_profile_edit.php on line 31
+[04-Apr-2019 09:25:38 Etc/GMT] PHP Notice:  Undefined index: mobile in /home/hermasunani/public_html/unani/yunaniAndroid/android_profile_edit.php on line 7
+[04-Apr-2019 09:25:38 Etc/GMT] PHP Notice:  Undefined index: email in /home/hermasunani/public_html/unani/yunaniAndroid/android_profile_edit.php on line 8
+[04-Apr-2019 09:25:38 Etc/GMT] PHP Notice:  Undefined index: name in /home/hermasunani/public_html/unani/yunaniAndroid/android_profile_edit.php on line 31
+[04-Apr-2019 09:25:38 Etc/GMT] PHP Notice:  Undefined index: place in /home/hermasunani/public_html/unani/yunaniAndroid/android_profile_edit.php on line 32

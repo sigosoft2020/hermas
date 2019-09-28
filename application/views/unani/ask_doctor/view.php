@@ -95,7 +95,7 @@
                                   <div class="col-12">
                                       <label for="select">Question</label>
                                       <input type="text" name="question" id="qustn" class="form-control" readonly>
-                                      <input type="hidden" name="ask_id" id="ask_id" class="form-control" required>
+                                      <input type="hidden" name="qst_id" id="qst_id" class="form-control" required>
                                   </div>
                               </div>
                               <div class="form-group m-b-25">
@@ -148,10 +148,10 @@
        $('#add-answer').modal('show');
       }
 
-      function edit(id,qstn,answer)
+      function edit(id,answer,qstn)
       {
         // alert(res);
-       $('#ask_id').val(id);
+       $('#qst_id').val(id);
        $('#qustn').val(qstn);
        $('#answer').val(answer);
        $('#edit-answer').modal('show');

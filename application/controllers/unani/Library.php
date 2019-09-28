@@ -148,6 +148,7 @@ class Library extends CI_Controller {
 				   $tar_file = $lib_data->full;	
 				}	
                 
+                $file1     = $_FILES['preview'];
                 if($file1['name']!='')
                 {
                 	$file1     = $_FILES['preview'];	       	
@@ -170,7 +171,7 @@ class Library extends CI_Controller {
 				$url      = FCPATH.'uploads/unani/library/images/cover/';
 				$rand     = $name.date('Ymd').mt_rand(1001,9999);
 				$userpath = $url.$rand.'.png';
-				$path     = "uploads/unani/library/library/".$rand.'.png';
+				$path     = "uploads/unani/library/images/cover/".$rand.'.png';
 				file_put_contents($userpath,base64_decode($img));
 
 				// Remove old image from the server
@@ -180,7 +181,7 @@ class Library extends CI_Controller {
 
 				$array = [
 					'title'       => $title,
-					'image'       => $path,
+					'cover'       => $path,
 					'full'        => $tar_file,
 					'preview'     => $tar_file1,
 					'description' => $description,

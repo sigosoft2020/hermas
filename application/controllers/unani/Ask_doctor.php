@@ -76,7 +76,7 @@ class Ask_doctor extends CI_Controller {
 
 	public function edit_answer()
 	{   
-		$id           = $this->security->xss_clean($this->input->post('ask_id'));
+		$id           = $this->security->xss_clean($this->input->post('qst_id'));
 		$answer       = $this->security->xss_clean($this->input->post('answer'));
 
 		$array = [

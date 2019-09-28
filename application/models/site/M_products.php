@@ -19,6 +19,7 @@ class M_products extends CI_Model
   {
     $this->db->select("*");
     $this->db->from("products");
+    $this->db->where('status','Active');
     $this->db->like('product_name', $key);
     return $this->db->get()->result();
   }
@@ -27,6 +28,7 @@ class M_products extends CI_Model
   {
     $this->db->select("*");
     $this->db->from("products");
+    $this->db->where('status','Active');
     $this->db->order_by('price','asc');
     return $this->db->get()->result();
   }
@@ -35,6 +37,7 @@ class M_products extends CI_Model
   {
     $this->db->select("*");
     $this->db->from("products");
+    $this->db->where('status','Active');
     $this->db->order_by('price','desc');
     return $this->db->get()->result();
   }

@@ -79,7 +79,7 @@ class Store extends CI_Controller {
         $Scene='<div>';
 		foreach($result as $re)
 		{ 
-		 $count_no = $this->Common->get_details('products',array('category_id'=>$re->category_id))->num_rows();
+		 $count_no = $this->Common->get_details('products',array('category_id'=>$re->category_id,'status'=>'Active'))->num_rows();
 		 	
          $Scene .=' <li style="list-style: none;" id="CategoryIDE'.$re->category_id.'" data-value="'.$re->category_id.'"><a onclick="CategoryFilter('.$re->category_id.')">'.$re->category_name.'<span> ('.$count_no.')</span></a></li>';
 
