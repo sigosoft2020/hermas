@@ -123,20 +123,16 @@
                
             <ul class="dropdown-menu"  id="drop_mnu_s">
                <div class="shopping-cart">
-
                   <ul class="shopping-cart-items" id="drop_menu_s">
-                    <li class="clearfix">
-                    
-                       <a href="profile.php"><span class="item-name">My Account</span></a>
+                    <li class="clearfix">                    
+                       <a href="<?=site_url('profile')?>"><span class="item-name">My Account</span></a>
                     </li>
 
-                    <li class="clearfix">
-                     
-                        <a href="order-history.php"><span class="item-name">My Orders</span></a>
+                    <li class="clearfix">                     
+                        <a href="<?=site_url('orders')?>"><span class="item-name">My Orders</span></a>
                     </li>
 
-                    <li class="clearfix">
-                      
+                    <li class="clearfix">                     
                       <!--<a href="logout.php"><span class="item-name">Logout</span></a>-->
                       <a data-toggle="modal" data-target=".bd-example-modal-sm"><span class="item-name" style="cursor:pointer">Logout</span></a>
                     </li>

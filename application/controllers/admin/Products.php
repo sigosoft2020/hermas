@@ -38,6 +38,7 @@ class Products extends CI_Controller {
 			 } 
 			$sub_array[] = $star;
 			$sub_array[] = $res->status;
+			$sub_array[] = '<a class="btn btn-link" style="font-size:17px;color:blue" href="' . site_url('admin/products/images/'.$res->product_id) . '"><i class="fa fa-picture-o"></i></a>';
 			$sub_array[] = '<a class="btn btn-link" style="font-size:17px;color:blue" href="' . site_url('admin/products/view/'.$res->product_id) . '"><i class="fa fa-eye"></i></a>';
 			$sub_array[] = '<a class="btn btn-link" style="font-size:17px;color:blue" href="' . site_url('admin/products/edit/'.$res->product_id) . '"><i class="fa fa-pencil"></i></a>';
 			$data[] = $sub_array;
@@ -342,5 +343,57 @@ class Products extends CI_Controller {
 	  $data['product'] = $product;
 	  $this->load->view('admin/products/details',$data);
  	}
+
+ 	public function images($id)
+	{
+		$check = $this->Common->get_details('product_images',array('ProductID' => $id));
+		$data['images'] = $check->result();
+		$data['product'] = $this->Common->get_details('products',array('product_id'=>$id))->row()->product_name;
+		$data['product_id'] = $id;
+		$this->load->view('admin/products/gallery',$data);
+	}
+
+	public function addImage()
+	{   
+		date_default_timezone_set('Asia/Kolkata');
+        $timestamp = date('Y-m-d H:i:s');
+
+		$product_id = $this->input->post('product_id');
+		$file = $_FILES['image'];
+		$tar = "uploads/admin/product_images/";
+		$rand = date('Ymd').mt_rand(1001,9999);
+		$tar_file = $tar . $rand . basename($file['name']);
+		if(move_uploaded_file($file['tmp_name'], $tar_file))
+		{
+			$array = [
+				'Image'      => $tar_file,
+				'ProductID'  => $product_id,
+				'Timestamp'  => $timestamp
+			];
+			$this->Common->insert('product_images',$array);
+		}
+		$this->session->set_flashdata('alert_type', 'success');
+		$this->session->set_flashdata('alert_title', 'Success');
+		$this->session->set_flashdata('alert_message', 'New image added successfully..!');
+		redirect('admin/products/images/'.$product_id);
+	}
+
+	public function deleteImage()
+	{
+		$id = $_POST['delete_id'];
+		$check = $this->Common->get_details('product_images',array('ImageID'=> $id));
+		if ($check->num_rows() == 1) 
+		{   
+			$this->Common->delete('product_images',array('ImageID' => $id));
+			$this->session->set_flashdata('alert_type', 'success');
+		    $this->session->set_flashdata('alert_title', 'Success');
+		    $this->session->set_flashdata('alert_message', 'Image deleted successfully..!');
+			redirect('admin/products/images/'.$check->row()->ProductID);
+		}
+		else 
+		{
+			redirect('admin/products');
+		}
+	}
 }
 ?>

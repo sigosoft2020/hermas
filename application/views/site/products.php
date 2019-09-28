@@ -19,7 +19,7 @@
   <body onload="Getproducts()">
 
     <section>  
-      <?php include 'includes/header.php';?>
+     <?php $this->load->view('site/includes/header.php'); ?>
     </section>
 
     <section class="contact-banner green-4">
@@ -36,6 +36,7 @@
     <section class="pad-rwd">
       <div class="container">
         <div class="row">
+          
           <div class="col-md-3 side-left">
             <div class="catagory-top">
               <h3>Categories</h3>
@@ -85,7 +86,7 @@
      <!-- <script src="//code.jquery.com/jquery-1.11.1.min.js"></script> -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')</script>
-    <script src="js/bootstrap.min.js"></script>
+    <script src="<?=base_url()?>site/js/bootstrap.min.js"></script>
 
      <script type="text/javascript">
     $(document).ready(function(){
@@ -247,7 +248,7 @@ offSetManager();
            var PFilter=document.getElementById('price').value
       
            xhr = new XMLHttpRequest();
-           xhr.open('POST' , 'Getproductprice.php' , true);
+           xhr.open('POST' , 'store/Getproductprice' , true);
 
            xhr.setRequestHeader('Content-Type', 'application/json');
            xhr.send(JSON.stringify({
@@ -320,7 +321,7 @@ offSetManager();
            var CategoryIDE=document.getElementById(IDE).getAttribute("data-value")
       
            xhr = new XMLHttpRequest();
-           xhr.open('POST' , 'GetCategoryFilter.php' , true);
+           xhr.open('POST' , 'store/CategoryFilter' , true);
 
            xhr.setRequestHeader('Content-Type', 'application/json');
            xhr.send(JSON.stringify({

@@ -1,33 +1,37 @@
 <?php
 
-class M_products extends CI_Model
+class M_home extends CI_Model
 {
   function __construct()
   {
     $this->load->database();
   }
   
-  function get_product($key)
-  {
-    $this->db->select("*");
-    $this->db->from("category");
-    $this->db->like('category_name', $key);
-    return $this->db->get()->result();
-  }
-
-  function get_search_product($key)
+  function get_featured_products()
   {
     $this->db->select("*");
     $this->db->from("products");
-    $this->db->like('product_name', $key);
+    $this->db->where('featured','Featured');
+    $this->db->limit('4');
     return $this->db->get()->result();
   }
 
-  function get_low_price_products()
+  function get_latest_products()
   {
     $this->db->select("*");
     $this->db->from("products");
-    $this->db->order_by('price','asc');
+    $this->db->where('status','Active');
+    $this->db->order_by('product_id','desc');
+    $this->db->limit('4');
+    return $this->db->get()->result();
+  }
+
+  function get_products()
+  {
+    $this->db->select("*");
+    $this->db->from("products");
+    $this->db->where('status','Active');
+    $this->db->order_by('product_id','asc');
     return $this->db->get()->result();
   }
 
@@ -37,15 +41,6 @@ class M_products extends CI_Model
     $this->db->from("products");
     $this->db->order_by('price','desc');
     return $this->db->get()->result();
-  }
-
-  function get_stock($id)
-  {
-    $this->db->select("*");
-    $this->db->from("stock_table");
-    $this->db->where('product_id',$id);
-    $this->db->where('stock>','0');
-    return $this->db->get();
   }
 }
 

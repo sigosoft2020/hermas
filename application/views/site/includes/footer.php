@@ -20,7 +20,8 @@
              <div class="subscribe-panel">
                <h3>Newsletter!!!</h3>
                 <p style="color: #5a5a5a;">Subscribe to our weekly Newsletter and stay tuned.</p>
-                  <form  method="post">
+
+                  <form  method="post" action="<?=site_url('home/newsletter')?>">
                     <div class="row">
                       <div class="col-md-12">
                         <div class="input-group">
@@ -33,6 +34,7 @@
                     <br/>
                     <button type="submit" class="btn btn-warning" style="float: left;" name="newsletter" id="newsletter" >Subscribe Now!</button>
                   </form>
+
                </div>
             </div>
         </div>
@@ -51,7 +53,7 @@
            <ul>
               <li><a href="<?=site_url('home')?>">Home</a></li>
               <li><a href="<?=site_url('about')?>">About</a></li>
-              <li><a href="product.php">Store</a></li>
+              <li><a href="<?=site_url('store')?>">Store</a></li>
               <li><a href="<?=site_url('contact')?>">Contact</a></li>
            </ul>  
         </div>

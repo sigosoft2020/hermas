@@ -79,10 +79,10 @@
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 
-<script type="text/javascript" src="js/bootstrap-show-password.min.js"></script>
+<script type="text/javascript" src="<?=base_url()?>site/js/bootstrap-show-password.min.js"></script>
 <script defer src="https://use.fontawesome.com/releases/v5.0.10/js/all.js" integrity="sha384-slN8GvtUJGnv6ca26v8EzVaR9DC58QEwsIk9q1QXdCU8Yu8ck/tL/5szYlBbqmS+" crossorigin="anonymous"></script>
 
-<script type="text/javascript" src="js/main.js"></script>
+<script type="text/javascript" src="<?=base_url()?>site/js/main.js"></script>
 <script type="text/javascript">
   $("#password").password('toggle');
   </script>

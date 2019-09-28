@@ -16,6 +16,14 @@
   </head>
 <!-- NAVBAR
 ================================================== -->
+    <?php if(!empty($this->session->flashdata('Message')))  {?>
+      <div class="alert alert-success" id="warn">
+        <strong>Success!
+        </strong>&nbsp;&nbsp;&nbsp;
+        <?php echo $this->session->flashdata('Message'); ?>.
+      </div>
+    <?php } ?>
+
   <body>
 
   <section>  
@@ -39,7 +47,7 @@
           <h2>Quick Enquiry</h2>
         </div>
                 
-         <form id="demo-form2" method="POST" data-parsley-validate class="form-horizontal form-label-left" enctype="multipart/form-data">
+         <form id="demo-form2" action="<?=site_url('contact/send_enquiry')?>" method="POST" data-parsley-validate class="form-horizontal form-label-left" enctype="multipart/form-data">
             <div class="form-group">
               <input type="text" name="name" class="form-controler" id="email" placeholder="Enter Your Name" required>
             </div>
@@ -171,12 +179,20 @@ offSetManager();
 </script>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-<script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')</script>
-<script src="js/bootstrap.min.js"></script>
+<script>window.jQuery || document.write('<script src="<?=base_url()?>assets/js/vendor/jquery.min.js"><\/script>')</script>
+<script src="<?=base_url()?>site/js/bootstrap.min.js"></script>
 <!-- Just to make our placeholder images work. Don't actually copy the next line! -->
-<script src="../../assets/js/vendor/holder.min.js"></script>
+<script src="<?=base_url()?>assets/js/vendor/holder.min.js"></script>
 <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-<script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>
-  </body>
+<script src="<?=base_url()?>assets/js/ie10-viewport-bug-workaround.js"></script>
+ <script type="">
+    $("#warn").show();
+    setTimeout(function() 
+    {
+       $("#warn").hide();
+    }, 3000);
+  </script>
+  
+ </body>
 
 </html>

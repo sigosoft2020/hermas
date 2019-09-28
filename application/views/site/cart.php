@@ -17,6 +17,14 @@
     <!--  <link href="carousel.css" rel="stylesheet"> -->  
   </head>
 
+  <?php if(!empty($this->session->flashdata('message')))  {?>
+    <div class="alert alert-success" id="warn">
+      <strong>Success!
+      </strong>&nbsp;&nbsp;&nbsp;
+      <?php echo $this->session->flashdata('message'); ?>.
+    </div>
+  <?php } ?>
+
 <body>
       <div class="green-5 clearfix">
         <?php $this->load->view('site/includes/header.php'); ?>
@@ -26,8 +34,10 @@
                 <div class="col-md-12" id="basket">
                     <div class="box">
                         <h1>Shopping cart</h1>
-                        <!-- <p class="text-muted">You currently have <?php echo $count; ?> item(s) in your cart.</p> -->
+                        <p class="text-muted">You currently have <?php $count= $cart_check->num_rows(); echo @$count; ?> item(s) in your cart.</p>
                             <div class="table-responsive">
+                             <?php  if($cart_check->num_rows()>0)
+                              {?>   
                                 <table class="table">
                                     <thead>
                                         <tr>
@@ -36,61 +46,76 @@
                                             <th>Unit price</th>                               <th colspan="2">Total</th>
                                         </tr>
                                     </thead>
-
+                                     
                                     <form method="POST">
                                       <tbody>
+                                      <?php 
+                                      $grandtotal=0;
+                                      foreach($cart as $c) {
+                                       $total      = $c->total; 
+                                       $grandtotal = $grandtotal+$total;
+                                      ?>  
                                         <tr>
-                                           <!--  <td>
+                                            <td>
                                                 <a href="#">
-                                                    <img src="uploads/products/<?php echo $cart[$i]['image']; ?>" alt="Product">
+                                                    <img src="<?=base_url().$c->image?>" alt="Product">
                                                 </a>
                                             </td>
-                                            <td><a href="#"><?php echo $cart[$i]['product_name']; ?></a>
+                                            <td>
+                                                <a href="#"><?php echo @$c->name;?></a>
                                             </td>
                                             <td>
-                                            <p><?php echo $cart[$i]['quantity']; ?></p>
-                                                
+                                                <p><?php echo @$c->quantity;?></p>
                                             </td>
-                                            <td>₹<?php echo $cart[$i]['price']; ?></td>
-                                         
-                                            <td>₹<?php echo $cart[$i]['total']; ?></td>
-                                            <td><button type="submit" class="my-cart-btn bg-blue" name="remove" value="<?php echo $i; ?>" onclick="return confirm('Are you sure to remove this item from cart?')"><i class="far fa-trash-alt"></i></button>
-                                            </td> -->
+                                            <td>₹<?php echo @$c->price;?></td>
+                                            <td>₹<?php echo @$c->total;?></td>
+                                            <td><a class="btn btn-link" style="font-size:24px;color:red" href="<?=site_url('cart/delete/'.$c->cart_id)?>" onclick="return confirm('Are you sure to remove this item from cart?')"><i class="far fa-trash-alt"></i></a></td>
+                                            
                                         </tr>
+                                    <?php };?>  
                                       </tbody>
                                     </form>
-
+                                
                                     <tfoot>
                                         <tr>
                                             <th colspan="5">Total</th>
-                                            <!-- <th colspan="2">₹<?php echo $grandtotal; ?></th> -->
+                                            <th colspan="2">₹<?php echo $grandtotal; ?></th>
                                         </tr>
                                     </tfoot>
+
                                 </table>
+                              <?php };?>  
                             </div>
                             <!-- /.table-responsive -->
-
-                            <div class="box-footer">
+                           <div class="box-footer">
                                 <div class="pull-left">
-                                    <a href="product.php" class="btn btn-primary">Continue shopping</a>
+                                    <a href="<?=site_url('store')?>" class="btn btn-primary">Continue shopping</a>
                                 </div>
-
-                                <div class="pull-right">
+                             <?php 
+                             if($cart_check->num_rows()>0)
+                             {?>
+                                 <?php if($this->session->userdata('site_user'))
+                                 { ?>
+                                 <div class="pull-right">
                                     <!-- <button class="btn btn-primary">Update basket</button> -->
-                                    <a href="login.php"><button class="btn btn-primary">Proceed to checkout</button></a>
+                                    <a href="<?=site_url('checkout')?>"><button class="btn btn-primary">Proceed to checkout</button></a>
                                 </div>
-
-                                <div class="pull-right">
+                            <?php 
+                                 }
+                            else{ ?>                                
+                                 <div class="pull-right">
                                     <!-- <button class="btn btn-primary">Update basket</button> -->
-                                    <a href="checkout.php"><button class="btn btn-primary">Proceed to checkout</button></a>
+                                    <a href="<?=site_url('login')?>"><button class="btn btn-primary">Proceed to checkout</button></a>
                                 </div>
+                            <?php }
+                              };
+                             ?>    
                             </div>
                     <!-- /.box -->
                     </div>
                 <!-- /.col-md-9 -->
                </div>
                 <!-- /.col-md-3 -->
-
             </div>
             <!-- /.container -->
         </div>
@@ -186,13 +211,18 @@ offSetManager();
 }); </script>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-<script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')</script>
-<script src="js/bootstrap.min.js"></script>
+<script>window.jQuery || document.write('<script src="<?=base_url()?>assets/js/vendor/jquery.min.js"><\/script>')</script>
+<script src="<?=base_url()?>site/js/bootstrap.min.js"></script>
 <!-- Just to make our placeholder images work. Don't actually copy the next line! -->
-<script src="../../assets/js/vendor/holder.min.js"></script>
+<script src="<?=base_url()?>assets/js/vendor/holder.min.js"></script>
 <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-<script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>
-
+<script src="<?=base_url()?>assets/js/ie10-viewport-bug-workaround.js"></script>
+ <script type="">
+      $("#warn").show();
+      setTimeout(function() 
+      {
+         $("#warn").hide();
+      }, 3000);
+    </script>
 </body>
-
 </html>

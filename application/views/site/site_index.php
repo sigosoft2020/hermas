@@ -103,27 +103,32 @@
             <!-- Wrapper for slides -->
             <div>
                 <div class="adj">
-                    <div class="row">                  
-                        <!-- <a href="product-single.php?id=<?php echo $row_featured['product_id']?>"><div class="col-sm-3"> -->
+                    <div class="row">    
+
+                    <?php foreach($featured as $feat) {?>              
+                       <a href="<?=site_url('store/product/'.$feat->product_id) ;?>"><div class="col-sm-3"> 
                             <div class="col-item">
                                 <div class="photo">
-                                  
+                                    <img src="<?=base_url().$feat->image?>" class="img-responsive" alt="a" />
                                 </div></a>
-                                <div class="info">
-                                    <div class="row">
-                                        <div class="col-md-12 text-center">
-                                            <h5 class="price">
-                                             </h5>
-                                            <h5 class="price-text-color">
-                                             </h5>
-                                        </div>
-                                    </div>
+                                 <div class="info">
+                                      <div class="row">
+                                          <div class="col-md-12 text-center">
+                                               <h5 class="price">
+                                                  <?php echo $feat->product_name;?>
+                                               </h5>
+                                               <h5 class="price-text-color">
+                                                  <?php echo $feat->price;?> INR
+                                               </h5>
+                                          </div>
+                                      </div>
                                    
                                     <div class="clearfix">
                                     </div>
-                                </div>
+                                 </div>
                             </div>
                         </div>
+                    <?php };?>     
                   </div>
               </div>
         </div>
@@ -146,27 +151,30 @@
             <div>
                 <div class="adj">
                     <div class="row">
-                  
-                        <!-- <a href="product-single.php?id=<?php echo $row_latest['product_id']?>"><div class="col-sm-3"> -->
+                      <?php foreach($latest as $lat) {?>    
+                         <a href="<?=site_url('store/product/'.$lat->product_id) ;?>"><div class="col-sm-3">
                             <div class="col-item">
                                 <div class="photo">
-                                   <!--  <img src="uploads/products/<?php echo $row_latest['image']?>" class="img-responsive" alt="a" /> -->
+                                    <img src="<?=base_url().$lat->image?>" class="img-responsive" alt="a" /> 
                                 </div></a>
                                 <div class="info">
                                     <div class="row">
                                         <div class="col-md-12 text-center">
                                             <h5 class="price">
+                                              <?php echo $lat->product_name;?>
                                              </h5>
-                                            <h5 class="price-text-color">
+                                              <h5 class="price-text-color">
+                                                <?php echo $lat->price;?> INR
                                               </h5>
                                         </div>                                       
-                                    </div>
+                                     </div>
                                    
                                     <div class="clearfix">
                                     </div>
                                 </div>
                             </div>
-                        </div>              
+                        </div> 
+                     <?php };?>                
                     </div>
                 </div>
              </div>
@@ -183,12 +191,10 @@
        <div class="whit-box">
         <p>It cleans the scalp, improves the texture of hair and prevent hair fall.</p>
        </div><br>
-       <a  class="mybtn2" href="product.php">BUY NOW</a>
+       <a  class="mybtn2" href="<?=site_url('store')?>">BUY NOW</a>
     </div>
   </div>
 </section>
-
-
 
 <section class="padding-sec">
   <div class="container">
@@ -197,7 +203,6 @@
   </div><br>
   <div class="container">
   <div class="row">
-
 
   <div class="modal fade" id="login-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
       <div class="modal-dialog">
@@ -214,7 +219,7 @@
                 <!-- Begin # DIV Form -->
             <div id="div-forms">                
               <!-- Begin # Login Form -->
-              <form id="login-form" method="post">
+              <form id="login-form" method="post" action="<?=site_url('store/bulk_order')?>">
                   <div id="div-login-msg">                               
                       <span id="text-login-msg">PRODUCT</span>
                   </div>
@@ -343,9 +348,11 @@
     </div>
   </div>
 
-
+    <?php foreach($products as $product) {?> 
       <div class="col-md-3 col-sm-6">
-          <span class="thumbnail">      
+          <span class="thumbnail">
+           <img src="<?=base_url().$product->image?>" alt="...">
+      
             <div class="block2-overlay trans-0-4">
               <a href="#" class="block2-btn-addwishlist hov-pointer trans-0-4">
                 <i class="icon-wishlist icon_heart_alt" aria-hidden="true"></i>
@@ -353,25 +360,28 @@
               </a>
 
               <div class="block2-btn-addcart w-size1 trans-0-4">
+                <button class="flex-c-m size1 bg4 bo-rad-23 hov1 s-text1 trans-0-4" data-toggle="modal" data-target="#login-modal" onclick="bulk_order('<?php echo $product->product_id;?>','<?php echo $product->product_name;?>','<?php echo $product->image;?>','<?php echo $product->quantity;?>','<?php echo $product->price;?>' )">
+                      BULK ORDER BOOKING
+                </button>
               </div>
             </div>
                 
             <div class="row merg">
                 <div class="col-md-12 green1">
-                 <h4></h4>
+                 <h4><?php echo $product->product_name;?></h4>
                 </div>
 
                 <div class="col-md-6 col-sm-6 green2">
-                  <p class="price"></p>
+                  <p class="price"><?php echo $product->price;?> INR</p>
                 </div>
 
                 <div class="col-md-6 col-sm-6 green3">
-                    <!-- <a class="mybtn3" href="product-single.php?id=<?php echo $row['product_id']?>"> BUY NOW</a> -->
+                    <a class="mybtn3" href="<?=site_url('store/product/'.$product->product_id) ;?>"> BUY NOW</a>
                 </div>              
             </div>
           </span>
       </div>
-  
+    <?php };?>
     </div>
   </div>
 </div>  
@@ -386,10 +396,8 @@
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
 
-
     <script defer src="https://use.fontawesome.com/releases/v5.0.10/js/all.js" integrity="sha384-slN8GvtUJGnv6ca26v8EzVaR9DC58QEwsIk9q1QXdCU8Yu8ck/tL/5szYlBbqmS+" crossorigin="anonymous"></script>
     
-
      <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
 
     <script type="text/javascript">
@@ -482,7 +490,7 @@ offSetManager();
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>    
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <script>
         function bulk_order(id,prod,img,qty,price){
             
@@ -490,7 +498,7 @@ offSetManager();
             var price = price;
             document.getElementById("product").value=product;
             document.getElementById("price").value=price;
-      document.getElementById("product_id").value=id;
+            document.getElementById("product_id").value=id;
         }
         
         function show_total(){

@@ -29,14 +29,15 @@
                   <table id="user_data" class="table table-bordered table-striped">
                     <thead>
                       <tr>
-                        <th width="10%">Image</th>
+                        <th width="15%">Image</th>
                         <th width="30%">Name</th>
                         <th width="10%">Quantity</th>
                         <th width="10%">Price</th>
                         <th width="10%">Featured</th>
                         <th width="10%">Status</th>
-                        <th width="10%">View</th>
-                        <th width="10%">Edit</th>
+                        <th width="5%">Images</th>
+                        <th width="5%">View</th>
+                        <th width="5%">Edit</th>
                       </tr>
                     </thead>
                   </table>
