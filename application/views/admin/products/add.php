@@ -3,6 +3,7 @@
   <head>
     <?php $this->load->view('admin/includes/includes.php'); ?>
     <?php $this->load->view('admin/includes/table-css.php'); ?>
+    <script type="text/javascript" src="http://www.google.com/jsapi"></script>
     <link rel="stylesheet" href="<?=base_url()?>plugins/image-crop/croppie.css">
   </head>
   <body>
@@ -24,7 +25,7 @@
           <div class="row">
             <div class="col-12">
               <div class="card-box">
-                <form action="<?=site_url('admin/Products/addProduct')?>" method="post" id="add-form" enctype="multipart/form-data">
+                <form action="<?=site_url('admin/Products/addProduct')?>" method="post" id="add-form" enctype="multipart/form-data" onkeypress="return event.keyCode != 13;">
 
                    <div class="row">
                       <div class="col-md-6">
@@ -113,6 +114,7 @@
       <?php $this->load->view('admin/includes/footer.php'); ?>
     </div>
   </body>
+  <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
   <?php $this->load->view('admin/includes/scripts.php'); ?>
   <script src="<?=base_url()?>plugins/image-crop/croppie.js"></script>
 

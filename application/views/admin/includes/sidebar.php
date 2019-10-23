@@ -16,12 +16,10 @@
       <nav class="navbar-custom">
 
           <ul class="list-unstyled topbar-right-menu float-right mb-0">
-
               <li class="dropdown notification-list">
                   <a class="nav-link dropdown-toggle waves-effect waves-light nav-user" data-toggle="dropdown" href="#" role="button"
                      aria-haspopup="false" aria-expanded="false">
                        <span class="ml-1"><?=$user['name']?><i class="mdi mdi-chevron-down"></i> </span>
-
                   </a>
                   <div class="dropdown-menu dropdown-menu-right profile-dropdown ">
                     <!-- <a href="<?=site_url('admin/settings')?>" class="dropdown-item notify-item">
@@ -43,7 +41,6 @@
           </ul>
  <!-- <h2 class="page_hd">Vendor</h2> -->
       </nav>
-
   </div>
   <!-- Top Bar End -->
 
@@ -78,8 +75,8 @@
                           <li><a href="<?=site_url('admin/products/add')?>">Add Products</a></li>
                           <li><a href="<?=site_url('admin/products')?>">Manage Products</a></li>
                       </ul>
-                   </li>
-                   <li>
+                  </li>
+                  <li>
                       <a href="#"><i class="fa fa-truck"></i> <span> Stock </span> <span class="menu-arrow"></span></a>
                       <ul class="nav-second-level" aria-expanded="false">
                           <li><a href="<?=site_url('admin/stock')?>">Add Stock</a></li>
@@ -96,7 +93,11 @@
                       </ul>
                   </li>
                   <li>
-                      <a href="<?=site_url('admin/users')?>"><i class="fa fa-user"></i> <span> Users </span></a>
+                      <a href="#"><i class="fa fa-user"></i> <span> Users </span><span class="menu-arrow"></span></a>
+                      <ul class="nav-second-level" aria-expanded="false">
+                          <li><a href="<?=site_url('admin/users')?>">Manage Users</a></li>
+                          <li><a href="<?=site_url('admin/users/blocked')?>">Blocked Users</a></li>
+                      </ul>
                   </li>
                   <li>
                       <a href="#"><i class="fa fa-image"></i> <span> Banner Images </span> <span class="menu-arrow"></span></a>
@@ -105,15 +106,12 @@
                           <li><a href="<?=site_url('admin/banner')?>">Manage Banner Images</a></li>
                       </ul>
                   </li>
-
                   <li>
                       <a href="<?=site_url('admin/salesman')?>"><i class="fa fa-user"></i> <span> Salesman </span></a>
                   </li>
-
                   <li>
                       <a href="<?=site_url('admin/voucher')?>"><i class="fa fa-gift"></i> <span> Voucher </span></a>
                   </li>
-
                   <li>
                       <a href="#"><i class="fa fa-quote-left"></i> <span> Testimonial </span> <span class="menu-arrow"></span></a>
                       <ul class="nav-second-level" aria-expanded="false">
@@ -121,7 +119,6 @@
                           <li><a href="<?=site_url('admin/testimonial')?>">Manage Testimonial</a></li>
                       </ul>
                   </li>
-
                   <li>
                       <a href="#"><i class="fa fa-bell"></i> <span> Wholesaler Request </span> <span class="menu-arrow"></span></a>
                       <ul class="nav-second-level" aria-expanded="false">
@@ -129,16 +126,14 @@
                           <li><a href="<?=site_url('admin/wholesaler')?>">Manage Wholesaler</a></li>
                       </ul>
                   </li>
-
                   <li>
-                      <a href="<?=site_url('admin/newsletter')?>"><i class="fa fa-credit-card-alt"></i> <span> Subscription </span></a>
+                      <a href="<?=site_url('admin/newsletter')?>"><i class="fa fa-credit-card-alt"></i> <span>Newsletter Subscription </span></a>
                   </li>
               </ul>
 
           </div>
           <!-- Sidebar -->
           <div class="clearfix"></div>
-
       </div>
       <!-- Sidebar -left -->
 

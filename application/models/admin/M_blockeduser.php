@@ -1,6 +1,6 @@
 <?php
 
-class M_user extends CI_Model
+class M_blockeduser extends CI_Model
 {
   function __construct()
   {
@@ -14,7 +14,7 @@ class M_user extends CI_Model
 
     $this->db->select($select_column);
     $this->db->from($table);
-    $this->db->where('status','Active');
+    $this->db->where('status','Blocked');
     if (isset($_POST["search"]["value"])) {
       $this->db->like("name",$_POST["search"]["value"]);
     }
@@ -44,7 +44,7 @@ class M_user extends CI_Model
   {
     $this->db->select("*");
     $this->db->from("users");
-    $this->db->where('status','Active');
+    $this->db->where('status','Blocked');
     return $this->db->count_all_results();
   }
 }

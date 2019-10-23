@@ -13,7 +13,7 @@
             <div class="row">
               <div class="col-12">
                 <div class="page-title-box">
-                  <h4 class="page-title float-left">Users</h4>
+                  <h4 class="page-title float-left">Blocked Users</h4>
                   <!-- <ol class="breadcrumb float-right">
                     <button type="button" class="btn btn-gradient btn-rounded waves-light waves-effect w-md">Add amenity</button>
                   </ol> -->
@@ -54,7 +54,7 @@
         "serverSide":true,
         "order":[],
         "ajax":{
-          url:"<?=site_url('admin/users/get')?>",
+          url:"<?=site_url('admin/users/get_blocked')?>",
           type:"POST"
         },
         "columnDefs":[
@@ -67,9 +67,9 @@
     });
   </script>
   <script>
-    function block()
+    function unblock()
     {
-      if (confirm('Are you sure to block this user ?')) {
+      if (confirm('Are you sure to unblock this user ?')) {
         return true;
       }
       else {
