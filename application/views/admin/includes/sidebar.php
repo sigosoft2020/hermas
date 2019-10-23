@@ -107,7 +107,11 @@
                       </ul>
                   </li>
                   <li>
-                      <a href="<?=site_url('admin/salesman')?>"><i class="fa fa-user"></i> <span> Salesman </span></a>
+                      <a href="#"><i class="fa fa-user"></i> <span> Salesman </span> <span class="menu-arrow"></span></a>
+                      <ul class="nav-second-level" aria-expanded="false">
+                          <li><a href="<?=site_url('admin/salesman')?>">Manage Salesman</a></li>
+                          <li><a href="<?=site_url('admin/salesman/blocked')?>">Blocked Salesman</a></li>
+                      </ul>
                   </li>
                   <li>
                       <a href="<?=site_url('admin/voucher')?>"><i class="fa fa-gift"></i> <span> Voucher </span></a>

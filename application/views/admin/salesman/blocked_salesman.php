@@ -13,10 +13,10 @@
             <div class="row">
               <div class="col-12">
                 <div class="page-title-box">
-                  <h4 class="page-title float-left">Salesman</h4>
-                  <ol class="breadcrumb float-right">
-                    <button type="button" class="btn btn-gradient btn-rounded waves-light waves-effect w-md" data-toggle="modal" data-target="#add-salesman">Add Salesman</button>
-                  </ol>
+                  <h4 class="page-title float-left">Blocked Salesman</h4>
+                  <!--<ol class="breadcrumb float-right">-->
+                  <!--  <button type="button" class="btn btn-gradient btn-rounded waves-light waves-effect w-md" data-toggle="modal" data-target="#add-salesman">Add Salesman</button>-->
+                  <!--</ol>-->
                   <div class="clearfix"></div>
                 </div>
               </div>
@@ -32,10 +32,10 @@
                         <th width="30%">Name</th>
                         <th width="20%">Phone Number</th>
                         <th width="20%">Email</th>
-                        <th width="15%">Username</th>
-                        <th width="5%">Status</th>
-                        <th width="5%">Edit</th>
-                        <th width="5%">Block/Enable</th>
+                        <th width="20%">Username</th>
+                        <th width="10%">Status</th>
+                        <!--<th width="10%">Edit</th>-->
+                        <th width="5%">Enable</th>
                       </tr>
                     </thead>
                   </table>
@@ -65,7 +65,7 @@
                           <div class="form-group m-b-25">
                               <div class="col-12">
                                   <label for="select">Phone number</label>
-                                   <input type="text" name="phone" class="form-control"  placeholder="Phone Number" maxlength="10" pattern="[6-9]{1}[0-9]{9}" title="Enter a valid phonenumber" required>
+                                   <input type="text" name="phone" class="form-control" id="phone" placeholder="Phone Number" maxlength="10" pattern="[6-9]{1}[0-9]{9}" title="Enter a valid phonenumber" required>
                               </div>
                           </div>
                           
@@ -73,13 +73,6 @@
                               <div class="col-12">
                                   <label for="select">Email</label>
                                   <input type="text" name="email" class="form-control" placeholder="Email ID" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" title="please enter valid email [test@test.com].">  
-                              </div>
-                          </div>
-                          
-                           <div class="form-group m-b-25">
-                              <div class="col-12">
-                                  <label for="select">User Name</label>
-                                  <input type="text" name="username" class="form-control" maxlength="100" placeholder="Name" required>
                               </div>
                           </div>
                           
@@ -119,27 +112,6 @@
                                   <input type="text" name="salesman" id="salesman" class="form-control" required>
                               </div>
                           </div>
-                          
-                          <div class="form-group m-b-25">
-                              <div class="col-12">
-                                  <label for="select">Phone number</label>
-                                   <input type="text" name="phone" class="form-control" id="phone" placeholder="Phone Number" maxlength="10" pattern="[6-9]{1}[0-9]{9}" title="Enter a valid phonenumber" required>
-                              </div>
-                          </div>
-                          
-                          <div class="form-group m-b-25">
-                              <div class="col-12">
-                                  <label for="select">Email</label>
-                                  <input type="text" name="email" id="email" class="form-control" placeholder="Email ID" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" title="please enter valid email [test@test.com].">  
-                              </div>
-                          </div>
-                          
-                           <div class="form-group m-b-25">
-                              <div class="col-12">
-                                  <label for="select">User Name</label>
-                                  <input type="text" name="username" id="username" class="form-control" maxlength="100" placeholder="Name" required>
-                              </div>
-                          </div>
                         
                           <div class="form-group account-btn text-center m-t-10">
                               <div class="col-12">
@@ -164,7 +136,7 @@
         "serverSide":true,
         "order":[],
         "ajax":{
-          url:"<?=site_url('admin/salesman/get')?>",
+          url:"<?=site_url('admin/salesman/get_blocked')?>",
           type:"POST"
         },
         "columnDefs":[
@@ -177,9 +149,9 @@
     });
   </script>
   <script>
-    function block()
+    function unblock()
     {
-      if (confirm('Are you sure to block this salesman ?')) {
+      if (confirm('Are you sure to unblock this salesman ?')) {
         return true;
       }
       else {
@@ -198,9 +170,6 @@
           data : { id : id },
           success : function( data ){
             $('#salesman').val(data.salesman_name);
-            $('#phone').val(data.phone);
-            $('#email').val(data.email);
-            $('#username').val(data.username);
             $('#edit-salesman').modal('show');
             // alert(data);
           }
